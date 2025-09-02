@@ -212,37 +212,48 @@ const Navbar = () => {
           </AnimatePresence>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex md:items-center md:space-x-8 rtl:space-x-reverse">
-            {[
-              { name: "Home", path: "/" },
-              { name: "About Us", path: "/about-us" },
-              { name: "Our Services", path: "/our-services" },
-              { name: "Projects", path: "/our-projects" },
-              { name: "Contact Us", path: "/contact-us" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Link
-                  to={item.path}
-                  className={`relative py-2 px-3 font-bold text-[#454545] hover:text-green-900 ${
-                    location.pathname === item.path ? "nav-item-active" : ""
-                  }`}
-                >
-                  {item.name}
-                  <span
-                    className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${
-                      location.pathname === item.path
-                        ? "after-visible"
-                        : "after-hidden"
-                    }`}
-                  ></span>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+<motion.div
+  className="hidden md:flex md:items-center rtl:space-x-reverse"
+  initial={false}
+  animate={{
+    gap: isScrolled ? "1.5rem" : "2rem", // spacing shrinks smoothly
+  }}
+  transition={{ duration: 0.3, ease: "easeInOut" }}
+>
+  {[
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Our Services", path: "/our-services" },
+    { name: "Projects", path: "/our-projects" },
+    { name: "Contact Us", path: "/contact-us" },
+  ].map((item, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      animate={{
+        y: isScrolled ? -2 : 0, // lift slightly when scrolled
+      }}
+    >
+      <Link
+        to={item.path}
+        className={`relative py-2 px-3 font-bold text-[#454545] hover:text-green-900 ${
+          location.pathname === item.path ? "nav-item-active" : ""
+        }`}
+      >
+        {item.name}
+        <motion.span
+          layoutId="underline"
+          className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${
+            location.pathname === item.path ? "after-visible" : "after-hidden"
+          }`}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        />
+      </Link>
+    </motion.div>
+  ))}
+</motion.div>
+
 
           {/* Dark overlay */}
           {isOpen && (
