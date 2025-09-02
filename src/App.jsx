@@ -9,10 +9,12 @@ import Contact from "./pages/contact/Contact";
 import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/top/ScrollToTop";
 import Scroll from "./components/top/Scroll";
+import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloatingMenu";
 
 function App() {
   return (
     <>
+    <SocialMediaFloatingMenu />
       <Navbar />
       <ScrollToTop />
       <Scroll />
