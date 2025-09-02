@@ -1,0 +1,49 @@
+/* Navbar.css */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100vh;
+  background: white;
+  z-index: 50;
+  transition: left 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.transition {
+  transition: all 0.3s ease;
+}
+
+.after-visible {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #454545;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.after-hidden {
+  display: none;
+}
