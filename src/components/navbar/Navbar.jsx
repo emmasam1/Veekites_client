@@ -158,7 +158,7 @@ const Navbar = () => {
           </Link>
 
           {/* Hamburger */}
-          <div className="relative md:hidden z-20">
+          <div className="relative md:hidden z-20 bg-white">
             <Hamburger toggled={isOpen} toggle={toggleMenu} size={27} />
           </div>
 
@@ -186,10 +186,10 @@ const Navbar = () => {
                     <img src={logo_small} alt="" className="w-40 mb-4" />
                     {[
                       { name: "Home", path: "/" },
-                      { name: "About Us", path: "/about" },
-                      { name: "Our Services", path: "/services" },
-                      { name: "Projects", path: "/projects" },
-                      { name: "Contact Us", path: "/contact" },
+                      { name: "About Us", path: "/about-us" },
+                      { name: "Our Services", path: "/our-services" },
+                      { name: "Projects", path: "/out-projects" },
+                      { name: "Contact Us", path: "/contact-us" },
                     ].map((item, i) => (
                       <motion.li key={i} variants={itemVariants}>
                         <Link

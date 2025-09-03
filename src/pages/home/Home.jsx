@@ -134,7 +134,14 @@ const Home = () => {
       <div className="h-screen relative !-top-21 bg-[url(/src/assets/background_2.jpg)] bg-no-repeat bg-cover bg-center">
         <div className="bg-[#0000009e] h-screen relative">
           <div className="absolute inset-0 overlay">
-            <div className="bg-[#454545] w-100 text-white relative top-36 left-[137px] p-8">
+            <div
+              className="
+    bg-[#454545] text-white p-8 
+    relative top-36
+    w-full sm:w-4/5 md:w-100
+    mx-auto md:mx-0 md:left-[137px]
+  "
+            >
               <Slider {...settings}>
                 {slides.map((slide, index) => (
                   <motion.div
