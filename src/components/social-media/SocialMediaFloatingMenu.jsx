@@ -74,7 +74,6 @@ const SocialMediaFloatingMenu = () => {
       onMouseEnter={() => !isMobile && setIsOpen(true)}
       onMouseLeave={() => !isMobile && setIsOpen(false)}
     >
-      {/* Expanded Social Links */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -120,7 +119,6 @@ const SocialMediaFloatingMenu = () => {
         )}
       </AnimatePresence>
 
-      {/* Main Toggle Button */}
       <motion.button
         onClick={() => setIsOpen((prev) => !prev)}
         className="bg-gray-800 text-white rounded-full p-4 shadow-lg hover:bg-gray-700 cursor-pointer flex items-center justify-center"
