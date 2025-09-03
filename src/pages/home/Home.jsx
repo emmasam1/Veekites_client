@@ -244,12 +244,53 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-30">
+      <div className="my-40">
         <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
           What Our Clients Say
         </h1>
 
         <Testimony />
+      </div>
+
+      <div>
+        <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
+          Our Projects
+        </h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              hoverable
+              cover={<img alt={service.title} src={service.image} />}
+              className="shadow-lg rounded-xl flex flex-col"
+            >
+              <div className="flex flex-col h-full justify-between">
+                <Meta
+                  title={<span className="font-bold">{service.title}</span>}
+                  description={service.description?.slice(0, 70)}
+                />
+                <div className="flex justify-center mt-5">
+                  <Button
+                    type="primary"
+                    className="!bg-[#FB2C36] !rounded-none"
+                  >
+                    Read More
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        <div className="flex justify-center items-center my-5">
+          <Link
+            to="/our-projects"
+            className="bg-[#FB2C36] text-white p-2 px-8 font-bold text-lg"
+          >
+            See More
+          </Link>
+        </div>
       </div>
     </>
   );
