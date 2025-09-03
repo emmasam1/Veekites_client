@@ -2,6 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import fd from '../../assets/fd.jpeg'
+import kalm from '../../assets/kalm.png'
+import nbrri from '../../assets/nbrri.jpeg'
+
 
 const Testimony = () => {
   const settings = {
@@ -19,36 +23,29 @@ const Testimony = () => {
   const testimonies = [
     {
       id: 1,
-      name: "John Doe",
-      role: "CEO, BuildRight Ltd.",
+      name: "Thompson, Project Manager",
+      role: "Federal Polytechnic Ukana",
       message:
-        "Working with Veekites Global Services was the best decision we made. Professional team, timely delivery, and excellent quality of work.",
-      image: "https://i.pravatar.cc/80?img=5",
+        "Working with Veekites was a game-changer for our project. Their expertise in civil engineering and project management ensured we stayed on schedule and within budget. We couldn't have done it without them.",
+      image: fd,
     },
     {
       id: 2,
-      name: "Sarah Johnson",
-      role: "Operations Manager, GreenTech",
+      name: "Okechukwu, Lead Engineer",
+      role: "Kalm Marine",
       message:
-        "Their dedication and expertise are unmatched. They helped us streamline our operations and achieve results beyond expectations.",
-      image: "https://i.pravatar.cc/80?img=12",
+        "Veekites transformed our infrastructure project with their innovative solutions. Their attention to detail and commitment to sustainability set them apart. Our entire team was impressed by their professionalism and results.",
+      image: kalm
     },
     {
       id: 3,
-      name: "Michael Smith",
-      role: "Director, Prime Logistics",
+      name: "NBRRI",
+      role: "Michael, Senior Construction Supervisor",
       message:
-        "Reliable, efficient, and innovative. Veekites Global Services truly understands client needs and delivers on every promise.",
-      image: "https://i.pravatar.cc/80?img=20",
+        "Veekites delivered beyond our expectations. Their ability to manage complex urban development projects while maintaining efficiency and quality was outstanding. We look forward to partnering with them again in the future.",
+      image: nbrri
     },
-    {
-      id: 4,
-      name: "Emily Brown",
-      role: "Founder, Elegant Interiors",
-      message:
-        "From start to finish, their service was seamless. I highly recommend them for any business looking to scale with confidence.",
-      image: "https://i.pravatar.cc/80?img=30",
-    },
+    
   ];
 
   return (
@@ -81,9 +78,9 @@ const Testimony = () => {
                     </p>
                     <div class="flex items-center gap-4">
                       <img
-                        src="https://i.pravatar.cc/80?img=5"
+                        src={post.image}
                         alt="client"
-                        class="w-16 h-16 rounded-full object-cover"
+                        class="w-20 h-20 object-contain"
                       />
                       <div>
                         <h4 class="text-lg font-semibold">{post.name}</h4>

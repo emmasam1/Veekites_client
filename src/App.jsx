@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/top/ScrollToTop";
 import Scroll from "./components/top/Scroll";
 import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloatingMenu";
+import DetailsPage from "./pages/services/DetailsPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/our-projects" element={<Project />} />
         <Route path="/our-projects" element={<Project />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/services/:name/:id" element={<DetailsPage />} />
       </Routes>
       <Footer />
     </>
