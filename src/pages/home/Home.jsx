@@ -100,24 +100,28 @@ const Home = () => {
 
   const services = [
     {
-      title: "Procurement & Logistics",
+      id: 1,
+      title: "Infrastructure Development",
       description:
-        "We provide efficient procurement and reliable logistics solutions tailored to your business needs.",
+        "We specialize in the design and construction of infrastructure that defines the modern landscape. From towering skyscrapers to expansive bridges, our civil engineering expertise ensures projects that are safe, sustainable, and visually striking. We manage every phase, from concept to completion, delivering on time and within budget.",
       image: image1, // replace with real image
     },
     {
-      title: "Construction & Engineering",
+      id: 2,
+      title: "Urban Planning",
       description:
-        "Delivering world-class construction, civil engineering, and infrastructure projects.",
+        "At Veekites, our projects are a testament to our commitment to quality, innovation, and client satisfaction. From complex civil engineering challenges to groundbreaking work in the oil and gas industry, our portfolio spans a wide range of successful ventures. Each project we undertake is a reflection of our expertise, collaborative spirit, and unwavering dedication to excellence",
       image: image2,
     },
     {
-      title: "Oil & Gas Services",
+      id: 3,
+      title: "Environmental Engineering",
       description:
-        "Expertise in oilfield support, maintenance, and supply chain solutions.",
+        "At Veekites, our projects are a testament to our commitment to quality, innovation, and client satisfaction. From complex civil engineering challenges to groundbreaking work in the oil and gas industry, our portfolio spans a wide range of successful ventures. Each project we undertake is a reflection of our expertise, collaborative spirit, and unwavering dedication to excellence.",
       image: image1,
     },
     {
+      id: 4,
       title: "ICT Solutions",
       description:
         "Offering cutting-edge ICT services, software development, and systems integration.",
@@ -226,7 +230,14 @@ const Home = () => {
                     type="primary"
                     className="!bg-[#FB2C36] !rounded-none"
                   >
-                    Read More
+                    <Link
+                      to={`/services/${service.title
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}/${service.id}`}
+                      state={{ service }}
+                    >
+                      Read More
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -244,7 +255,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="my-40">
+      <div className="my-30">
         <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
           What Our Clients Say
         </h1>
