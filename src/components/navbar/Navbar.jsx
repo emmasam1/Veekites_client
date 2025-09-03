@@ -64,11 +64,11 @@ const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="w-9/11 m-auto flex flex-row justify-between pt-4">
-          <div>
+        <div className="px-10 flex flex-row justify-between pt-4">
+          {/* <div>
             <img src={logo_small} alt="" className="w-40" />
-          </div>
-          <div className="flex flex-row">
+          </div> */}
+          <div className="flex flex-row justify-between w-9/11 mx-auto">
             {/* Address */}
             <div className="flex items-center border-r-2 pr-5 border-gray-500">
               <IoHome size={30} className="mr-2 text-gray-300" />
@@ -212,48 +212,49 @@ const Navbar = () => {
           </AnimatePresence>
 
           {/* Desktop Menu */}
-<motion.div
-  className="hidden md:flex md:items-center rtl:space-x-reverse"
-  initial={false}
-  animate={{
-    gap: isScrolled ? "1.5rem" : "2rem", // spacing shrinks smoothly
-  }}
-  transition={{ duration: 0.3, ease: "easeInOut" }}
->
-  {[
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about-us" },
-    { name: "Our Services", path: "/our-services" },
-    { name: "Projects", path: "/our-projects" },
-    { name: "Contact Us", path: "/contact-us" },
-  ].map((item, i) => (
-    <motion.div
-      key={i}
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      animate={{
-        y: isScrolled ? -2 : 0, // lift slightly when scrolled
-      }}
-    >
-      <Link
-        to={item.path}
-        className={`relative py-2 px-3 font-bold text-[#454545] hover:text-green-900 ${
-          location.pathname === item.path ? "nav-item-active" : ""
-        }`}
-      >
-        {item.name}
-        <motion.span
-          layoutId="underline"
-          className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${
-            location.pathname === item.path ? "after-visible" : "after-hidden"
-          }`}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-        />
-      </Link>
-    </motion.div>
-  ))}
-</motion.div>
-
+          <motion.div
+            className="hidden md:flex md:items-center rtl:space-x-reverse"
+            initial={false}
+            animate={{
+              gap: isScrolled ? "1.5rem" : "2rem", // spacing shrinks smoothly
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            {[
+              { name: "Home", path: "/" },
+              { name: "About Us", path: "/about-us" },
+              { name: "Our Services", path: "/our-services" },
+              { name: "Projects", path: "/our-projects" },
+              { name: "Contact Us", path: "/contact-us" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                animate={{
+                  y: isScrolled ? -2 : 0, // lift slightly when scrolled
+                }}
+              >
+                <Link
+                  to={item.path}
+                  className={`relative py-2 px-3 font-bold text-[#454545] hover:text-green-900 ${
+                    location.pathname === item.path ? "nav-item-active" : ""
+                  }`}
+                >
+                  {item.name}
+                  <motion.span
+                    layoutId="underline"
+                    className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${
+                      location.pathname === item.path
+                        ? "after-visible"
+                        : "after-hidden"
+                    }`}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  />
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
 
           {/* Dark overlay */}
           {isOpen && (

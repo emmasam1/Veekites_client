@@ -29,7 +29,7 @@ const Scroll = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5">
+    <div className="fixed bottom-5 right-5 z-10">
       {isVisible && (
         <button
           onClick={scrolles}
