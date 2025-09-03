@@ -39,13 +39,13 @@ const TestimonialSlider = () => {
     >
   {testimonials.map((t, i) => (
     <SwiperSlide key={i}>
-      <div className="flex flex-col items-center text-center space-y-4">
+      <div className="flex flex-col items-center text-center space-y-4 text-white">
         <img
           src={t.img}
           alt={t.name}
           className="w-20 h-20 rounded-full object-cover border-4 border-white"
         />
-        <h3 className="font-bold">{t.name}</h3>
+        <h3 className="font-bold text-white">{t.name}</h3>
         <p className="text-sm text-gray-200">{t.role}</p>
         <p className="max-w-2xl mx-auto italic">{t.text}</p>
       </div>
