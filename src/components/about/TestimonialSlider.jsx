@@ -29,36 +29,14 @@ const TestimonialSlider = () => {
   return (
     <div className="relative bg-[url('assets/testimonial.jpg')] bg-cover bg-center py-20">
       <div className="absolute inset-0 bg-black/60"></div>
-      <div className="max-w-4xl mx-auto relative z-10 px-6 text-white">
-        {/* <Swiper
-          modules={[Autoplay, Pagination]}
-          autoplay={{ delay: 4000 }}
-          pagination={{ clickable: true }}
-          loop
-          className="pb-12" 
-        >
-          {testimonials.map((t, i) => (
-            <SwiperSlide key={i}>
-              <div className="flex flex-col items-center text-center space-y-4">
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-20 h-20 rounded-full object-cover border-4 border-white"
-                />
-                <h3 className="font-bold">{t.name}</h3>
-                <p className="text-sm text-gray-200">{t.role}</p>
-                <p className="max-w-2xl mx-auto italic">{t.text}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
+      <div className="max-w-4xl mx-auto relative z-10 px-">
     <Swiper
-  modules={[Autoplay, Pagination]}
-  autoplay={{ delay: 4000 }}
-  pagination={{ clickable: true }}
-  loop
-  className="pb-16"  // 👈 adds space so bullets sit below content
->
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 4000 }}
+        pagination={{ clickable: true }}
+        loop
+        className="pb-25"
+    >
   {testimonials.map((t, i) => (
     <SwiperSlide key={i}>
       <div className="flex flex-col items-center text-center space-y-4">
