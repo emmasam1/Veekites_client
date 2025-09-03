@@ -1,4 +1,5 @@
-import React from "react";
+import experience2 from "../../assets/experience2.jpg";
+import experience1 from "../../assets/experience1.jpg";
 
 const ExperienceSection = () => {
   return (
@@ -14,7 +15,7 @@ const ExperienceSection = () => {
           aut officiis debitis aut rerum saepe eveniet ut et voluptates repudiandae sint et molestiae.
         </p>
         <img
-          src="assets/experience1.jpg"
+          src={experience1}
           alt="Experience"
           className="rounded-lg"
         />
@@ -23,7 +24,7 @@ const ExperienceSection = () => {
       {/* Right Column */}
       <div className="space-y-6">
         <img
-          src="assets/experience2.jpg"
+          src={experience2}
           alt="Bridge Construction"
           className="rounded-lg"
         />
