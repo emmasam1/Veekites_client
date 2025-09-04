@@ -17,11 +17,6 @@ const IntroSection = () => {
             alt="Excavator"
             className="rounded-lg w-full h-64 md:h-80 object-cover"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
-              ▶
-            </button>
-          </div>
         </div>
 
         {/* Right: Text */}
