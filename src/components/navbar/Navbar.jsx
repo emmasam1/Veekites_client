@@ -188,7 +188,11 @@ const Navbar = () => {
                       { name: "Home", path: "/" },
                       { name: "About Us", path: "/about-us" },
                       { name: "Our Services", path: "/our-services" },
+<<<<<<< HEAD
+                      { name: "Projects", path: "/out-projects" },
+=======
                       { name: "Projects", path: "/our-projects" },
+>>>>>>> bd89b0a2b0afd47fe0a67dd76f813cfbd358ee6b
                       { name: "Blog", path: "/blog" },
                       { name: "Contact Us", path: "/contact-us" },
                     ].map((item, i) => (
@@ -225,7 +229,11 @@ const Navbar = () => {
               { name: "Home", path: "/" },
               { name: "About Us", path: "/about-us" },
               { name: "Our Services", path: "/our-services" },
+<<<<<<< HEAD
+              { name: "Projects", path: "/out-projects" },
+=======
               { name: "Projects", path: "/our-projects" },
+>>>>>>> bd89b0a2b0afd47fe0a67dd76f813cfbd358ee6b
               { name: "Blog", path: "/blog" },
               { name: "Contact Us", path: "/contact-us" },
             ].map((item, i) => (
