@@ -2,7 +2,9 @@ import React from 'react'
 
 function Services() {
   return (
-    <div>Services</div>
+    <div>
+      <div className='bg-amber-500 h'></div>
+    </div>
   )
 }
 

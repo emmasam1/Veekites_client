@@ -2,13 +2,12 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-[400px] bg-[url('assets/about2.jpg')] bg-cover bg-bottom relative flex flex-col justify-center items-center text-center px-4 bg-no-repeat sm:bg-scroll lg:bg-fixed">
+    <div className="h-[400px] bg-[url('assets/about2.jpg')] bg-no-repeat bg-cover bg-center">
+    {/* <div className="w-full h-[400px] bg-[url('assets/about2.jpg')] bg-cover bg-bottom flex flex-col justify-center items-center text-center px-4 bg-no-repeat sm:bg-scroll lg:bg-fixed !relative !-top-21"> */}
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
-
-      {/* Content */}
-      <div className="relative z-10 text-white space-y-4">
-        <h2 className="text-5xl font-bold">About Us</h2>
+      <div className="absolute inset-0 bg-black/50 h-[400px] flex justify-center items-center flex-col">
+       <div className="relative z-10 text-white space-y-4">
+        <h2 className="text-5xl font-bold text-center">About Us</h2>
         <h3 className="text-3xl lg:text-4xl font-medium">
           Shaping the Future with Expertise and Innovation
         </h3>
@@ -18,6 +17,8 @@ const HeroSection = () => {
           and builds a sustainable future.
         </p>
       </div>
+      </div>
+     
     </div>
   );
 };

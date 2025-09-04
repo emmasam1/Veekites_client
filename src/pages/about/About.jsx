@@ -13,7 +13,7 @@ import FeaturesSection from "../../components/about/FeaturesSection";
 
 const About = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="relative !-top-21">
       <HeroSection />
       <IntroSection />
       <FeaturesSection />
