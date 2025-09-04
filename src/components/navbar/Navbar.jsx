@@ -182,13 +182,15 @@ const Navbar = () => {
                   animate="visible"
                   exit="exit"
                 >
-                  <ul className="flex flex-col p-6 space-y-4">
+                  <ul className="flex flex-col p-6 space-y-1">
                     <img src={logo_small} alt="" className="w-40 mb-4" />
                     {[
                       { name: "Home", path: "/" },
                       { name: "About Us", path: "/about-us" },
                       { name: "Our Services", path: "/our-services" },
                       { name: "Projects", path: "/out-projects" },
+                      { name: "News", path: "/news" },
+                      { name: "Blog", path: "/blog" },
                       { name: "Contact Us", path: "/contact-us" },
                     ].map((item, i) => (
                       <motion.li key={i} variants={itemVariants}>
@@ -224,7 +226,9 @@ const Navbar = () => {
               { name: "Home", path: "/" },
               { name: "About Us", path: "/about-us" },
               { name: "Our Services", path: "/our-services" },
-              { name: "Projects", path: "/our-projects" },
+              { name: "Projects", path: "/out-projects" },
+              { name: "News", path: "/news" },
+              { name: "Blog", path: "/blog" },
               { name: "Contact Us", path: "/contact-us" },
             ].map((item, i) => (
               <motion.div
@@ -237,7 +241,7 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className={`relative py-2 px-3 font-bold text-[#454545] hover:text-green-900 ${
+                  className={`relative py-2 font-bold text-[#454545] hover:text-green-900 ${
                     location.pathname === item.path ? "nav-item-active" : ""
                   }`}
                 >
