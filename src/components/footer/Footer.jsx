@@ -46,7 +46,7 @@ const Footer = () => {
                   to=""
                   className="text-sm text-red-500 hover:text-white font-thin"
                 >
-                  GENERAL BUILDER →
+                  Construction →
                 </Link>
               </div>
               <div className="mt-2">
@@ -54,7 +54,7 @@ const Footer = () => {
                   to=""
                   className="text-sm text-red-500 hover:text-white font-thin"
                 >
-                  HOUSE EXTENSIONS →
+                  Oil & Gas →
                 </Link>
               </div>
               <div className="mt-2">
@@ -62,7 +62,7 @@ const Footer = () => {
                   to=""
                   className="text-sm text-red-500 hover:text-white font-thin"
                 >
-                  REFURBISHMENT →
+                  Marine Services →
                 </Link>
               </div>
               <div className="mt-2">
@@ -70,7 +70,7 @@ const Footer = () => {
                   to=""
                   className="text-sm text-red-500 hover:text-white font-thin"
                 >
-                  ELECTRICITY →
+                  Project Management →
                 </Link>
               </div>
               <div className="mt-2">
@@ -78,7 +78,7 @@ const Footer = () => {
                   to=""
                   className="text-sm text-red-500 hover:text-white font-thin"
                 >
-                  GENERAL BUILDER →
+                  ICT Training & Solutions →
                 </Link>
               </div>
               <div className="mt-2">
@@ -86,7 +86,15 @@ const Footer = () => {
                   to=""
                   className="text-sm text-red-500 hover:text-white font-thin"
                 >
-                  KITCHENS →
+                  Strategic Procurement →
+                </Link>
+              </div>
+              <div className="mt-2">
+                <Link
+                  to=""
+                  className="text-sm text-red-500 hover:text-white font-thin"
+                >
+                  Customized cross-industry solutions
                 </Link>
               </div>
             </div>
