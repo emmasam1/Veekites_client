@@ -5,14 +5,23 @@ import { Phone, Mail, CheckCircle } from "lucide-react";
 const DetailsPage = () => {
   const { name, id } = useParams();
   const location = useLocation();
-  const service = location.state?.service;
+  const service = location.state;
+
+  if (!service) {
+    return (
+      <div className="p-10 text-center">
+        <h1 className="text-2xl font-bold">Service not found</h1>
+        <p>Please go back and select a service.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto w-11/12 py-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Left Sidebar (sticky on large screens) */}
+        {/* Left Sidebar */}
         <div className="order-2 md:order-1 md:col-span-1 md:sticky md:top-6 h-fit space-y-6">
-          {/* Quick Info Card */}
+          {/* Quick Info */}
           <div className="bg-white shadow-md rounded-2xl p-6 space-y-4 text-gray-800">
             <h2 className="text-xl font-bold border-b pb-2">Quick Info</h2>
             <ul className="space-y-2 text-sm">
@@ -67,11 +76,11 @@ const DetailsPage = () => {
 
         {/* Right Content */}
         <div className="order-1 md:order-2 md:col-span-2">
-          <div className="rounded-2xl overflow-hidden shadow-md">
+          <div className="overflow-hidden shadow-md">
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-[350px] object-cover"
+              className="w-full h-[450px] object-cover"
             />
           </div>
           <h1 className="font-bold text-4xl mt-8">{service.title}</h1>

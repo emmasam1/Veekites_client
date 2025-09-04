@@ -241,7 +241,12 @@ const Home = () => {
                       to={`/services/${service.title
                         .toLowerCase()
                         .replace(/\s+/g, "-")}/${service.id}`}
-                      state={{ service }}
+                      state={{
+                        id: service.id,
+                        title: service.title,
+                        description: service.description,
+                        image: service.image,
+                      }}
                     >
                       Read More
                     </Link>
