@@ -1,3 +1,5 @@
+
+
 import experience2 from "../../assets/experience2.jpg";
 import experience1 from "../../assets/experience1.jpg";
 
@@ -9,6 +11,9 @@ const ExperienceSection = () => {
         <h2 className="text-4xl font-bold">
           <span className="text-orange-600">12</span> Years of Experience
         </h2>
+        <p className="text-sm text-gray-500 italic">
+          Founded on June 11th, 2013 — Over a Decade of Excellence
+        </p>
         <p className="text-gray-600 leading-relaxed">
           Since our incorporation on June 11th, 2013, Veekites Global Services Limited has
           consistently delivered innovative solutions across engineering, construction, oil & gas,

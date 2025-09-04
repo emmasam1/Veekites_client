@@ -13,6 +13,7 @@ import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloati
 import DetailsPage from "./pages/services/DetailsPage";
 import Blog from "./pages/blog/Blog";
 import News from "./pages/news/News";
+import ProjDetails from "./pages/project/ProjDetails";
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/our-services" element={<Services />} />
         <Route path="/our-projects" element={<Project />} />
-        <Route path="/our-projects" element={<Project />} />
         <Route path="/contact-us" element={<Contact />} />
+         <Route path="/project/:name/:id" element={<ProjDetails />} />
         <Route path="/services/:name/:id" element={<DetailsPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/news" element={<News />} />

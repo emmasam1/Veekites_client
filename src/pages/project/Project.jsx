@@ -1,8 +1,10 @@
-import React from 'react'
+import Projectcomponent from "../../components/project/Projectcomponent";
 
 const Project = () => {
   return (
-    <div>Project</div>
+    <>
+      <Projectcomponent />
+    </>
   )
 }
 
