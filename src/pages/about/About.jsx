@@ -9,6 +9,10 @@ import TeamSection from "../../components/about/TeamSection";
 import TestimonialSlider from "../../components/about/TestimonialSlider";
 import BrandsSection from "../../components/about/BrandsSection";
 import FeaturesSection from "../../components/about/FeaturesSection";
+import Mission from "../../components/about/Mission";
+import Vision from "../../components/about/Vision";
+import WhyVeekites from "../../components/about/WhyVeekites";
+import OurHistory from "../../components/about/OurHistory";
 
 
 const About = () => {
@@ -16,8 +20,12 @@ const About = () => {
     <div className="relative !-top-21">
       <HeroSection />
       <IntroSection />
+      <Mission />
+      <Vision />
       <FeaturesSection />
+      <WhyVeekites />
       <ExperienceSection />
+      <OurHistory />
       <StatsSection />
       <TeamSection />
       <TestimonialSlider />

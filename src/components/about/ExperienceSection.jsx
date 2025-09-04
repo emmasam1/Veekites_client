@@ -7,33 +7,37 @@ const ExperienceSection = () => {
       {/* Left Column */}
       <div className="space-y-6">
         <h2 className="text-4xl font-bold">
-          <span className="text-orange-600">50</span> Years of Experience
+          <span className="text-orange-600">12</span> Years of Experience
         </h2>
-        <p className="text-gray-600">
-          Ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-          omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
-          aut officiis debitis aut rerum saepe eveniet ut et voluptates repudiandae sint et molestiae.
+        <p className="text-gray-600 leading-relaxed">
+          Since our incorporation on June 11th, 2013, Veekites Global Services Limited has
+          consistently delivered innovative solutions across engineering, construction, oil & gas,
+          and project management. In just over a decade, we have transformed from a growing firm
+          into a trusted industry leader with a proven record of excellence. 
         </p>
-        <img
-          src={experience1}
-          alt="Experience"
-          className="rounded-lg"
-        />
+        <p className="text-gray-600 leading-relaxed">
+          Our 12 years of experience highlight a journey of resilience, innovation, and client-focused
+          service. Each project we deliver combines cutting-edge technology with sustainable practices,
+          ensuring long-term value and meaningful impact for our clients and communities.
+        </p>
+        <img src={experience1} alt="Experience" className="rounded-lg shadow-md" />
       </div>
 
       {/* Right Column */}
       <div className="space-y-6">
-        <img
-          src={experience2}
-          alt="Bridge Construction"
-          className="rounded-lg"
-        />
-        <p className="text-gray-600">
-          Ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-          omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
-          aut officiis debitis aut rerum saepe eveniet ut et voluptates repudiandae sint et molestiae.
+        <img src={experience2} alt="Bridge Construction" className="rounded-lg shadow-md" />
+        <p className="text-gray-600 leading-relaxed">
+          Over the years, Veekites has successfully executed landmark projects for governments,
+          private institutions, and global organizations. Our diverse team of professionals
+          continues to push boundaries, offering tailored solutions that address complex challenges
+          while maintaining uncompromising quality.
         </p>
-        <button className="bg-orange-600 text-white px-6 py-3 font-medium rounded hover:bg-orange-700 transition">
+        <p className="text-gray-600 leading-relaxed">
+          With 12 years of proven expertise, Veekites Global stands as a symbol of excellence,
+          precision, and trust. We remain committed to advancing our legacy—delivering projects
+          that not only meet today’s demands but also anticipate the opportunities of tomorrow.
+        </p>
+        <button className="bg-[#A02B2D] text-white px-6 py-3 font-medium rounded-lg shadow hover:bg-orange-700 transition cursor-pointer">
           CONTACT US
         </button>
       </div>
