@@ -12,7 +12,9 @@ import Scroll from "./components/top/Scroll";
 import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloatingMenu";
 import DetailsPage from "./pages/services/DetailsPage";
 import Blog from "./pages/blog/Blog";
-import News from "./pages/news/News";
+import Blogs from './components/blog/Blogs'
+import BlogDetails from "./components/blog/BlogDetails";
+
 
 function App() {
   return (
@@ -29,8 +31,10 @@ function App() {
         <Route path="/our-projects" element={<Project />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/services/:name/:id" element={<DetailsPage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/blog" element={<Blog />} >
+          <Route path="" element={<Blogs />} />
+          <Route path="blog-details/:name/:id" element={<BlogDetails />} />
+        </Route>
       </Routes>
       <Footer />
     </>
