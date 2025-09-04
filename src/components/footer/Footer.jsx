@@ -36,7 +36,9 @@ const Footer = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 />
-                <span className="relative">READ MORE</span>
+                <span className="relative">
+                  <Link to="/about-us">READ MORE</Link>
+                </span>
               </motion.button>
             </div>
             <div className="p-5">
