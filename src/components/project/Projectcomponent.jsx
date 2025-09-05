@@ -95,7 +95,7 @@ const Projectcomponent = () => {
       {/* New Section */}
       <div className="max-w-7xl mx-auto pb-12 px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-4xl font-bold text-[#A02B2D] leading-tight">
+          <h2 className="text-4xl font-bold text-[#A02B2D] leading-tight md:text-3xl sm:text-2xl">
             Delivering Impactful <br /> Solutions Across <br /> Industries
           </h2>
           <p className="mt-6 text-gray-700 leading-relaxed">
@@ -111,7 +111,7 @@ const Projectcomponent = () => {
       </div>
 
       {/* Featured Projects */}
-      <div className="text-center mb-12 max-w-7xl mx-auto px-6">
+      <div className="text-center sm:text-left mb-12 max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-[#A02B2D]">
           Featured Projects
         </h2>
