@@ -111,11 +111,11 @@ const Projectcomponent = () => {
       </div>
 
       {/* Featured Projects */}
-      <div className="text-center sm:text-left mb-12 max-w-7xl mx-auto px-6">
+      <div className="text-center mb-12 max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-[#A02B2D]">
           Featured Projects
         </h2>
-        <p className="text-gray-600 mt-3 max-w-3xl mx-auto">
+        <p className="text-gray-600 mt-3 max-w-3xl mx-auto sm:text-left">
           Explore a selection of our most impactful projects, where innovation meets excellence. 
         </p>
       </div>
