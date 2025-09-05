@@ -82,7 +82,7 @@ const Blogs = () => {
                 className="!bg-[#FB2C36] !rounded-none mt-3"
               >
                 <Link
-                  to={`/blog-details/${post.title
+                  to={`blog-details/${post.title
                     .toLowerCase()
                     .replace(/\s+/g, "-")}/${post.id}`}
                   state={{
