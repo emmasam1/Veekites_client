@@ -81,7 +81,7 @@ function Services() {
     },
   ];
   return (
-    <div>
+    <div className="mb-10">
       <div className=" h-[500px] relative -top-21 bg-[url(/src/assets/service_hero.jpg)] bg-no-repeat bg-cover bg-center">
       <div className="bg-[#0000009e] h-[500px] flex justify-center items-center flex-col">
         <h2 className="text-5xl font-bold text-center text-white">Our Services, Your Success</h2>

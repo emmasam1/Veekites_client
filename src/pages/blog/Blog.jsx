@@ -45,7 +45,7 @@ const Blog = () => {
   const isBlogHome = location.pathname === "/blog";
 
   return (
-    <div>
+    <div className="mb-10">
       {/* ✅ Show hero only on /blog */}
       {isBlogHome && (
         <div className=" h-[500px] relative -top-21 bg-[url(/src/assets/blog_hero.jpg)] bg-no-repeat bg-cover bg-center">

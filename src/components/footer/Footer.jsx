@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="mt-10">
+    <div className="">
       <div className="w-full bg-[#34373C] flex flex-col justify-center items-center">
         <div className="w-4/5 m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 h-20">
           <div></div>
