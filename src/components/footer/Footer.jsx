@@ -157,12 +157,19 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="p-5">
-        <div className="w-4/5 m-auto">
-          <p className="text-center text-gray-500">
-            {" "}
-            &copy; {currentYear} Veekites All rights reserved By - D-Unit{" "}
+      <div className="p-5 border-t border-gray-700">
+        <div className="w-4/5 m-auto flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="text-center md:text-left text-gray-500">
+            &copy; {currentYear} Veekites. All rights reserved. By - D-Unit
           </p>
+          <div className="flex gap-4 text-sm">
+            <Link to="/terms" className="text-gray-400 hover:text-red-500">
+              Terms & Conditions
+            </Link>
+            <Link to="/privacy" className="text-gray-400 hover:text-red-500">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </div>
