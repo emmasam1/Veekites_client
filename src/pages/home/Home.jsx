@@ -132,40 +132,41 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-screen relative !-top-21 bg-[url(/src/assets/background_2.jpg)] bg-no-repeat bg-cover bg-center">
-        <div className="bg-[#0000009e] h-screen relative">
-          <div className="absolute inset-0 overlay">
-            <div
-              className="
-    bg-[#454545] text-white p-8 
-    relative top-36
-    w-full sm:w-4/5 md:w-100
-    mx-auto md:mx-0 md:left-[137px]
-  "
+  <div className="h-[300px] sm:h-[400px] md:h-screen relative !-top-21 bg-[url(/src/assets/background_2.jpg)] bg-no-repeat bg-cover bg-center">
+  <div className="bg-[#0000009e] h-[300px] sm:h-[400px] md:h-screen relative">
+    <div className="absolute inset-0 overlay flex items-center">
+      <div
+        className="
+          bg-[#454545] text-white p-4 sm:p-6 md:p-8
+          max-w-[280px] sm:max-w-md md:w-[500px]
+          ml-4 sm:mx-auto md:ml-[137px]
+          text-left
+        "
+      >
+        <Slider {...settings}>
+          {slides.map((slide, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
             >
-              <Slider {...settings}>
-                {slides.map((slide, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center md:text-left"
-                  >
-                    <h2 className="text-xl md:text-1xl lg:text-2xl mb-2">
-                      {slide.title}
-                    </h2>
-                    <p className="text-gray-300 text-sm md:text-base">
-                      {slide.text}
-                    </p>
-                  </motion.div>
-                ))}
-              </Slider>
-            </div>
-          </div>
-        </div>
+              <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2">
+                {slide.title}
+              </h2>
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base">
+                {slide.text}
+              </p>
+            </motion.div>
+          ))}
+        </Slider>
       </div>
+    </div>
+  </div>
+</div>
+
 
       <div className="m-auto w-11/12 md:w-4/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8 lg:pt-0 lg:pb-0 lg:relative lg:-top-28">
         <motion.div
