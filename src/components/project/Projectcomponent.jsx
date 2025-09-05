@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router"; 
-
+import Slider from "react-slick";
 import projbg from "../../assets/projbg.jpeg";
 import prj from "../../assets/prj.jpeg";
 import prj1 from "../../assets/prj1.jpeg";
@@ -41,6 +41,20 @@ const latestProjects = [
   }
 ];
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 800,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  adaptiveHeight: true,
+  pauseOnHover: true,
+  dotsClass: "slick-dots custom-dots",
+};
+
 const Projectcomponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
@@ -69,7 +83,7 @@ const Projectcomponent = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="h-[300px] relative bg-[url(/src/assets/service_hero.jpg)] bg-no-repeat bg-cover bg-center">
+      <div className="h-[300px] -top-21 relative bg-[url(/src/assets/service_hero.jpg)] bg-no-repeat bg-cover bg-center">
         <div className="bg-[#0000009e] h-full flex justify-center items-center flex-col">
           <h2 className="text-5xl font-bold text-center text-white">Projects</h2>
           <p className="mt-2 text-lg text-white px-4 text-center max-w-2xl">
@@ -79,7 +93,7 @@ const Projectcomponent = () => {
       </div>
 
       {/* New Section */}
-      <div className="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto pb-12 px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-4xl font-bold text-[#A02B2D] leading-tight">
             Delivering Impactful <br /> Solutions Across <br /> Industries
@@ -143,7 +157,7 @@ const Projectcomponent = () => {
               onClick={() => setCurrentPage(i + 1)}
               className={`px-3 py-1 rounded-full ${
                 currentPage === i + 1
-                  ? "bg-orange-600 text-white"
+                  ? "bg-[#A02B2D] text-white"
                   : "border text-gray-600 hover:bg-gray-100"
               }`}
             >
@@ -159,49 +173,43 @@ const Projectcomponent = () => {
           </button>
         </div>
       </div>
+<div className="bg-gray-50 py-16">
+  <h1 className="pb-10 font-bold text-[#A02B2D] text-4xl text-center">
+    Latest Project
+  </h1>
+  <div className="max-w-7xl mx-auto px-6">
+    <Slider {...settings}>
+      {latestProjects.map((proj) => (
+        <div key={proj.id} className="px-4">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Image */}
+            <img
+              src={proj.img}
+              alt={proj.title}
+              className="w-full h-80 object-cover shadow-md rounded-lg"
+            />
 
-      {/* Latest Projects Slider */}
-      <div className="bg-gray-50 py-16">
-        <h1 className="pb-10 font-bold text-[#A02B2D] text-4xl text-center">Latest Project</h1>
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            key={latestProjects[activeSlide].id}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.9 }}
-            className="grid md:grid-cols-2 gap-10 items-center"
-          >
-            <img src={latestProjects[activeSlide].img} alt={latestProjects[activeSlide].title} className="w-full h-80 object-cover shadow-md" />
-            <div>
+            {/* Content */}
+            <div className="flex flex-col justify-center">
               <h3 className="text-3xl font-bold text-[#A02B2D] mb-4">
-                {latestProjects[activeSlide].title}
+                {proj.title}
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                {latestProjects[activeSlide].desc}
+                {proj.desc}
               </p>
               <Link
-                to={`/project/${slugify(latestProjects[activeSlide].title)}/${latestProjects[activeSlide].id}`}
-                className="bg-orange-600 text-white px-6 py-3 font-medium rounded-lg shadow hover:bg-orange-700 transition inline-block"
+                to={`/project/${slugify(proj.title)}/${proj.id}`}
+                className="bg-[#A02B2D] w-40 text-white px-6 py-3 font-medium rounded-lg shadow hover:bg-orange-700 transition inline-block"
               >
                 VIEW PROJECT
               </Link>
             </div>
-          </motion.div>
-
-          <div className="flex justify-center mt-8 space-x-3">
-            {latestProjects.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveSlide(i)}
-                className={`w-3 h-3 rounded-full ${
-                  activeSlide === i ? "bg-orange-600" : "bg-gray-400"
-                }`}
-              ></button>
-            ))}
           </div>
         </div>
-      </div>
+      ))}
+    </Slider>
+  </div>
+</div>
     </div>
   );
 };
