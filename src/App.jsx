@@ -12,11 +12,6 @@ import Scroll from "./components/top/Scroll";
 import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloatingMenu";
 import DetailsPage from "./pages/services/DetailsPage";
 import Blog from "./pages/blog/Blog";
-<<<<<<< HEAD
-=======
-import Blogs from './components/blog/Blogs'
-import BlogDetails from "./components/blog/BlogDetails";
->>>>>>> 2a8731adb8811e7cc99ad9d27bde5c65c6245a95
 import ProjDetails from "./pages/project/ProjDetails";
 
 function App() {

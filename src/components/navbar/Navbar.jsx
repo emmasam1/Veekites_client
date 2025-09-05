@@ -188,9 +188,6 @@ const Navbar = () => {
                       { name: "Home", path: "/" },
                       { name: "About Us", path: "/about-us" },
                       { name: "Our Services", path: "/our-services" },
-<<<<<<< HEAD
-                      { name: "Projects", path: "/out-projects" },
-=======
                       { name: "Projects", path: "/our-projects" },
                       { name: "Blog", path: "/blog" },
                       { name: "Contact Us", path: "/contact-us" },
@@ -228,9 +225,6 @@ const Navbar = () => {
               { name: "Home", path: "/" },
               { name: "About Us", path: "/about-us" },
               { name: "Our Services", path: "/our-services" },
-<<<<<<< HEAD
-              { name: "Projects", path: "/out-projects" },
-=======
               { name: "Projects", path: "/our-projects" },
               { name: "Blog", path: "/blog" },
               { name: "Contact Us", path: "/contact-us" },
