@@ -49,7 +49,7 @@ const Blog = () => {
       {/* ✅ Show hero only on /blog */}
       {isBlogHome && (
         <div className=" h-[500px] relative -top-21 bg-[url(/src/assets/blog_hero.jpg)] bg-no-repeat bg-cover bg-center">
-          <div className="bg-[url('https://via.placeholder.com/1600x500')] bg-cover bg-center h-[500px] flex justify-center items-center flex-col text-center px-4 relative">
+          <div className="bg-[url('https://via.placeholder.com/1600x500')] bg-cover bg-center h-[500px] flex justify-center items-center flex-col lg:text-center px-4 relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/60"></div>
 
