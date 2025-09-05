@@ -10,11 +10,11 @@ const WhyVeekites = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative max-w-4xl mx-auto px-6 py-20 text-center text-white">
+      <div className="relative max-w-4xl mx-auto px-6 py-20 text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#e62a2d]">
           What Sets Veekites Apart
         </h2>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-100">
+        <p className="text-center text-lg md:text-xl leading-relaxed text-gray-100 sm:text-left">
           What distinguishes Veekites is our holistic approach to solving
           complex challenges. We bring together a diverse team of experts from
           various disciplines, ensuring that we approach each project with fresh
