@@ -15,4 +15,6 @@
   bottom: -16px !important; 
 }
 
-
+.custom-dots li.slick-active button::before {
+  color: #A02B2D !important;
+} 
