@@ -1,6 +1,6 @@
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 
 const { Search } = Input;
 
@@ -39,27 +39,37 @@ const popularPosts = [
 ];
 
 const Blog = () => {
+  const location = useLocation();
+
+  // Check if we are exactly on "/blog"
+  const isBlogHome = location.pathname === "/blog";
+
   return (
     <div>
-      <div className=" h-[500px] relative -top-21 bg-[url(/src/assets/blog_hero.jpg)] bg-no-repeat bg-cover bg-center">
-        <div className="bg-[url('https://via.placeholder.com/1600x500')] bg-cover bg-center h-[500px] flex justify-center items-center flex-col text-center px-4 relative">
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/60"></div>
+      {/* ✅ Show hero only on /blog */}
+      {isBlogHome && (
+        <div className=" h-[500px] relative -top-21 bg-[url(/src/assets/blog_hero.jpg)] bg-no-repeat bg-cover bg-center">
+          <div className="bg-[url('https://via.placeholder.com/1600x500')] bg-cover bg-center h-[500px] flex justify-center items-center flex-col text-center px-4 relative">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/60"></div>
 
-          {/* Content */}
-          <div className="relative z-10 max-w-3xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Insights & Updates from Veekites
-            </h2>
-            <p className="mt-4 text-lg md:text-xl text-gray-200">
-              Explore our latest news, industry trends, and expert opinions
-              across construction, oil & gas, ICT, and more.
-            </p>
+            {/* Content */}
+            <div className="relative z-10 max-w-3xl">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
+                Insights & Updates from Veekites
+              </h2>
+              <p className="mt-4 text-lg md:text-xl text-gray-200">
+                Explore our latest news, industry trends, and expert opinions
+                across construction, oil & gas, ICT, and more.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
       <div className="mx-auto w-11/12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Sidebar */}
           <div className="md:col-span-1 order-2 md:order-1">
             <div className="bg-[#F7F8F9] p-5  mb-15 !py-5">
               <h3 className="font-bold text-lg mb-3">Search</h3>
@@ -111,11 +121,11 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-2 order-1 md:order-2">
-           <Outlet />
-          </div>
 
-          {/* Pagination */}
+          {/* ✅ This will either show Blogs or BlogDetails */}
+          <div className="md:col-span-2 order-1 md:order-2">
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>
