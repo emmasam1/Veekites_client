@@ -12,6 +12,7 @@ import { Link } from "react-router";
 import image1 from "../../assets/service-2.jpg";
 import image2 from "../../assets/service1.jpg";
 import Testimony from "../../components/testimony/Testimony";
+import Map from "../../components/map/Map";
 
 const { Meta } = Card;
 
@@ -314,6 +315,10 @@ const Home = () => {
             See More
           </Link>
         </div>
+      </div>
+
+      <div className="my-6">
+        <Map />
       </div>
     </>
   );
