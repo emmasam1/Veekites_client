@@ -13,6 +13,7 @@ import image1 from "../../assets/service-2.jpg";
 import image2 from "../../assets/service1.jpg";
 import Testimony from "../../components/testimony/Testimony";
 import Map from "../../components/map/Map";
+import ProjectCarousel from "../../components/home/ProjectCarousel";
 
 const { Meta } = Card;
 
@@ -132,7 +133,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-[300px] sm:h-[400px] md:h-screen relative !-top-21 overflow-hidden">
+      {/* <div className="h-[300px] sm:h-[400px] md:h-screen  relative !-top-21 overflow-hidden"> */}
+      <div className="relative overflow-hidden !-top-21 h-[300px] sm:h-[400px] md:h-[500px] lg:h-screen">
+
         {/* Background Video */}
         <video
           autoPlay
@@ -180,6 +183,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <ProjectCarousel />
 
       {/* <div className="m-auto w-11/12 md:w-4/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8 lg:pt-0 lg:pb-0 lg:relative lg:-top-28">
         <motion.div
@@ -282,10 +286,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="my-30">
-        <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
+      <div className="my-10">
+        {/* <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
           What Our Clients Say
-        </h1>
+        </h1> */}
 
         <Testimony />
       </div>
