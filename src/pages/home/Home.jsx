@@ -181,7 +181,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="m-auto w-11/12 md:w-4/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8 lg:pt-0 lg:pb-0 lg:relative lg:-top-28">
+      {/* <div className="m-auto w-11/12 md:w-4/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8 lg:pt-0 lg:pb-0 lg:relative lg:-top-28">
         <motion.div
           ref={ref1}
           initial="hidden"
@@ -227,7 +227,7 @@ const Home = () => {
             shareholders' value.
           </h1>
         </motion.div>
-      </div>
+      </div> */}
 
       <div>
         <div className="flex justify-between items-center px-6">
