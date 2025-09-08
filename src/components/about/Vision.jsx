@@ -22,10 +22,10 @@ const Vision = () => {
 
         {/* Right: Vision Text */}
         <div className="space-y-6">
-          <h2 className="text-3xl lg:text-4xl font-bold leading-snug text-[#e62a2d]">
+          <h2 className="text-3xl lg:text-4xl font-bold leading-snug sm:text-center text-[#e62a2d]">
             Vision of Veekites
           </h2>
-          <p className="leading-relaxed text-gray-200 text-semibold text-2xl">
+          <p className="leading-relaxed text-gray-200 text-semibold sm:text-xl text-2xl">
             Our vision is to become a global leader in engineering,
             architecture, and technical solutions by embracing innovation and
             sustainability. We aspire to build infrastructures and systems that

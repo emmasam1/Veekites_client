@@ -85,8 +85,8 @@ const Projectcomponent = () => {
       {/* Hero Section */}
       <div className="h-[300px] -top-21 relative bg-[url(/src/assets/service_hero.jpg)] bg-no-repeat bg-cover bg-center">
         <div className="bg-[#0000009e] h-full flex justify-center items-center flex-col">
-          <h2 className="text-5xl font-bold text-center text-white">Projects</h2>
-          <p className="mt-2 text-lg text-white px-4 text-center max-w-2xl">
+          <h2 className="text-5xl font-bold lg:text-center text-white">Projects</h2>
+          <p className="mt-2 text-lg text-white px-4 lg:text-center max-w-2xl">
             Delivering innovative solutions across construction, energy, ICT, and more to help businesses grow and thrive.
           </p>
         </div>
@@ -95,7 +95,7 @@ const Projectcomponent = () => {
       {/* New Section */}
       <div className="max-w-7xl mx-auto pb-12 px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-4xl font-bold text-[#A02B2D] leading-tight">
+          <h2 className="text-4xl font-bold text-[#A02B2D] leading-tight md:text-3xl sm:text-2xl">
             Delivering Impactful <br /> Solutions Across <br /> Industries
           </h2>
           <p className="mt-6 text-gray-700 leading-relaxed">
@@ -111,11 +111,11 @@ const Projectcomponent = () => {
       </div>
 
       {/* Featured Projects */}
-      <div className="text-center mb-12 max-w-7xl">
+      <div className="lg:text-center mb-12 max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-[#A02B2D]">
           Featured Projects
         </h2>
-        <p className="text-gray-600 mt-3 max-w-3xl mx-auto">
+        <p className="text-gray-600 mt-3 max-w-3xl mx-auto sm:text-left">
           Explore a selection of our most impactful projects, where innovation meets excellence. 
         </p>
       </div>
