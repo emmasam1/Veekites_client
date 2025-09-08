@@ -132,41 +132,54 @@ const Home = () => {
 
   return (
     <>
-  <div className="h-[300px] sm:h-[400px] md:h-screen relative !-top-21 bg-[url(/src/assets/background_2.jpg)] bg-no-repeat bg-cover bg-center">
-  <div className="bg-[#0000009e] h-[300px] sm:h-[400px] md:h-screen relative">
-    <div className="absolute inset-0 overlay flex items-center">
-      <div
-        className="
-          bg-[#454545] text-white p-4 sm:p-6 md:p-8
-          max-w-[280px] sm:max-w-md md:w-[500px]
-          ml-4 sm:mx-auto md:ml-[137px]
-          text-left
-        "
-      >
-        <Slider {...settings}>
-          {slides.map((slide, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.8 }}
-              className="text-left"
-            >
-              <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2">
-                {slide.title}
-              </h2>
-              <p className="text-gray-300 text-xs sm:text-sm md:text-base">
-                {slide.text}
-              </p>
-            </motion.div>
-          ))}
-        </Slider>
-      </div>
-    </div>
-  </div>
-</div>
+      <div className="h-[300px] sm:h-[400px] md:h-screen relative !-top-21 overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="public/video/AboutUsWeb.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-[#0000009e]"></div>
+
+        {/* Slider Content */}
+        <div className="absolute inset-0 flex items-center">
+          <div
+            className="
+        bg-[#454545] text-white p-4 sm:p-6 md:p-8
+        max-w-[280px] sm:max-w-md md:w-[500px]
+        ml-4 sm:mx-auto md:ml-[137px]
+        text-left relative z-10
+      "
+          >
+            <Slider {...settings}>
+              {slides.map((slide, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-left"
+                >
+                  <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2">
+                    {slide.title}
+                  </h2>
+                  <p className="text-gray-300 text-xs sm:text-sm md:text-base">
+                    {slide.text}
+                  </p>
+                </motion.div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </div>
 
       <div className="m-auto w-11/12 md:w-4/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8 lg:pt-0 lg:pb-0 lg:relative lg:-top-28">
         <motion.div
@@ -217,55 +230,58 @@ const Home = () => {
       </div>
 
       <div>
-        <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
-          Our Services
-        </h1>
+        <div className="flex justify-between items-center px-6">
+          <h1 className="relative font-bold text-lg">Our Services</h1>
+
+          <Link
+            to="/our-services"
+            className="text-black font-bold text-lg"
+          >
+            View all
+          </Link>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              hoverable
-              cover={<img alt={service.title} src={service.image} />}
-              className="shadow-lg rounded-xl flex flex-col"
+              cover={
+                <img
+                  alt={service.title}
+                  src={service.image}
+                  className="!rounded-none h-48 w-full object-cover" // 👈 fixed height + cover
+                />
+              }
+              className="flex flex-col !border-none !rounded-none "
             >
               <div className="flex flex-col h-full justify-between">
                 <Meta
-                  title={<span className="font-bold">{service.title}</span>}
+                  title={
+                    <span className="text-lg font-semibold">
+                      {service.title}
+                    </span>
+                  }
                   description={service.description?.slice(0, 70)}
                 />
-                <div className="flex justify-center mt-5">
-                  <Button
-                    type="primary"
-                    className="!bg-[#A02B2D] !rounded-none"
+                <div className="mt-5">
+                  <Link
+                    to={`/services/${service.title
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}/${service.id}`}
+                    state={{
+                      id: service.id,
+                      title: service.title,
+                      description: service.description,
+                      image: service.image,
+                    }}
+                    className="!text-black hover:underline"
                   >
-                    <Link
-                      to={`/services/${service.title
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}/${service.id}`}
-                      state={{
-                        id: service.id,
-                        title: service.title,
-                        description: service.description,
-                        image: service.image,
-                      }}
-                    >
-                      Read More
-                    </Link>
-                  </Button>
+                    Learn more
+                  </Link>
                 </div>
               </div>
             </Card>
           ))}
-        </div>
-
-        <div className="flex justify-center items-center my-5">
-          <Link
-            to="/our-services"
-            className="bg-[#A02B2D] text-white p-2 px-8 font-bold text-lg"
-          >
-            See More
-          </Link>
         </div>
       </div>
 
@@ -318,9 +334,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <Map />
-      </div>
+      </div> */}
     </>
   );
 };

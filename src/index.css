@@ -1,8 +1,29 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: veekites;
+  src: url("./fonts/PlusJakartaSans-Light.ttf");
+}
+
+body {
+  font-family: veekites;
+}
+
+.ant-card .ant-card-body{
+  padding: 25px 0 !important;
+}
+
+.ant-card-bordered .ant-card-cover{
+  border-radius:  0 !important;
+}
+
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -12,9 +33,9 @@
 }
 
 .swiper-pagination {
-  bottom: -16px !important; 
+  bottom: -16px !important;
 }
 
 .custom-dots li.slick-active button::before {
-  color: #A02B2D !important;
-} 
+  color: #a02b2d !important;
+}
