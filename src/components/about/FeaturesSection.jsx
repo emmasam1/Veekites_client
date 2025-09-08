@@ -5,17 +5,17 @@ import { Star, Award, DollarSign } from "lucide-react";
 
 const features = [
   {
-    icon: <Star className="w-10 h-10 text-orange-500" />,
+    icon: <Star className="w-10 h-10 text-[#A02B2D]" />,
     title: "Top Rated",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Officia odio eum corporis consequatur."
   },
   {
-    icon: <Award className="w-10 h-10 text-orange-500" />,
+    icon: <Award className="w-10 h-10 text-[#A02B2D]" />,
     title: "Best Quality",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Officia odio eum corporis consequatur."
   },
   {
-    icon: <DollarSign className="w-10 h-10 text-orange-500" />,
+    icon: <DollarSign className="w-10 h-10 text-[#A02B2D]" />,
     title: "Low Cost",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Officia odio eum corporis consequatur."
   }
