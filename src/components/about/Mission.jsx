@@ -12,7 +12,7 @@ const Mission = () => {
         {/* Left: Mission Text */}
         <div className="space-y-6">
           <h2 className="text-3xl lg:text-4xl font-bold leading-snug text-[#A02B2D]">
-            Mission of Veekites
+            Our Mission
           </h2>
           <p className="text-gray-600 leading-relaxed">
             Our mission is to be the most foremost Architectural Design, Civil,
