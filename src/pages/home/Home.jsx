@@ -317,10 +317,6 @@ const Home = () => {
           </Link>
         </div>
       </div>
-
-      <div className="mt-6">
-        <Map />
-      </div>
     </>
   );
 };
