@@ -136,12 +136,12 @@ const TeamSection = () => {
             <img
               src={member.img}
               alt={member.name}
-              className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-orange-100"
+              className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D]"
             />
             <h3 className="font-semibold text-lg text-gray-800">
               {member.name}
             </h3>
-            <p className="text-sm text-orange-600 font-medium">
+            <p className="text-sm text-[#A02B2D] font-medium">
               {member.role}
             </p>
             <p className="text-sm text-gray-400">{member.email}</p>

@@ -237,7 +237,7 @@ const Home = () => {
                 <div className="flex justify-center mt-5">
                   <Button
                     type="primary"
-                    className="!bg-[#FB2C36] !rounded-none"
+                    className="!bg-[#A02B2D] !rounded-none"
                   >
                     <Link
                       to={`/services/${service.title
@@ -262,7 +262,7 @@ const Home = () => {
         <div className="flex justify-center items-center my-5">
           <Link
             to="/our-services"
-            className="bg-[#FB2C36] text-white p-2 px-8 font-bold text-lg"
+            className="bg-[#A02B2D] text-white p-2 px-8 font-bold text-lg"
           >
             See More
           </Link>
@@ -298,7 +298,7 @@ const Home = () => {
                 <div className="flex justify-center mt-5">
                   <Button
                     type="primary"
-                    className="!bg-[#FB2C36] !rounded-none"
+                    className="!bg-[#A02B2D] !rounded-none"
                   >
                     Read More
                   </Button>
@@ -311,7 +311,7 @@ const Home = () => {
         <div className="flex justify-center items-center my-5">
           <Link
             to="/our-projects"
-            className="bg-[#FB2C36] text-white p-2 px-8 font-bold text-lg"
+            className="bg-[#A02B2D] text-white p-2 px-8 font-bold text-lg"
           >
             See More
           </Link>

@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion"; // ✅ Framer Motion
 import "./Navbar.css";
 
 import logo_small from "../../assets/logo_small.png";
+import { Button } from "antd";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -254,8 +255,10 @@ const Navbar = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   />
                 </Link>
+                
               </motion.div>
             ))}
+            <Button className="!bg-[#A02B2D] !border-none !rounded-none !text-white">Book a Consultation</Button>
           </motion.div>
 
           {/* Dark overlay */}

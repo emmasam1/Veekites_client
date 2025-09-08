@@ -104,7 +104,7 @@ function Services() {
                     alt={service.title}
                     className="h-48 w-full object-cover"
                   />
-                  <div className="absolute -bottom-6 left-4 h-15 w-15 bg-[#333] p-2 flex items-center justify-center">
+                  <div className="absolute -bottom-6 left-4 h-15 w-15 bg-[#A02B2D] p-2 flex items-center justify-center">
                     {service.icon}
                   </div>
                 </div>
@@ -119,7 +119,7 @@ function Services() {
                   <p className="text-gray-500">{service.description?.slice(0, 100)}...</p>
                 }
               />
-              <Button type="primary" className="!bg-[#FB2C36] !rounded-none mt-4">
+              <Button type="primary" className="!bg-[#A02B2D] !rounded-none mt-4">
                 <Link
                   to={`/services/${service.title
                     .toLowerCase()

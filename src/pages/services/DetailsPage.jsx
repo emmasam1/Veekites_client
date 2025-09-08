@@ -41,7 +41,7 @@ const DetailsPage = () => {
           </div>
 
           {/* Contact Card */}
-          <div className="bg-[#FB2C36] shadow-md rounded-2xl p-6 text-white space-y-4">
+          <div className="bg-[#A02B2D] shadow-md rounded-2xl p-6 text-white space-y-4">
             <h2 className="text-xl font-bold">Need This Service?</h2>
             <p className="text-sm">
               Get in touch with our team to discuss your project and get a free
@@ -49,7 +49,7 @@ const DetailsPage = () => {
             </p>
             
             <div className="space-y-2">
-              <button className="w-full bg-white text-[#FB2C36] font-semibold py-2 rounded-lg hover:bg-gray-100 transition">
+              <button className="w-full bg-white text-[#A02B2D] font-semibold py-2 rounded-lg hover:bg-gray-100 transition">
                 Request a Quote
               </button>
               <a

@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import mission from "../../assets/mission.jpg";
+import { Button } from "antd";
 
 const Mission = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="max-w-7xl mx-auto py-16 px-6">
+    <div className="w-9/11 mx-auto py-16">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Mission Text */}
         <div className="space-y-6">
@@ -18,12 +19,12 @@ const Mission = () => {
             Mechanical, Electrical, Building Engineering, General Supply as well
             as Technical company of the millennium....
           </p>
-          <button
+          <Button
             onClick={() => setIsOpen(true)}
-            className="bg-[#A02B2D] text-white px-6 py-3 font-medium rounded-lg shadow-md hover:bg-orange-700 transition duration-300 cursor-pointer"
+            className="!bg-[#A02B2D] !rounded-none !text-white"
           >
             Learn More
-          </button>
+          </Button>
         </div>
 
         {/* Right: Mission Image */}
