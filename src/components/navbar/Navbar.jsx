@@ -190,7 +190,7 @@ const Navbar = () => {
                       { name: "About Us", path: "/about-us" },
                       { name: "Our Services", path: "/our-services" },
                       { name: "Projects", path: "/our-projects" },
-                      { name: "Blog", path: "/blog" },
+                      // { name: "Blog", path: "/blog" },
                       { name: "Contact Us", path: "/contact-us" },
                     ].map((item, i) => (
                       <motion.li key={i} variants={itemVariants}>
@@ -227,7 +227,7 @@ const Navbar = () => {
               { name: "About Us", path: "/about-us" },
               { name: "Our Services", path: "/our-services" },
               { name: "Projects", path: "/our-projects" },
-              { name: "Blog", path: "/blog" },
+              // { name: "Blog", path: "/blog" },
               { name: "Contact Us", path: "/contact-us" },
             ].map((item, i) => (
               <motion.div
@@ -255,10 +255,11 @@ const Navbar = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   />
                 </Link>
-                
               </motion.div>
             ))}
-            <Button className="!bg-[#A02B2D] !border-none !rounded-none !text-white">Book a Consultation</Button>
+            <Button className="!bg-[#A02B2D] !border-none !rounded-none !text-white">
+              Book a Consultation
+            </Button>
           </motion.div>
 
           {/* Dark overlay */}

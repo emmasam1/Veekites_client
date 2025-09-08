@@ -11,19 +11,17 @@ import ScrollToTop from "./components/top/ScrollToTop";
 import Scroll from "./components/top/Scroll";
 import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloatingMenu";
 import DetailsPage from "./pages/services/DetailsPage";
-import Blog from "./pages/blog/Blog";
-import Blogs from "./components/blog/Blogs";
+// import Blog from "./pages/blog/Blog";
+// import Blogs from "./components/blog/Blogs";
 import ProjDetails from "./pages/project/ProjDetails";
-import BlogDetails from "./components/blog/BlogDetails";
-
+// import BlogDetails from "./components/blog/BlogDetails";
 
 //fetch(`${process.env.REACT_APP_API_URL}/api/blogs`)
-
 
 function App() {
   return (
     <>
-    <SocialMediaFloatingMenu />
+      <SocialMediaFloatingMenu />
       <Navbar />
       <ScrollToTop />
       <Scroll />
@@ -33,12 +31,12 @@ function App() {
         <Route path="/our-services" element={<Services />} />
         <Route path="/our-projects" element={<Project />} />
         <Route path="/contact-us" element={<Contact />} />
-         <Route path="/project/:name/:id" element={<ProjDetails />} />
+        <Route path="/project/:name/:id" element={<ProjDetails />} />
         <Route path="/services/:name/:id" element={<DetailsPage />} />
-        <Route path="/blog" element={<Blog />} >
-        <Route index element={<Blogs />} />
-        <Route path="blog-details/:name/:id" element={<BlogDetails />} />
-        </Route>
+        {/* <Route path="/blog" element={<Blog />}>
+          <Route index element={<Blogs />} />
+          <Route path="blog-details/:name/:id" element={<BlogDetails />} />
+        </Route> */}
       </Routes>
       <Footer />
     </>
