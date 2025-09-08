@@ -233,10 +233,7 @@ const Home = () => {
         <div className="flex justify-between items-center px-6">
           <h1 className="relative font-bold text-lg">Our Services</h1>
 
-          <Link
-            to="/our-services"
-            className="text-black font-bold text-lg"
-          >
+          <Link to="/our-services" className="text-black">
             View all
           </Link>
         </div>
@@ -294,43 +291,45 @@ const Home = () => {
       </div>
 
       <div>
-        <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
-          Our Projects
-        </h1>
+        <div className="flex justify-between items-center px-6">
+          <h1 className="relative font-bold text-lg">Our Projects</h1>
+
+          <Link to="/our-projects" className="text-black">
+            View all
+          </Link>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              hoverable
-              cover={<img alt={service.title} src={service.image} />}
-              className="shadow-lg rounded-xl flex flex-col"
+              cover={
+                <img
+                  alt={service.title}
+                  src={service.image}
+                  className="!rounded-none h-48 w-full object-cover" // 👈 fixed height + cover
+                />
+              }
+              className="flex flex-col !border-none !rounded-none "
             >
               <div className="flex flex-col h-full justify-between">
                 <Meta
-                  title={<span className="font-bold">{service.title}</span>}
+                  title={
+                    <span className="text-lg font-semibold">
+                      {service.title}
+                    </span>
+                  }
                   description={service.description?.slice(0, 70)}
                 />
-                <div className="flex justify-center mt-5">
-                  <Button
-                    type="primary"
-                    className="!bg-[#A02B2D] !rounded-none"
-                  >
-                    Read More
-                  </Button>
+                <div className="flex justify-left mt-5">
+                  <Link to="#" className="!text-black hover:underline">
+                    Learn more
+                  </Link>
+                  
                 </div>
               </div>
             </Card>
           ))}
-        </div>
-
-        <div className="flex justify-center items-center my-5">
-          <Link
-            to="/our-projects"
-            className="bg-[#A02B2D] text-white p-2 px-8 font-bold text-lg"
-          >
-            See More
-          </Link>
         </div>
       </div>
 
