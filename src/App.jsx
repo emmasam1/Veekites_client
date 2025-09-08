@@ -16,6 +16,10 @@ import Blogs from "./components/blog/Blogs";
 import ProjDetails from "./pages/project/ProjDetails";
 import BlogDetails from "./components/blog/BlogDetails";
 
+
+//fetch(`${process.env.REACT_APP_API_URL}/api/blogs`)
+
+
 function App() {
   return (
     <>

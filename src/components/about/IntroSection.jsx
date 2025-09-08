@@ -6,9 +6,9 @@ const IntroSection = () => {
   return (
     <div className="w-9/11 mx-auto py-16 px-6">
       {/* Welcome Line on top */}
-      <h4 className="text-[#A02B2D] font-bold text-4xl lg:text-center mb-10">
+      {/* <h4 className="text-[#A02B2D] font-bold text-4xl lg:text-center mb-10">
         Welcome to Veekites Global Service Limited
-      </h4>
+      </h4> */}
 
       {/* Content: Image + Text */}
       <div className="grid md:grid-cols-2 gap-10 items-center">
