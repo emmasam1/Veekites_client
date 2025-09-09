@@ -258,7 +258,9 @@ const Navbar = () => {
               </motion.div>
             ))}
             <Button className="!bg-[#A02B2D] !border-none !rounded-none !text-white">
+             <Link to='/contact-us'>
               Book a Consultation
+             </Link>
             </Button>
           </motion.div>
 

@@ -10,7 +10,7 @@ import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/top/ScrollToTop";
 import Scroll from "./components/top/Scroll";
 import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloatingMenu";
-import DetailsPage from "./pages/services/DetailsPage";
+// import DetailsPage from "./pages/services/DetailsPage";
 // import Blog from "./pages/blog/Blog";
 // import Blogs from "./components/blog/Blogs";
 import ProjDetails from "./pages/project/ProjDetails";
@@ -32,7 +32,7 @@ function App() {
         <Route path="/our-projects" element={<Project />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/project/:name/:id" element={<ProjDetails />} />
-        <Route path="/services/:name/:id" element={<DetailsPage />} />
+        {/* <Route path="/services/:name/:id" element={<DetailsPage />} /> */}
         {/* <Route path="/blog" element={<Blog />}>
           <Route index element={<Blogs />} />
           <Route path="blog-details/:name/:id" element={<BlogDetails />} />

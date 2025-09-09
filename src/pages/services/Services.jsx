@@ -1,27 +1,25 @@
-import React from "react";
-import { Card, Button } from "antd";
-import { Link } from "react-router";
+import React, { useState } from "react";
+import { Button, Divider } from "antd";
 import {
   HomeOutlined,
   ToolOutlined,
   BuildOutlined,
   ThunderboltOutlined,
 } from "@ant-design/icons";
+import { IoChevronBackSharp } from "react-icons/io5";
+
 import image1 from "../../assets/services_renovation.jpg";
-import image2 from "../../assets/service_power.jpg";
-import image3 from "../../assets/service_minning.jpg";
-import image4 from "../../assets/service_material.jpg";
 import image5 from "../../assets/service_oil.jpg";
 import image6 from "../../assets/service_marine.jpg";
-import image7 from "../../assets/service_ict.jpg";
 import image8 from "../../assets/project.jpg";
+import image7 from "../../assets/service_ict.jpg";
 import image9 from "../../assets/service_strategic.jpg";
 import image10 from "../../assets/solution.jpg";
-
-
-const { Meta } = Card;
+import heroImage from "../../assets/service_hero.jpg";
 
 function Services() {
+  const [selectedService, setSelectedService] = useState(null);
+
   const services = [
     {
       id: 1,
@@ -80,63 +78,146 @@ function Services() {
       icon: <BuildOutlined className="!text-white text-3xl" />,
     },
   ];
+
+  // Capabilities (example static list, can make it dynamic per service later)
+  const capabilities = [
+    {
+      title: "Detailed Engineering + Design",
+      description:
+        "Maximize project value with leading technologies and an agile, dedicated team.",
+      image:
+        "https://auduboncompanies.com/wp-content/smush-webp/2021/02/fbb645fab9d13b81da4f04eba73d9586-1.jpg.webp",
+    },
+    {
+      title: "Construction Management",
+      description:
+        "Delivering projects on time and within budget with proven management systems.",
+      image:
+        "https://auduboncompanies.com/wp-content/smush-webp/2021/02/9d0295eb325f826726d41ddf68193976-1-1.jpg.webp",
+    },
+    {
+      title: "Owner’s Engineering",
+      description:
+        "Independent project oversight to safeguard client interests and ensure quality.",
+      image:
+        "https://auduboncompanies.com/wp-content/smush-webp/2021/04/Owners-Engineering2.jpg.webp",
+    },
+  ];
+
   return (
     <div className="mb-10">
-      <div className=" h-[500px] relative -top-21 bg-[url(/src/assets/service_hero.jpg)] bg-no-repeat bg-cover bg-center">
-      <div className="bg-[#0000009e] h-[500px] flex justify-center items-center flex-col">
-        <h2 className="text-5xl font-bold text-center text-white">Our Services, Your Success</h2>
-        <p className="mt-2 text-lg text-white text-center">
-          Delivering innovative solutions across construction, energy, ICT, and more to help businesses grow and thrive.
-        </p>
-      </div>
+      {/* Hero Section */}
+      <div
+        className="h-[500px] relative -top-21 bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${
+            selectedService ? selectedService.image : heroImage
+          })`,
+        }}
+      >
+        <div className="bg-[#0000009e] h-[500px] flex justify-center flex-col px-4">
+          <div className="w-9/11 mx-auto">
+            {selectedService && (
+              <div
+                className="flex items-center cursor-pointer w-20 gap-2 text-white mb-5"
+                onClick={() => setSelectedService(null)}
+              >
+                <IoChevronBackSharp /> Back
+              </div>
+            )}
+            <h2 className="text-5xl font-bold text-white">
+              {selectedService ? selectedService.title : "Services We Offer"}
+            </h2>
+          </div>
+        </div>
       </div>
 
       <div className="w-9/11 mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, i) => (
-            <Card
-              key={i}
-              hoverable
-              cover={
-                <div className="relative">
+        {!selectedService ? (
+          // 🔹 Show All Services
+          services.map((service, index) => (
+            <div key={service.id}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
+                {/* Left (image) */}
+                <div className="h-80">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="h-48 w-full object-cover"
+                    className="h-full w-full object-cover"
                   />
-                  <div className="absolute -bottom-6 left-4 h-15 w-15 bg-[#A02B2D] p-2 flex items-center justify-center">
-                    {service.icon}
-                  </div>
                 </div>
-              }
-              className="shadow-md !rounded-none"
-            >
-              <Meta
-                title={
-                  <h3 className="font-bold text-lg mt-5">{service.title}</h3>
-                }
-                description={
-                  <p className="text-gray-500">{service.description?.slice(0, 100)}...</p>
-                }
-              />
-              <Button type="primary" className="!bg-[#A02B2D] !rounded-none mt-4">
-                <Link
-                  to={`/services/${service.title
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}/${service.id}`}
-                  state={{
-                    id: service.id,
-                    title: service.title,
-                    description: service.description,
-                    image: service.image,
-                  }}
-                >
-                  Read More
-                </Link>
-              </Button>
-            </Card>
-          ))}
-        </div>
+
+                {/* Right (content) */}
+                <div className="md:col-span-2 p-4">
+                  <h3 className="font-bold text-2xl">{service.title}</h3>
+                  <p className="text-lg mt-4 text-justify">
+                    {service.description}
+                  </p>
+                  <Button
+                    className="!bg-[#A02B2D] !border-none !rounded-none !text-white mt-8"
+                    onClick={() => {
+                      setSelectedService(service);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    Explore Service
+                  </Button>
+                </div>
+              </div>
+
+              {/* Divider (not for last item) */}
+              {index !== services.length - 1 && (
+                <div className="border-b border-gray-300"></div>
+              )}
+            </div>
+          ))
+        ) : (
+          // 🔹 Show Selected Service Details
+          <div className="py-10">
+            <p className="text-lg text-justify">
+              {selectedService.description}
+            </p>
+
+            <div className="mt-8">
+              <h3 className="font-bold text-2xl">
+                {selectedService.title} Capabilities
+              </h3>
+
+              <Divider />
+
+              {/* Grid of Capabilities */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {capabilities.map((cap, idx) => (
+                  <div key={idx}>
+                    <img
+                      src={cap.image}
+                      alt={cap.title}
+                      className="h-80 w-full object-cover"
+                    />
+                    <h3 className="font-bold text-2xl mt-4">{cap.title}</h3>
+                    <p className="text-lg text-justify mt-3">
+                      {cap.description}
+                    </p>
+                    <Button
+                      className="!p-0 !border-none mt-3 !shadow-none hover:!text-black"
+                      onClick={() => {
+                        setSelectedService({
+                          ...selectedService,
+                          image: cap.image,
+                          title: cap.title,
+                          description: cap.description,
+                        });
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Learn more
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
