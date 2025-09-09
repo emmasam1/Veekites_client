@@ -1,10 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import mission from "../../assets/mission.jpg";
 import { Button } from "antd";
 
 const Mission = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Close modal with Esc key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  // Prevent background scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
 
   return (
     <div className="w-9/11 mx-auto py-16">
@@ -21,7 +39,7 @@ const Mission = () => {
           </p>
           <Button
             onClick={() => setIsOpen(true)}
-            className="!bg-[#A02B2D] !rounded-none !text-white"
+            className="!bg-[#A02B2D] !rounded-none !text-white hover:!bg-[#861f21] transition"
           >
             Learn More
           </Button>
@@ -48,15 +66,18 @@ const Mission = () => {
           >
             {/* Modal Card */}
             <motion.div
-              className="bg-white rounded-xl shadow-2xl max-w-2xl w-full p-6 md:p-10 relative"
+              className="bg-white rounded-xl shadow-2xl max-w-2xl w-full p-6 md:p-8 lg:p-10 relative"
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 50 }}
               transition={{ duration: 0.3 }}
+              role="dialog"
+              aria-modal="true"
             >
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close modal"
                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold"
               >
                 ×
@@ -65,13 +86,15 @@ const Mission = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D] mb-4">
                 Our Mission
               </h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg">
                 At Veekites Global Service Limited, we strive to redefine
                 excellence in Architectural Design, Civil, Mechanical,
                 Electrical, and Building Engineering. Our mission extends beyond
                 delivering projects—we aim to empower industries, foster
                 sustainable growth, and build infrastructures that stand the
-                test of time. <br /><br />
+                test of time.
+                <br />
+                <br />
                 Through innovation, integrity, and dedication, we position
                 ourselves as a leading force in the technical and supply sectors
                 of the millennium, committed to creating a lasting impact in

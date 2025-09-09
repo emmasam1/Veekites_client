@@ -79,7 +79,6 @@ function Services() {
     },
   ];
 
-  // Capabilities (example static list, can make it dynamic per service later)
   const capabilities = [
     {
       title: "Detailed Engineering + Design",
@@ -116,7 +115,7 @@ function Services() {
         }}
       >
         <div className="bg-[#0000009e] h-[500px] flex justify-center flex-col px-4">
-          <div className="w-9/11 mx-auto">
+          <div className="max-w-6xl w-full mx-auto">
             {selectedService && (
               <div
                 className="flex items-center cursor-pointer w-20 gap-2 text-white mb-5"
@@ -125,14 +124,15 @@ function Services() {
                 <IoChevronBackSharp /> Back
               </div>
             )}
-            <h2 className="text-5xl font-bold text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
               {selectedService ? selectedService.title : "Services We Offer"}
             </h2>
           </div>
         </div>
       </div>
 
-      <div className="w-9/11 mx-auto">
+      {/* Content */}
+      <div className="max-w-6xl w-full mx-auto px-4">
         {!selectedService ? (
           // 🔹 Show All Services
           services.map((service, index) => (

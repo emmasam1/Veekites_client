@@ -6,56 +6,64 @@ const OurHistory = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-9/11 mx-auto py-20 px-6">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-       {/* Left: Image with Play Button */}
-        <div className="relative rounded-xl overflow-hidden shadow-lg h-96 md:h-[32rem] lg:h-[38rem]">
-        <img
+    <div className="max-w-6xl w-full mx-auto py-20 px-4 sm:px-6">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        {/* Left: Image with Play Button */}
+        <div className="relative rounded-xl overflow-hidden shadow-lg h-64 sm:h-80 md:h-[28rem] lg:h-[36rem]">
+          <img
             src={historyImg}
             alt="Our History"
             className="w-full h-full object-cover"
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Play Button */}
-        <div className="absolute inset-0 flex items-center justify-center">
+          {/* Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center">
             <button
-            onClick={() => setIsOpen(true)}
-            className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
+              onClick={() => setIsOpen(true)}
+              className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
             >
-            <span className="text-2xl md:text-3xl text-orange-600">▶</span>
+              <span className="text-xl sm:text-2xl md:text-3xl text-orange-600">
+                ▶
+              </span>
             </button>
-        </div>
+          </div>
         </div>
 
         {/* Right: History Text */}
         <div className="space-y-6">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#A02B2D]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#A02B2D]">
             Our History
           </h2>
           <p className="text-gray-600 leading-relaxed text-justify">
-           Incorporated 11th june 2013, VeeKITES started as a small firm with a vision to revolutionize the
-            global services industry. Over the years, we have expanded our expertise, embracing new challenges
-             and growing into a leading provider of comprehensive solutions in civil engineering, oil and gas, 
-             and project management. Our journey has been marked by a series of significant milestones, each 
-             contributing to our legacy of excellence and innovation.
+            Incorporated 11th June 2013, VeeKITES started as a small firm with a
+            vision to revolutionize the global services industry. Over the
+            years, we have expanded our expertise, embracing new challenges and
+            growing into a leading provider of comprehensive solutions in civil
+            engineering, oil and gas, and project management. Our journey has
+            been marked by significant milestones, each contributing to our
+            legacy of excellence and innovation.
           </p>
           <p className="text-gray-600 leading-relaxed text-justify">
-          Veekites Global Services Limited is widely recognized as one of the most 
-           professional companies offering a wide range of services in the fields of engineering, construction, 
-           supplies, and training, with a team of directors and senior executives who are experts in their chosen
-            fields. Each member of this formidable team offers a range of combined experience in their areas of specialty.
+            Veekites Global Services Limited is widely recognized as one of the
+            most professional companies offering a wide range of services in the
+            fields of engineering, construction, supplies, and training, with a
+            team of directors and senior executives who are experts in their
+            chosen fields. Each member of this formidable team offers a range of
+            combined experience in their areas of specialty.
           </p>
-        <p className="text-gray-600 leading-relaxed text-justify">
-           In addition, Veekites Global Services Limited has over 50 highly competent technical and support staff, 
-          all working together to deliver sustainable high-quality assets that not only meet but also exceed client expectations.
+          <p className="text-gray-600 leading-relaxed text-justify">
+            In addition, Veekites Global Services Limited has over 50 highly
+            competent technical and support staff, all working together to
+            deliver sustainable high-quality assets that not only meet but also
+            exceed client expectations.
           </p>
-
-        <p className="text-gray-600 leading-relaxed text-justify">
-           Veekites Global Services Limited is fully established in Nigeria. Veekites Global Services Limited continues
-            to advance on its successes by building value for its clients through the successful planning, implementation
-             and management of landmark and community-based projects.
+          <p className="text-gray-600 leading-relaxed text-justify">
+            Veekites Global Services Limited is fully established in Nigeria.
+            Veekites continues to advance on its successes by building value for
+            its clients through the successful planning, implementation and
+            management of landmark and community-based projects.
           </p>
         </div>
       </div>
@@ -84,7 +92,7 @@ const OurHistory = () => {
                 ×
               </button>
 
-              {/* Video Player (YouTube embed example) */}
+              {/* Video Player */}
               <div className="aspect-video w-full">
                 <iframe
                   className="w-full h-full"

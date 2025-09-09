@@ -4,12 +4,7 @@ import { Link } from "react-router";
 
 const IntroSection = () => {
   return (
-    <div className="w-9/11 mx-auto py-16 px-6">
-      {/* Welcome Line on top */}
-      {/* <h4 className="text-[#A02B2D] font-bold text-4xl lg:text-center mb-10">
-        Welcome to Veekites Global Service Limited
-      </h4> */}
-
+    <div className="max-w-6xl w-full mx-auto py-16 px-4">
       {/* Content: Image + Text */}
       <div className="grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Image */}
@@ -24,7 +19,7 @@ const IntroSection = () => {
         {/* Right: Text */}
         <div className="space-y-6">
           <h2 className="text-3xl lg:text-4xl font-bold">
-            Committed to Innovation, Quality,& Global Impact
+            Committed to Innovation, Quality, & Global Impact
           </h2>
           <p className="text-gray-600">
             Veekites Global Services Limited is widely recognized as one of the
@@ -34,7 +29,7 @@ const IntroSection = () => {
             chosen fields. Each member of this formidable team offers a range of
             combined experience in their areas of specialty.
           </p>
-          <Button className="!bg-[#A02B2D] !text-white !border-none !rounded-none hover:bg-orange-700 transition cursor-pointer">
+          <Button className="!bg-[#A02B2D] !text-white !border-none !rounded-none hover:!bg-orange-700 transition cursor-pointer">
             <Link to="/our-services">OUR SERVICES</Link>
           </Button>
         </div>
