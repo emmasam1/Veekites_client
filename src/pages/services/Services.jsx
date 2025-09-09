@@ -155,7 +155,10 @@ function Services() {
                   </p>
                   <Button
                     className="!bg-[#A02B2D] !border-none !rounded-none !text-white mt-8"
-                    onClick={() => setSelectedService(service)}
+                    onClick={() => {
+                      setSelectedService(service);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                   >
                     Explore Service
                   </Button>
@@ -197,14 +200,15 @@ function Services() {
                     </p>
                     <Button
                       className="!p-0 !border-none mt-3 !shadow-none hover:!text-black"
-                      onClick={() =>
+                      onClick={() => {
                         setSelectedService({
                           ...selectedService,
                           image: cap.image,
                           title: cap.title,
                           description: cap.description,
-                        })
-                      }
+                        });
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
                     >
                       Learn more
                     </Button>
