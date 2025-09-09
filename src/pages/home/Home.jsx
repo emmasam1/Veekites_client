@@ -282,7 +282,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="my-30">
+      <div className="my-20">
         <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
           What Our Clients Say
         </h1>
