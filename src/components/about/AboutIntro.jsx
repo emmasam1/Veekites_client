@@ -1,0 +1,55 @@
+import React from "react";
+import { Link } from "react-router";
+
+const AboutIntro = () => {
+  return (
+    <div className="w-full py-10 px-5 bg-[#0B2439] text-white">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <header className="flex justify-between items-center text-sm md:text-base">
+          <div className="space-x-2 md:space-x-4">
+            <Link
+              to="/"
+              className="hover:text-teal-400 transition-colors duration-200"
+            >
+              Home
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link
+              to="/our-services"
+              className="hover:text-teal-400 transition-colors duration-200"
+            >
+              Services
+            </Link>
+          </div>
+          <Link
+            to="/contact-us"
+            className="text-white bg-[#A02B2D] px-4 py-2 font-semibold"
+          >
+            Contact Us
+          </Link>
+        </header>
+
+        {/* Content */}
+        <div className="py-10">
+          <h1 className="text-3xl md:text-4xl lg:text-3xl font-extrabold leading-tight mt-5">
+            Engineering a future built on excellence
+          </h1>
+          <p className="mt-6 text-gray-200 text-base md:text-lg w-full max-w-3xl">
+            Veekites provides reliable, integrated EPC services with flexibility
+            and expertise. Building on our past and focusing on the future, we
+            generate sustainable, turnkey solutions for global industrial
+            operators—and a better tomorrow for us all.
+          </p>
+          <p className="mt-4 text-gray-200 text-base md:text-lg w-full max-w-3xl">
+            By applying technological innovation and agile problem-solving, we
+            continue to overcome complex challenges with multidisciplinary
+            capabilities to deliver repeatable project success.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutIntro;

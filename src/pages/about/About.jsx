@@ -13,12 +13,16 @@ import Mission from "../../components/about/Mission";
 import Vision from "../../components/about/Vision";
 import WhyVeekites from "../../components/about/WhyVeekites";
 import OurHistory from "../../components/about/OurHistory";
+import CoreValues from "../../components/about/CoreValues";
+import AboutIntro from "../../components/about/AboutIntro";
 
 
 const About = () => {
   return (
     <div className="relative !-top-21">
       <HeroSection />
+      <AboutIntro />
+      <CoreValues />
       <IntroSection />
       <Mission />
       <Vision />
