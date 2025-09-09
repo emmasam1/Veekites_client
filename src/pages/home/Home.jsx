@@ -135,7 +135,6 @@ const Home = () => {
     <>
       {/* <div className="h-[300px] sm:h-[400px] md:h-screen  relative !-top-21 overflow-hidden"> */}
       <div className="relative overflow-hidden !-top-21 h-[300px] sm:h-[400px] md:h-[500px] lg:h-screen">
-
         {/* Background Video */}
         <video
           autoPlay
@@ -255,7 +254,7 @@ const Home = () => {
               }
               className="flex flex-col !border-none !rounded-none "
             >
-              <div className="flex flex-col h-full justify-between">
+              <div className="flex flex-col h-full justify-between px-3">
                 <Meta
                   title={
                     <span className="text-lg font-semibold">
@@ -314,9 +313,9 @@ const Home = () => {
                   className="!rounded-none h-48 w-full object-cover" // 👈 fixed height + cover
                 />
               }
-              className="flex flex-col !border-none !rounded-none "
+              className="!border-none !rounded-none"
             >
-              <div className="flex flex-col h-full justify-between">
+              <div className="flex flex-col h-full justify-between px-3">
                 <Meta
                   title={
                     <span className="text-lg font-semibold">
@@ -329,7 +328,6 @@ const Home = () => {
                   <Link to="#" className="!text-black hover:underline">
                     Learn more
                   </Link>
-                  
                 </div>
               </div>
             </Card>
