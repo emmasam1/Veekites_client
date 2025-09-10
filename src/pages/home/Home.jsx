@@ -241,48 +241,41 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              cover={
-                <img
-                  alt={service.title}
-                  src={service.image}
-                  className="!rounded-none h-48 w-full object-cover" // 👈 fixed height + cover
-                />
-              }
-              className="flex flex-col !border-none !rounded-none "
-            >
-              <div className="flex flex-col h-full justify-between px-3">
-                <Meta
-                  title={
-                    <span className="text-lg font-semibold">
-                      {service.title}
-                    </span>
-                  }
-                  description={service.description?.slice(0, 70)}
-                />
-                <div className="mt-5">
-                  <Link
-                    to={`/services/${service.title
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}/${service.id}`}
-                    state={{
-                      id: service.id,
-                      title: service.title,
-                      description: service.description,
-                      image: service.image,
-                    }}
-                    className="!text-black hover:underline"
-                  >
-                    Learn more
-                  </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <Card
+                key={index}
+                cover={
+                  <img
+                    alt={service.title}
+                    src={service.image}
+                    className="!rounded-none h-48 w-full object-cover" // 👈 fixed height + cover
+                  />
+                }
+                className="flex flex-col !border-none !rounded-none "
+              >
+                <div className="flex flex-col h-full justify-between px-3">
+                  <Meta
+                    title={
+                      <span className="text-lg font-semibold">
+                        {service.title}
+                      </span>
+                    }
+                    description={service.description?.slice(0, 70)}
+                  />
+                  <div className="mt-5">
+                    <Link
+                      to="our-services"
+                      state={{ service }} 
+                      className="!text-black hover:underline"
+                    >
+                      Learn more
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+              </Card>
+            ))}
+          </div>
       </div>
 
       <div className="my-10">

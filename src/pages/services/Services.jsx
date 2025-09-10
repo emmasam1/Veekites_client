@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Divider } from "antd";
+
 import {
   HomeOutlined,
   ToolOutlined,
@@ -16,9 +17,18 @@ import image7 from "../../assets/service_ict.jpg";
 import image9 from "../../assets/service_strategic.jpg";
 import image10 from "../../assets/solution.jpg";
 import heroImage from "../../assets/service_hero.jpg";
+import { useLocation } from "react-router";
 
 function Services() {
   const [selectedService, setSelectedService] = useState(null);
+
+  const location = useLocation();
+
+    useEffect(() => {
+    if (location.state?.service) {
+      setSelectedService(location.state.service);
+    }
+  }, [location.state]);
 
   const services = [
     {
