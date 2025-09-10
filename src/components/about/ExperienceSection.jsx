@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const ExperienceSection = () => {
   return (
-    <div className="max-w-6xl w-full mx-auto py-20 px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div className="w-11/12 mx-auto py-20 grid lg:grid-cols-2 gap-12 items-center">
       {/* Left Column */}
       <div className="space-y-6">
         <h2 className="text-3xl sm:text-4xl font-bold leading-snug">

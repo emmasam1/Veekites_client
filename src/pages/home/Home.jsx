@@ -232,8 +232,8 @@ const Home = () => {
         </motion.div>
       </div> */}
 
-      <div>
-        <div className="flex justify-between items-center px-6">
+      <div className="w-11/12 mx-auto">
+        <div className="flex justify-between items-center my-3">
           <h1 className="relative font-bold text-lg">Our Services</h1>
 
           <Link to="/our-services" className="text-black">
@@ -241,7 +241,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -293,8 +293,8 @@ const Home = () => {
         <Testimony />
       </div>
 
-      <div>
-        <div className="flex justify-between items-center px-6">
+      <div className="mx-auto w-11/12">
+        <div className="flex justify-between items-center my-3">
           <h1 className="relative font-bold text-lg">Our Projects</h1>
 
           <Link to="/our-projects" className="text-black">
@@ -302,7 +302,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}

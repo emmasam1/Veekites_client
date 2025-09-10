@@ -3,8 +3,8 @@ import { Link } from "react-router";
 
 const AboutIntro = () => {
   return (
-    <div className="w-full py-10 bg-[#0B2439] text-white px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full py-10 bg-[#0B2439] text-white">
+      <div className="w-11/12 mx-auto">
         {/* Header */}
         <header className="flex justify-between items-center text-sm md:text-base">
           <div className="space-x-2">

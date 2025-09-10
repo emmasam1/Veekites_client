@@ -25,7 +25,7 @@ const Mission = () => {
   }, [isOpen]);
 
   return (
-    <div className="w-9/11 mx-auto py-16">
+    <div className="w-11/12 mx-auto py-5">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Mission Text */}
         <div className="space-y-6">

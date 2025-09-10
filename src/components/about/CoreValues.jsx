@@ -67,7 +67,7 @@ const CoreValues = () => {
   return (
     <div className="w-full py-10 px-5 bg-gradient-to-b from-gray-50 to-white">
       {/* Desktop / Large Screen Grid Layout */}
-      <div className="hidden md:grid grid-cols-2 gap-10 max-w-7xl mx-auto">
+      <div className="hidden md:grid grid-cols-2 gap-10 w-11/12 mx-auto">
         {/* Left Side - Heading */}
         <div className="flex flex-col justify-start">
           <h2 className="text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight">
@@ -163,7 +163,7 @@ const CoreValues = () => {
 
               {/* Accordion Body */}
               {activeIndex === i && (
-                <div className="px-4 pb-4 text-sm text-gray-600">
+                <div className="pb-4 text-sm text-gray-600">
                   {val.description}
                 </div>
               )}

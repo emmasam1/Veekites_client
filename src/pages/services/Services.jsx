@@ -132,7 +132,7 @@ function Services() {
       </div>
 
       {/* Content */}
-      <div className="max-w-6xl w-full mx-auto px-4">
+      <div className="w-11/12 mx-auto">
         {!selectedService ? (
           // 🔹 Show All Services
           services.map((service, index) => (

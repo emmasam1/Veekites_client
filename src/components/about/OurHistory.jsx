@@ -6,7 +6,7 @@ const OurHistory = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="max-w-6xl w-full mx-auto py-20 px-4 sm:px-6">
+    <div className="w-11/12 mx-auto py-20">
       <div className="grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Image with Play Button */}
         <div className="relative rounded-xl overflow-hidden shadow-lg h-64 sm:h-80 md:h-[28rem] lg:h-[36rem]">

@@ -4,7 +4,7 @@ const Vision = () => {
   return (
     <div className="relative bg-fixed bg-center bg-cover">
       {/* Content */}
-      <div className="relative max-w-6xl mx-auto py-20 px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative w-11/12 mx-auto py-10 grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Image preview */}
         <div className="hidden md:block">
           <img

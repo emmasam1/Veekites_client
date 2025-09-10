@@ -24,7 +24,7 @@ const features = [
 const FeaturesSection = () => {
   return (
     <div className="bg-gray-50 py-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-6 text-center">
+      <div className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
         {features.map((f, i) => (
           <div key={i} className="flex flex-col items-center space-y-4">
             {f.icon}
