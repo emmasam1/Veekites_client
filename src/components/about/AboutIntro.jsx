@@ -35,13 +35,13 @@ const AboutIntro = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mt-5">
             Engineering a future built on excellence
           </h1>
-          <p className="mt-6 text-gray-200 text-base md:text-lg max-w-3xl">
+          <p className="mt-6 text-gray-200 text-base  max-w-3xl">
             Veekites provides reliable, integrated EPC services with flexibility
             and expertise. Building on our past and focusing on the future, we
             generate sustainable, turnkey solutions for global industrial
             operators—and a better tomorrow for us all.
           </p>
-          <p className="mt-4 text-gray-200 text-base md:text-lg max-w-3xl">
+          <p className="mt-4 text-gray-200 text-base max-w-3xl">
             By applying technological innovation and agile problem-solving, we
             continue to overcome complex challenges with multidisciplinary
             capabilities to deliver repeatable project success.

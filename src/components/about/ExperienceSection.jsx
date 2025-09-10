@@ -8,7 +8,7 @@ const ExperienceSection = () => {
     <div className="w-11/12 mx-auto py-20 grid lg:grid-cols-2 gap-12 items-center">
       {/* Left Column */}
       <div className="space-y-6">
-        <h2 className="text-3xl sm:text-4xl font-bold leading-snug">
+        <h2 className="text-2xl  md:text-3xl font-bold leading-snug">
           <span className="text-[#A02B2D]">12</span> Years of Experience
         </h2>
         <p className="text-sm text-gray-500 italic">

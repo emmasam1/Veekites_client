@@ -86,7 +86,7 @@ const Mission = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D] mb-4">
                 Our Mission
               </h2>
-              <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg">
+              <p className="text-gray-700 leading-relaxedsm:text-base">
                 At Veekites Global Service Limited, we strive to redefine
                 excellence in Architectural Design, Civil, Mechanical,
                 Electrical, and Building Engineering. Our mission extends beyond

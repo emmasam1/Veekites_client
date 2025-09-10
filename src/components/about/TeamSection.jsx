@@ -112,10 +112,10 @@ const TeamSection = () => {
     <div className="py-20 w-11/12 mx-auto">
       {/* Section Header */}
       <div className="mx-auto mb-16 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl text-left md:text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#A02B2D] mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D] mb-6">
           Our Team
         </h2>
-        <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-600">
+        <p className="text-base leading-relaxed text-gray-600">
           Our team is our greatest asset. Comprising seasoned professionals and
           dynamic innovators, our experts bring a wealth of knowledge and a
           passion for excellence to every project. We believe in fostering a
@@ -138,7 +138,7 @@ const TeamSection = () => {
               alt={member.name}
               className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D]"
             />
-            <h3 className="font-semibold text-lg text-gray-800">
+            <h3 className="font-semibold text-md text-gray-800">
               {member.name}
             </h3>
             <p className="text-sm text-[#A02B2D] font-medium">

@@ -160,7 +160,7 @@ function Services() {
                 {/* Right (content) */}
                 <div className="md:col-span-2 p-4">
                   <h3 className="font-bold text-2xl">{service.title}</h3>
-                  <p className="text-lg mt-4 text-justify">
+                  <p className=" mt-4 text-justify">
                     {service.description}
                   </p>
                   <Button
@@ -184,7 +184,7 @@ function Services() {
         ) : (
           // 🔹 Show Selected Service Details
           <div className="py-10">
-            <p className="text-lg text-justify">
+            <p className="text-justify">
               {selectedService.description}
             </p>
 
@@ -205,7 +205,7 @@ function Services() {
                       className="h-80 w-full object-cover"
                     />
                     <h3 className="font-bold text-2xl mt-4">{cap.title}</h3>
-                    <p className="text-lg text-justify mt-3">
+                    <p className="text-justify mt-3">
                       {cap.description}
                     </p>
                     <Button

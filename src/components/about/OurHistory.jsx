@@ -33,7 +33,7 @@ const OurHistory = () => {
 
         {/* Right: History Text */}
         <div className="space-y-6">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#A02B2D]">
+          <h2 className="text-2xl  md:text-3xl font-bold text-[#A02B2D]">
             Our History
           </h2>
           <p className="text-gray-600 leading-relaxed text-justify">

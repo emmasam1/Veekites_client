@@ -60,7 +60,7 @@ const Navbar = () => {
     <>
       {/* Top Bar */}
       <motion.div
-        className="bg-[#454545] h-28 hidden sm:block"
+        className="bg-[#454545] h-23 hidden sm:block"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -143,19 +143,19 @@ const Navbar = () => {
 
       {/* Main Nav */}
       <motion.nav
-        className={`bg-white z-10 w-full m-auto lg:w-4/5 lg:relative lg:-top-7 ${
+        className={`bg-white z-10 w-full m-auto lg:w-4/5 lg:relative lg:-top-9 ${
           isScrolled ? "fixed top-0 shadow-md" : ""
         }`}
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="flex flex-wrap items-center justify-between mx-auto p-2">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src={logo_small} alt="" className="w-40" />
+            <img src={logo_small} alt="" className="w-30" />
           </Link>
 
           {/* Hamburger */}

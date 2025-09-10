@@ -23,7 +23,7 @@ const About = () => {
       <HeroSection />
       <AboutIntro />
       <CoreValues />
-      <IntroSection />
+      {/* <IntroSection /> */}
       <Mission />
       <Vision />
       <FeaturesSection />

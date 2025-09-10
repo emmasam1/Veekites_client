@@ -16,16 +16,17 @@ const Vision = () => {
 
         {/* Right: Vision Text */}
         <div className="space-y-6">
-          <h2 className="text-3xl lg:text-4xl font-bold leading-snug text-center sm:text-left text-[#e62a2d]">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D] leading-snug text-center sm:text-left">
             Our Vision
           </h2>
-          <p className="leading-relaxed text-gray-800 text-base sm:text-lg md:text-xl">
+
+          <p className="leading-relaxed text-gray-800 text-base ">
             Our vision is to become a global leader in engineering,
             architecture, and technical solutions by embracing innovation and
             sustainability. We aspire to build infrastructures and systems that
             not only serve today but also inspire generations to come.
           </p>
-          <p className="leading-relaxed text-gray-700 text-sm sm:text-base md:text-lg">
+          <p className="leading-relaxed text-gray-700">
             By combining creativity, integrity, and expertise, we aim to shape a
             future where quality and trust define every project we deliver.
           </p>
