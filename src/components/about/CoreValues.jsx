@@ -74,7 +74,7 @@ const CoreValues = () => {
             Committed <br />
             to excellence <br />
             through <br />
-            <span className="text-teal-500">our core values</span>
+            <span className="text-[#A02B2D]">our core values</span>
           </h2>
         </div>
 
@@ -82,7 +82,9 @@ const CoreValues = () => {
         <div className="relative w-[600px] h-[600px] mx-auto flex items-center justify-center">
           {/* Center Circle */}
           <div className="absolute w-72 h-72 rounded-full bg-white border-[12px] border-[#E5E5E5] shadow-2xl flex flex-col items-center justify-center text-center p-6 z-10">
-            <h4 className="text-xl font-bold text-gray-800">{selected.title}</h4>
+            <h4 className="text-xl font-bold text-gray-800">
+              {selected.title}
+            </h4>
             <p className="text-sm text-gray-600 mt-2">{selected.description}</p>
           </div>
 
@@ -125,7 +127,7 @@ const CoreValues = () => {
           <h2 className="text-2xl font-bold text-gray-800">
             Committed to excellence through
           </h2>
-          <h3 className="text-3xl font-bold text-teal-500">our core values</h3>
+          <h3 className="text-3xl font-bold text-[#A02B2D]">our core values</h3>
         </div>
 
         {/* Accordion List */}
@@ -138,9 +140,7 @@ const CoreValues = () => {
               {/* Accordion Header */}
               <button
                 className="flex items-center justify-between w-full p-4"
-                onClick={() =>
-                  setActiveIndex(activeIndex === i ? null : i)
-                }
+                onClick={() => setActiveIndex(activeIndex === i ? null : i)}
               >
                 <div className="flex items-center gap-3">
                   <div

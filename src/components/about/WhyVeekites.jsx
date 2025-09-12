@@ -15,7 +15,7 @@ const WhyVeekites = () => {
 
         {/* Right: Text */}
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D] mb-4">
+          <h2 className="text-lg md:text-xl font-bold text-black mb-6">
             What Sets Veekites Apart
           </h2>
           <p className="text-base leading-relaxed text-gray-700">
