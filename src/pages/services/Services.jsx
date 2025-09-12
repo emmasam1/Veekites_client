@@ -159,7 +159,7 @@ function Services() {
 
                 {/* Right (content) */}
                 <div className="md:col-span-2 p-4">
-                  <h3 className="font-bold text-2xl uppercase">{service.title}</h3>
+                  <h3 className="font-bold text-lg uppercase">{service.title}</h3>
                   <p className=" mt-4 text-justify">
                     {service.description}
                   </p>

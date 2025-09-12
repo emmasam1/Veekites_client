@@ -145,7 +145,7 @@ const Projectcomponent = () => {
       {/* New Section */}
       <div className="w-11/12 mx-auto pb-12 px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-2xl font-bold text-[#A02B2D] leading-tight md:text-3xl sm:text-2xl">
+          <h2 className="text-lg uppercase font-bold  leading-tight">
             Delivering Impactful <br /> Solutions Across <br /> Industries
           </h2>
           <p className="mt-6 text-gray-700 leading-relaxed">
@@ -168,7 +168,7 @@ const Projectcomponent = () => {
 
       {/* Featured Projects */}
       <div className="lg:text-center mb-12 max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#A02B2D]">
+        <h2 className="text-lg md:text-lg font-bold uppercase leading-snug">
           Featured Projects
         </h2>
         <p className="text-gray-600 mt-3 max-w-3xl mx-auto sm:text-left">
@@ -190,7 +190,7 @@ const Projectcomponent = () => {
                 className="!rounded-none h-48 w-full object-cover"
               />
               <div className="p-5">
-                <h3 className="font-semibold">{proj.title}</h3>
+                <h3 className="font-semibold uppercase">{proj.title}</h3>
                 <p className="text-gray-500 text-sm mt-2">{proj.desc}</p>
                 <Link
                   to={`/project/${slugify(proj.title)}/${proj.id}`}
@@ -235,7 +235,7 @@ const Projectcomponent = () => {
         </div>
       </div>
       <div className="bg-gray-50 py-16">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#A02B2D] leading-snug mb-4 text-center">
+        <h1 className="text-lg font-bold uppercase leading-snug mb-4 text-center">
           Latest Project
         </h1>
         <div className="max-w-7xl mx-auto px-6">
@@ -252,7 +252,7 @@ const Projectcomponent = () => {
 
                   {/* Content */}
                   <div className="flex flex-col justify-center">
-                    <h3 className="text-2xl md:text-3xl leading-snug font-bold text-[#A02B2D] mb-4">
+                    <h3 className=" leading-snug font-bold text-lg uppercase mb-4">
                       {proj.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed mb-6">
@@ -260,7 +260,7 @@ const Projectcomponent = () => {
                     </p>
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
-                      className="bg-[#A02B2D] w-41 text-white px-6 py-3 rounded-lg shadow hover:bg-orange-700 transition inline-block"
+                      className="bg-[#A02B2D] w-41 text-white px-6 py-2 rounded-lg shadow transition inline-block"
                     >                                                                                                                                                                                                                                                                                                                                                           
                       VIEW PROJECT
                     </Link>
