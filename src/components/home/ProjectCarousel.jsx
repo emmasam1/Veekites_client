@@ -1,5 +1,3 @@
-
-
 import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router";
@@ -8,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import projectImg1 from "../../assets/service.webp";
-import projectImg2 from "../../assets/service2.webp"; 
+import projectImg2 from "../../assets/service2.webp";
 import projectImg3 from "../../assets/service3.webp";
 import projectImg4 from "../../assets/service5.webp";
 
@@ -97,7 +95,7 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 relative overflow-visible ">
               {/* Left content */}
               <div className="relative bg-[#dbe9f2] md:h-[560px] p-10 md:p-16 z-10">
-                <p className="text-sm font-semibold text-[#173447] mb-3">
+                <p className="text-sm font-semibold text-[#A02B2D] mb-3">
                   FEATURED WORK
                 </p>
 
