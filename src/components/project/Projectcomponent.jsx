@@ -135,8 +135,8 @@ const Projectcomponent = () => {
               Projects
             </h2>
             <p className="mt-2 text-lg text-white max-w-2xl">
-              Delivering innovative solutions across construction, <br/>energy, ICT,
-              and more to help businesses grow and thrive.
+              Delivering innovative solutions across construction, <br />
+              energy, ICT, and more to help businesses grow and thrive.
             </p>
           </div>
         </div>
@@ -180,10 +180,7 @@ const Projectcomponent = () => {
       <div className="w-11/12 mx-auto pb-16 px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginatedProjects.map((proj) => (
-            <div
-              key={proj.id}
-              className="bg-white overflow-hidden transition"
-            >
+            <div key={proj.id} className="bg-white overflow-hidden transition">
               <img
                 src={proj.img}
                 alt={proj.title}
@@ -196,7 +193,7 @@ const Projectcomponent = () => {
                   to={`/project/${slugify(proj.title)}/${proj.id}`}
                   className="text-[#A02B2D] mt-4 text-sm font-medium hover:underline inline-block"
                 >
-                 Learn more
+                  Learn more
                 </Link>
               </div>
             </div>
@@ -260,8 +257,8 @@ const Projectcomponent = () => {
                     </p>
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
-                      className="bg-[#A02B2D] w-41 text-white px-6 py-2 rounded-lg shadow transition inline-block"
-                    >                                                                                                                                                                                                                                                                                                                                                           
+                      className="bg-[#A02B2D] w-41 text-white px-6 py-2 shadow transition inline-block"
+                    >
                       VIEW PROJECT
                     </Link>
                   </div>

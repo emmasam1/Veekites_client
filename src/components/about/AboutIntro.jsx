@@ -24,7 +24,7 @@ const AboutIntro = () => {
           </div>
           <Link
             to="/contact-us"
-            className="text-white bg-[#A02B2D] px-4 py-2 font-semibold rounded-md"
+            className="text-white bg-[#A02B2D] px-4 py-2 font-semibold"
           >
             Contact Us
           </Link>
