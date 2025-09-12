@@ -62,7 +62,7 @@ const Testimony = () => {
               projects. Their satisfaction and success stories inspire us to
               keep delivering excellence.
             </p>
-            <button class="!bg-[#A02B2D] text-white px-6 py-3 rounded-full hover:bg-orange-700 transition">
+            <button class="!bg-[#A02B2D] text-white px-6 py-3 !rounded-none hover:bg-orange-700 transition">
               Contact Us
             </button>
           </div>
