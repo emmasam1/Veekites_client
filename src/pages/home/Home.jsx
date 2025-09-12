@@ -187,7 +187,7 @@ const Home = () => {
 
       <div className="w-11/12 mx-auto">
         <div className="hidden  lg:flex justify-between items-center">
-          <h1 className="relative font-bold text-lg">Our Services</h1>
+          <h1 className="relative font-extrabold text-lg text-[#A02B2D] uppercase">Our Services</h1>
 
           {/* <Link to="/our-services" className="text-black">
             View all
@@ -236,7 +236,7 @@ const Home = () => {
 
       <div className="mx-auto w-11/12">
         <div className="flex justify-between items-center my-3">
-          <h1 className="relative font-bold text-lg">Our Projects</h1>
+          <h1 className="relative font-bold text-lg uppercase text-[#A02B2D] font-bold">Our Projects</h1>
 
           <Link to="/our-projects" className="text-black">
             View all
