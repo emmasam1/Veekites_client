@@ -155,7 +155,7 @@ const Home = () => {
         <div className="absolute inset-0 flex items-center">
           <div
             className="
-        bg-[#454545] text-white p-4 sm:p-6 md:p-8
+         !bg-[#a02b2dd9] text-white p-4 sm:p-6 md:p-8
         max-w-[280px] sm:max-w-md md:w-[500px]
         ml-4 sm:mx-auto md:ml-[137px]
         text-left relative z-10
@@ -169,7 +169,7 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.8 }}
-                  className="text-left"
+                  className="text-left "
                 >
                   <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2">
                     {slide.title}

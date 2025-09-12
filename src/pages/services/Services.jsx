@@ -134,7 +134,7 @@ function Services() {
                 <IoChevronBackSharp /> Back
               </div>
             )}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl uppercase font-bold text-white">
               {selectedService ? selectedService.title : "Services We Offer"}
             </h2>
           </div>
@@ -159,7 +159,7 @@ function Services() {
 
                 {/* Right (content) */}
                 <div className="md:col-span-2 p-4">
-                  <h3 className="font-bold text-2xl">{service.title}</h3>
+                  <h3 className="font-bold text-lg uppercase">{service.title}</h3>
                   <p className=" mt-4 text-justify">
                     {service.description}
                   </p>
@@ -189,7 +189,7 @@ function Services() {
             </p>
 
             <div className="mt-8">
-              <h3 className="font-bold text-2xl">
+              <h3 className="font-bold uppercase text-2xl">
                 {selectedService.title} Capabilities
               </h3>
 
@@ -204,12 +204,12 @@ function Services() {
                       alt={cap.title}
                       className="h-80 w-full object-cover"
                     />
-                    <h3 className="font-bold text-2xl mt-4">{cap.title}</h3>
+                    <h3 className="font-bold text-lg uppercase mt-4">{cap.title}</h3>
                     <p className="text-justify mt-3">
                       {cap.description}
                     </p>
                     <Button
-                      className="!p-0 !border-none mt-3 !shadow-none hover:!text-black"
+                      className="!p-0 !border-none mt-3 !shadow-none hover:!text-[#A02B2D] !text-[#A02B2D]"
                       onClick={() => {
                         setSelectedService({
                           ...selectedService,
