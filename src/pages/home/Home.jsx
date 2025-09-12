@@ -12,9 +12,9 @@ import { Link } from "react-router";
 import image1 from "../../assets/service-2.jpg";
 import image2 from "../../assets/service1.jpg";
 import Testimony from "../../components/testimony/Testimony";
-import Map from "../../components/map/Map";
 import ProjectCarousel from "../../components/home/ProjectCarousel";
 import BrochureSection from "../../components/home/BrochureSection";
+import { PiGreaterThanLight } from "react-icons/pi";
 
 const { Meta } = Card;
 
@@ -187,7 +187,7 @@ const Home = () => {
 
       <div className="w-11/12 mx-auto">
         <div className="hidden  lg:flex justify-between items-center">
-          <h1 className="relative font-extrabold text-lg text-[#A02B2D] uppercase">Our Services</h1>
+          <h1 className="relative font-extrabold text-lg uppercase">Our Services</h1>
 
           {/* <Link to="/our-services" className="text-black">
             View all
@@ -236,10 +236,10 @@ const Home = () => {
 
       <div className="mx-auto w-11/12">
         <div className="flex justify-between items-center my-3">
-          <h1 className="relative font-extrabold font text-lg uppercase text-[#A02B2D]">Our Projects</h1>
+          <h1 className="relative font-extrabold font text-lg uppercase">Our Projects</h1>
 
-          <Link to="/our-projects" className="text-black">
-            View all
+          <Link to="/our-projects" className="!text-[#A02B2D] flex items-center gap-0.5">
+            View all <PiGreaterThanLight/><PiGreaterThanLight className="relative -left-2"/>
           </Link>
         </div>
 
@@ -259,7 +259,7 @@ const Home = () => {
               <div className="flex flex-col h-full justify-between px-3">
                 <Meta
                   title={
-                    <span className="text-lg font-semibold text-[#A02B2D] uppercase">
+                    <span className="text-lg font-semibold uppercase">
                       {service.title}
                     </span>
                   }

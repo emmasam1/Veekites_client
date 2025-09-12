@@ -16,7 +16,7 @@ const Vision = () => {
 
         {/* Right: Vision Text */}
         <div className="space-y-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D] leading-snug text-center sm:text-left">
+          <h2 className="text-xl md:text-2xl font-bold text-black uppercase leading-snug text-center sm:text-left">
             Our Vision
           </h2>
 
