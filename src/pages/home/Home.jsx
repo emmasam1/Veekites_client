@@ -236,7 +236,7 @@ const Home = () => {
 
       <div className="mx-auto w-11/12">
         <div className="flex justify-between items-center my-3">
-          <h1 className="relative font-bold text-lg uppercase text-[#A02B2D] font-bold">Our Projects</h1>
+          <h1 className="relative font-extrabold font text-lg uppercase text-[#A02B2D]">Our Projects</h1>
 
           <Link to="/our-projects" className="text-black">
             View all
