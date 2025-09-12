@@ -76,7 +76,7 @@ export default function TermsPage() {
             onClick={() => setActiveSection("terms")}
             className={`w-full text-left px-3 py-2 rounded-md ${
               activeSection === "terms" ? "bg-gray-700" : "hover:bg-gray-700"
-            }`}
+            }`}   
           >
             Terms of Use
           </button>

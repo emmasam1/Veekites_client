@@ -232,9 +232,7 @@ const Home = () => {
           </div> */}
       </div>
 
-      <div className="my-10">
-        <Testimony />
-      </div>
+     
 
       <div className="mx-auto w-11/12">
         <div className="flex justify-between items-center my-3">
@@ -276,6 +274,11 @@ const Home = () => {
             </Card>
           ))}
         </div>
+      </div>
+
+
+       <div className="my-10">
+        <Testimony />
       </div>
 
       {/* <div className="mt-6">
