@@ -14,6 +14,7 @@ import image2 from "../../assets/service1.jpg";
 import Testimony from "../../components/testimony/Testimony";
 import Map from "../../components/map/Map";
 import ProjectCarousel from "../../components/home/ProjectCarousel";
+import BrochureSection from "../../components/home/BrochureSection";
 
 const { Meta } = Card;
 
@@ -184,64 +185,17 @@ const Home = () => {
       </div>
       <ProjectCarousel />
 
-      {/* <div className="m-auto w-11/12 md:w-4/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8 lg:pt-0 lg:pb-0 lg:relative lg:-top-28">
-        <motion.div
-          ref={ref1}
-          initial="hidden"
-          animate={controls1}
-          variants={fadeInTop}
-          transition={{ duration: 1 }}
-          className="p-4 md:p-8 bg-white drop-shadow flex flex-col items-center text-left"
-        >
-          <FaRocket className="mb-2" size={50} />
-          <h1 className="font-semibold text-sm md:text-base lg:text-lg">
-            To continuously improve our products and services
-          </h1>
-        </motion.div>
-
-        <motion.div
-          ref={ref2}
-          initial="hidden"
-          animate={controls2}
-          variants={fadeInBottom}
-          transition={{ duration: 1 }}
-          className="p-4 md:p-8 bg-white relative lg:-top-10 drop-shadow flex flex-col items-center text-left"
-        >
-          <GoBriefcase className="mb-2" size={50} />
-          <h1 className="font-semibold text-sm md:text-base lg:text-lg">
-            To become the number-one reference for Agricultural, Construction,
-            Logistics, Real Estate, Manufacturing, Marketing, Janitorial, etc.
-            products and services.
-          </h1>
-        </motion.div>
-
-        <motion.div
-          ref={ref3}
-          initial="hidden"
-          animate={controls3}
-          variants={fadeInTop}
-          transition={{ duration: 1 }}
-          className="p-4 md:p-8 bg-white drop-shadow flex flex-col items-center text-left"
-        >
-          <FaHandshake className="mb-2" size={50} />
-          <h1 className="font-semibold text-sm md:text-base lg:text-lg">
-            To continuously impact our employees, suppliers, customers, the
-            environment, and the communities we work positively while enhancing
-            shareholders' value.
-          </h1>
-        </motion.div>
-      </div> */}
-
       <div className="w-11/12 mx-auto">
-        <div className="flex justify-between items-center my-3">
+        <div className="hidden  lg:flex justify-between items-center">
           <h1 className="relative font-bold text-lg">Our Services</h1>
 
-          <Link to="/our-services" className="text-black">
+          {/* <Link to="/our-services" className="text-black">
             View all
-          </Link>
+          </Link> */}
         </div>
+        <BrochureSection />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -275,14 +229,10 @@ const Home = () => {
                 </div>
               </Card>
             ))}
-          </div>
+          </div> */}
       </div>
 
       <div className="my-10">
-        {/* <h1 className="relative text-center font-bold text-3xl after:content-[''] after:block after:w-16 after:h-1 after:bg-[#454545] after:mx-auto after:mt-2">
-          What Our Clients Say
-        </h1> */}
-
         <Testimony />
       </div>
 
