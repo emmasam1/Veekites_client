@@ -29,7 +29,7 @@ const Mission = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Mission Text */}
         <div className="space-y-6">
-          <h2 className="text-3xl lg:text-4xl font-bold leading-snug text-[#A02B2D]">
+          <h2 className="text-3xl lg:text-4xl font-bold leading-snug uppercase text-black">
             Our Mission
           </h2>
           <p className="text-gray-600 leading-relaxed">
