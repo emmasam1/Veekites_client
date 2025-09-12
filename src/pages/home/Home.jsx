@@ -259,14 +259,14 @@ const Home = () => {
               <div className="flex flex-col h-full justify-between px-3">
                 <Meta
                   title={
-                    <span className="text-lg font-semibold">
+                    <span className="text-lg font-semibold text-[#A02B2D] uppercase">
                       {service.title}
                     </span>
                   }
                   description={service.description?.slice(0, 70)}
                 />
                 <div className="flex justify-left mt-5">
-                  <Link to="#" className="!text-black hover:underline">
+                  <Link to="#" className="hover:underline !text-[#A02B2D] ">
                     Learn more
                   </Link>
                 </div>
