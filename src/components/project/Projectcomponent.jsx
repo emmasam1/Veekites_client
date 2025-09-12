@@ -258,7 +258,7 @@ const Projectcomponent = () => {
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
                       className="bg-[#A02B2D] w-41 text-white px-6 py-2 shadow transition inline-block"
-                    >
+                    >                                                                                                                                                                                                                                                                                                                                                           
                       VIEW PROJECT
                     </Link>
                   </div>
