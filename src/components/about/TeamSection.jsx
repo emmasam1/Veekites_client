@@ -1,4 +1,3 @@
-
 // const team = [
 //   {
 //     name: "Ngozi Nwosu",
@@ -112,7 +111,7 @@ const TeamSection = () => {
     <div className="py-20 w-11/12 mx-auto">
       {/* Section Header */}
       <div className="mx-auto mb-16 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl text-left md:text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D] mb-6">
+        <h2 className="text-lg md:text-3xl font-bold text-black uppercase mb-6">
           Our Team
         </h2>
         <p className="text-base leading-relaxed text-gray-600">
@@ -141,9 +140,7 @@ const TeamSection = () => {
             <h3 className="font-semibold text-md text-gray-800">
               {member.name}
             </h3>
-            <p className="text-sm text-[#A02B2D] font-medium">
-              {member.role}
-            </p>
+            <p className="text-sm text-[#A02B2D] font-medium">{member.role}</p>
             <p className="text-sm text-gray-400">{member.email}</p>
             {/* Social Icons */}
             <div className="flex justify-center space-x-3 mt-4 text-gray-500">
@@ -160,5 +157,3 @@ const TeamSection = () => {
 };
 
 export default TeamSection;
-
-
