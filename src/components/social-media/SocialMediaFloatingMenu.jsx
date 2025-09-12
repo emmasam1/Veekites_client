@@ -24,12 +24,12 @@ const SocialMediaFloatingMenu = () => {
   }, []);
 
   const socialLinks = [
-    {
-      name: "Snapchat",
-      icon: <FaSnapchatGhost size={22} />,
-      url: "https://www.snapchat.com/add/veekitesglobal?share_id=5aIPrOTFjGo&locale=en-GB",
-      bg: "bg-yellow-400 hover:bg-yellow-500 text-black",
-    },
+    // {
+    //   name: "Snapchat",
+    //   icon: <FaSnapchatGhost size={22} />,
+    //   url: "https://www.snapchat.com/add/veekitesglobal?share_id=5aIPrOTFjGo&locale=en-GB",
+    //   bg: "bg-yellow-400 hover:bg-yellow-500 text-black",
+    // },
     {
       name: "Facebook",
       icon: <FaFacebook size={22} />,
@@ -42,24 +42,24 @@ const SocialMediaFloatingMenu = () => {
       url: "https://www.instagram.com/veekitesglobal",
       bg: "bg-pink-500 hover:bg-pink-600",
     },
-    {
-      name: "Twitter",
-      icon: <FaTwitter size={22} />,
-      url: "https://x.com/veekitesglobal",
-      bg: "bg-sky-500 hover:bg-sky-600",
-    },
+    // {
+    //   name: "Twitter",
+    //   icon: <FaTwitter size={22} />,
+    //   url: "https://x.com/veekitesglobal",
+    //   bg: "bg-sky-500 hover:bg-sky-600",
+    // },
     {
       name: "LinkedIn",
       icon: <FaLinkedin size={22} />,
       url: "https://www.linkedin.com/company/veekitesglobal/",
       bg: "bg-blue-700 hover:bg-blue-800",
     },
-    {
-      name: "YouTube",
-      icon: <FaYoutube size={22} />,
-      url: "http://youtube.com/@veekitesglobal",
-      bg: "bg-red-600 hover:bg-red-700",
-    },
+    // {
+    //   name: "YouTube",
+    //   icon: <FaYoutube size={22} />,
+    //   url: "http://youtube.com/@veekitesglobal",
+    //   bg: "bg-red-600 hover:bg-red-700",
+    // },
     {
       name: "TikTok",
       icon: <SiTiktok size={22} />,

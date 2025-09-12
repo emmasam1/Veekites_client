@@ -112,10 +112,10 @@ const Navbar = () => {
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
               />
-              <IoLogoTwitter
+              {/* <IoLogoTwitter
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
-              />
+              /> */}
               <FaInstagram
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
@@ -124,18 +124,18 @@ const Navbar = () => {
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
               />
-              <IoLogoYoutube
+              {/* <IoLogoYoutube
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
-              />
+              /> */}
               <FaTiktok
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
               />
-              <FaSnapchatGhost
+              {/* <FaSnapchatGhost
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
-              />
+              /> */}
             </div>
           </div>
         </div>
