@@ -16,7 +16,7 @@ import image8 from "../../assets/project.jpg";
 import image7 from "../../assets/service_ict.jpg";
 import image9 from "../../assets/service_strategic.jpg";
 import image10 from "../../assets/solution.jpg";
-import heroImage from "../../assets/service_hero.jpg";
+import heroImage from "../../assets/service_bg.jpeg";
 import { useLocation } from "react-router";
 
 function Services() {
