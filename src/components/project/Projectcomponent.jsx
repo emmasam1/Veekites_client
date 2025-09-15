@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import Slider from "react-slick";
-import projbg from "../../assets/projbg.jpeg";
+import projbg from "../../assets/projbg.jpg";
 import prj from "../../assets/prj.jpeg";
 import prj1 from "../../assets/prj1.jpeg";
 import project1 from "../../assets/project-11.jpg";
