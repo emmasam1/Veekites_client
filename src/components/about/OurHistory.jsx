@@ -1,114 +1,109 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import historyImg from "../../assets/historyImg.jpg";
 
-const OurHistory = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const events = [
+  {
+    year: "1960–1965",
+    small: "History of the Museum",
+    title: "THE ARCHIVE",
+    desc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+    img: historyImg,
+  },
+  {
+    year: "1970–1978",
+    small: "Always in",
+    title: "NEW HOME",
+    desc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+    img: historyImg,
+  },
+  {
+    year: "1982–1995",
+    small: "Milestones & more",
+    title: "EVENTS",
+    desc:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    img: historyImg,
+  },
+];
 
+export default function OurHistory() {
   return (
-    <div className="w-11/12 mx-auto py-20">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        {/* Left: Image with Play Button */}
-        <div className="relative rounded-xl overflow-hidden shadow-lg h-64 sm:h-80 md:h-[28rem] lg:h-[36rem]">
-          <img
-            src={historyImg}
-            alt="Our History"
-            className="w-full h-full object-cover"
-          />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/40"></div>
-
-          {/* Play Button */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <button
-              onClick={() => setIsOpen(true)}
-              className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
-            >
-              <span className="text-xl sm:text-2xl md:text-3xl text-orange-600">
-                ▶
-              </span>
-            </button>
-          </div>
-        </div>
-
-        {/* Right: History Text */}
-        <div className="space-y-6">
-          <h2 className="text-lg  md:text-xl font-bold text-black uppercase">
-            Our History
+    <section className="w-full text-gray-700">
+      {/* Hero banner */}
+      <div
+        className="w-full h-44 md:h-64 bg-center bg-cover relative"
+        style={{ backgroundImage: `url(${historyImg})` }}
+        aria-hidden="true"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-white/40" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h2 className="text-white text-xl md:text-2xl tracking-widest font-bold uppercase">
+            OUR HISTORY
           </h2>
-          <p className="text-gray-600 leading-relaxed text-justify">
-            Incorporated 11th June 2013, VeeKITES started as a small firm with a
-            vision to revolutionize the global services industry. Over the
-            years, we have expanded our expertise, embracing new challenges and
-            growing into a leading provider of comprehensive solutions in civil
-            engineering, oil and gas, and project management. Our journey has
-            been marked by significant milestones, each contributing to our
-            legacy of excellence and innovation.
-          </p>
-          <p className="text-gray-600 leading-relaxed text-justify">
-            Veekites Global Services Limited is widely recognized as one of the
-            most professional companies offering a wide range of services in the
-            fields of engineering, construction, supplies, and training, with a
-            team of directors and senior executives who are experts in their
-            chosen fields. Each member of this formidable team offers a range of
-            combined experience in their areas of specialty.
-          </p>
-          <p className="text-gray-600 leading-relaxed text-justify">
-            In addition, Veekites Global Services Limited has over 50 highly
-            competent technical and support staff, all working together to
-            deliver sustainable high-quality assets that not only meet but also
-            exceed client expectations.
-          </p>
-          <p className="text-gray-600 leading-relaxed text-justify">
-            Veekites Global Services Limited is fully established in Nigeria.
-            Veekites continues to advance on its successes by building value for
-            its clients through the successful planning, implementation and
-            management of landmark and community-based projects.
-          </p>
         </div>
       </div>
 
-      {/* Video Modal */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="bg-black rounded-xl shadow-2xl max-w-4xl w-full relative overflow-hidden"
-              initial={{ scale: 0.8, opacity: 0, y: 50 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.8, opacity: 0, y: 50 }}
-              transition={{ duration: 0.3 }}
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-4 right-4 text-white text-2xl font-bold z-10"
+      {/* Timeline container */}
+      <div className="max-w-5xl mx-auto px-6 md:px-0 py-12 relative">
+        {/* Center vertical line (only on md+) */}
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-px bg-gray-200" />
+
+        {/* Intro / Title centered above timeline */}
+        <div className="text-center mb-12">
+          <p className="text-sm text-gray-400 uppercase">About our history</p>
+          <h3 className="text-lg md:text-2xl tracking-widest my-3 leading-tight font-bold">
+            TIMELINE
+          </h3>
+          <p className="text-sm text-gray-500 max-w-xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore.
+          </p>
+        </div>
+
+        {/* Timeline items */}
+        <div className="flex flex-col space-y-12">
+          {events.map((ev, idx) => {
+            const reverse = idx % 2 === 1;
+            return (
+              <div
+                key={ev.title}
+                className={`relative flex flex-col md:flex-row items-center md:items-stretch md:justify-between ${
+                  reverse ? "md:flex-row-reverse" : ""
+                }`}
               >
-                ×
-              </button>
+                {/* Dot + Year (center) (visible md+) */}
+                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-1/2 transform -translate-y-1/2 flex-col items-center">
+                  <span className="text-xs text-gray-500 mb-2">{ev.year}</span>
+                  <div className="w-3 h-3 rounded-full bg-white border border-gray-300 z-10" />
+                </div>
 
-              {/* Video Player */}
-              <div className="aspect-video w-full">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                  title="Our History Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                {/* Left (image or text depending on order on md) */}
+                <div className="w-full md:w-5/12 px-3 md:px-6 flex items-center justify-center">
+                  <div className="w-full max-w-md">
+                    <img
+                      src={ev.img}
+                      alt={ev.title}
+                      className="w-full h-64 md:h-72 object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Right (text block) */}
+                <div className="w-full md:w-5/12 px-3 md:px-6 flex items-center">
+                  <div className="max-w-[36rem]">
+                    <p className="text-sm text-gray-400 mb-2">{ev.small}</p>
+                    <h4 className="text-lg md:text-2xl tracking-wide mb-4 leading-tight font-bold">
+                      {ev.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">{ev.desc}</p>
+                  </div>
+                </div>
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
-};
-
-export default OurHistory;
+}
