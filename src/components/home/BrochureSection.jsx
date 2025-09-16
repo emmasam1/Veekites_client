@@ -1,9 +1,9 @@
 import { Link } from "react-router";
-import brochureImg from "../../assets/adbi.webp";
+import brochureImg from "../../assets/brochure.png";
 
 export default function BrochureSection() {
   return (
-    <section className="w-full relative px-6 md:px-12">
+   <section className="w-full relative px-6 md:px-12 mb-20 md:mb-10">
       {/* Blue band background (desktop only) */}
       <div className="hidden md:flex absolute inset-0 items-center">
         <div className="w-full bg-[#c9dceb] h-52"></div>
