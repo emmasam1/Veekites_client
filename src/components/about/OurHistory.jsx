@@ -38,7 +38,7 @@ export default function OurHistory() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-white/40" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="text-white text-xl md:text-2xl tracking-widest uppercase">
+          <h2 className="text-white text-xl md:text-2xl tracking-widest font-bold uppercase">
             OUR HISTORY
           </h2>
         </div>
@@ -52,7 +52,7 @@ export default function OurHistory() {
         {/* Intro / Title centered above timeline */}
         <div className="text-center mb-12">
           <p className="text-sm text-gray-400 uppercase">About our history</p>
-          <h3 className="text-lg md:text-2xl tracking-widest my-3">
+          <h3 className="text-lg md:text-2xl tracking-widest my-3 leading-tight font-bold">
             TIMELINE
           </h3>
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
@@ -93,7 +93,7 @@ export default function OurHistory() {
                 <div className="w-full md:w-5/12 px-3 md:px-6 flex items-center">
                   <div className="max-w-[36rem]">
                     <p className="text-sm text-gray-400 mb-2">{ev.small}</p>
-                    <h4 className="text-lg md:text-2xl tracking-wide mb-4">
+                    <h4 className="text-lg md:text-2xl tracking-wide mb-4 leading-tight font-bold">
                       {ev.title}
                     </h4>
                     <p className="text-sm text-gray-600 leading-relaxed">{ev.desc}</p>
