@@ -5,10 +5,10 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import projectImg1 from "../../assets/service.webp";
-import projectImg2 from "../../assets/service2.webp";
-import projectImg3 from "../../assets/service3.webp";
-import projectImg4 from "../../assets/service5.webp";
+import projectImg1 from "../../assets/project-13.jpg";
+import projectImg2 from "../../assets/project-14.jpg";
+import projectImg3 from "../../assets/project-15.jpg";
+import projectImg4 from "../../assets/project-16.jpg";
 
 const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
   const sliderRef = useRef(null);
@@ -17,36 +17,36 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
 
   const slides = [
     {
+      id: 1,
       title: "Energizing NGL Hub in 5 Months with High-Voltage EPC Solution",
       category: "Power + Utilities",
       description:
         "Two-phase project planning with flexible engineering, agile problem-solving, and dedication to success",
       image: projectImg1,
-      link: "#",
     },
     {
+      id: 2,
       title: "Transforming Energy Infrastructure with EPC Solutions",
       category: "Energy + Infrastructure",
       description:
         "Comprehensive engineering, procurement, and construction services that ensure timely project delivery.",
       image: projectImg2,
-      link: "#",
     },
     {
+      id: 3,
       title: "Driving Growth with Next-Gen Utility Innovations",
       category: "Utilities + Innovation",
       description:
         "Cutting-edge utility management systems designed to scale with tomorrow’s energy demands.",
       image: projectImg3,
-      link: "#",
     },
     {
+      id: 4,
       title: "Driving Growth with Next-Gen Utility Innovations",
       category: "Utilities + Innovation",
       description:
         "Cutting-edge utility management systems designed to scale with tomorrow’s energy demands.",
       image: projectImg4,
-      link: "#",
     },
   ];
 
@@ -87,6 +87,12 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
     };
   }, [autoplaySpeed]);
 
+  const slugify = (text) =>
+    text
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]+/g, "");
+
   return (
     <div className="w-11/12 mx-auto mb-12">
       <Slider ref={sliderRef} {...settings}>
@@ -112,7 +118,7 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
                 </p>
 
                 <Link
-                  to={slide.link}
+                  to={`/project/${slugify(slide.title)}/${slide.id}`}
                   className="inline-block bg-[#A02B2D] text-white font-semibold px-6 py-3"
                 >
                   Learn more

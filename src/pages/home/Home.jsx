@@ -9,8 +9,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { Button, Card } from "antd";
 import { Link } from "react-router";
 
-import image1 from "../../assets/service-2.jpg";
-import image2 from "../../assets/service1.jpg";
+import image1 from "../../assets/project-9.jpg";
+import image2 from "../../assets/project-10.jpg";
+import image3 from "../../assets/project-11.jpg";
+import image4 from "../../assets/project-12.jpg";
 import Testimony from "../../components/testimony/Testimony";
 import ProjectCarousel from "../../components/home/ProjectCarousel";
 import BrochureSection from "../../components/home/BrochureSection";
@@ -86,6 +88,13 @@ const Home = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+    // ✅ Utility to slugify title
+  const slugify = (text) =>
+    text
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]+/g, "");
+
   const slides = [
     {
       title: "Veekites Global Services Limited",
@@ -121,14 +130,14 @@ const Home = () => {
       title: "Environmental Engineering",
       description:
         "At Veekites, our projects are a testament to our commitment to quality, innovation, and client satisfaction. From complex civil engineering challenges to groundbreaking work in the oil and gas industry, our portfolio spans a wide range of successful ventures. Each project we undertake is a reflection of our expertise, collaborative spirit, and unwavering dedication to excellence.",
-      image: image1,
+      image: image3,
     },
     {
       id: 4,
       title: "ICT Solutions",
       description:
         "Offering cutting-edge ICT services, software development, and systems integration.",
-      image: image2,
+      image: image4,
     },
   ];
 
@@ -266,7 +275,7 @@ const Home = () => {
                   description={service.description?.slice(0, 70)}
                 />
                 <div className="flex justify-left mt-5">
-                  <Link to="#" className="hover:underline !text-[#A02B2D] ">
+                  <Link to={`/project/${slugify(service.title)}/${service.id}`} className="hover:underline !text-[#A02B2D] ">
                     Learn more
                   </Link>
                 </div>

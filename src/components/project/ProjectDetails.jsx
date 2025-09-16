@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
+import { IoChevronBackSharp } from "react-icons/io5";
 
 // Dummy fallback images
 import fallbackImg from "../../assets/project-details.jpg";
@@ -25,10 +26,10 @@ const dummyProjects = [
     description: [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem veritatis quo et ullam, ducimus itaque earum dolorem?",
       "Modi cum fugit officia dolores eligendi, rem. Quibusdam quas impedit perspiciatis iure maiores.",
-      "Aliquid nemo consequuntur cupiditate delectus sapiente doloribus dolorem, non laudantium mollitia magnam repellat atque quia!"
+      "Aliquid nemo consequuntur cupiditate delectus sapiente doloribus dolorem, non laudantium mollitia magnam repellat atque quia!",
     ],
     mainImage: fallbackImg,
-    gallery: [gallery1, gallery2, gallery3, gallery4, gallery5]
+    gallery: [gallery1, gallery2, gallery3, gallery4, gallery5],
   },
   {
     id: "2",
@@ -42,11 +43,11 @@ const dummyProjects = [
     sector: "Bridge, Transport",
     description: [
       "Bridge construction project with modern design.",
-      "Focused on durability and sustainability."
+      "Focused on durability and sustainability.",
     ],
     mainImage: gallery2,
-    gallery: [gallery1, gallery2, gallery3, gallery4, gallery5]
-  }
+    gallery: [gallery1, gallery2, gallery3, gallery4, gallery5],
+  },
 ];
 
 const ProjectDetail = () => {
@@ -61,12 +62,9 @@ const ProjectDetail = () => {
   }, [id]);
 
   // ESC key handler to close modal
-  const handleKeyDown = useCallback(
-    (e) => {
-      if (e.key === "Escape") setSelectedImg(null);
-    },
-    []
-  );
+  const handleKeyDown = useCallback((e) => {
+    if (e.key === "Escape") setSelectedImg(null);
+  }, []);
 
   useEffect(() => {
     if (selectedImg) {
@@ -82,7 +80,7 @@ const ProjectDetail = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-[url('/src/assets/service_hero.jpg')] bg-cover bg-center">
+      <div className="relative h-64 md:h-80 bg-[url('/src/assets/service_hero.jpg')] bg-cover bg-center -top-14">
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white">
           <h1 className="text-3xl md:text-4xl font-bold">Project Details</h1>
           <p className="mt-2 text-sm md:text-base">
@@ -93,6 +91,11 @@ const ProjectDetail = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className=" w-20 gap-2  mb-5">
+          <Link to="/our-projects" className="flex items-center cursor-pointer w-20 gap-2">
+            <IoChevronBackSharp /> Back
+          </Link>
+        </div>
         {/* Main Image */}
         <img
           src={project.mainImage}
@@ -106,13 +109,27 @@ const ProjectDetail = () => {
           <aside className="bg-gray-900 text-white p-6 shadow-lg space-y-4">
             <h3 className="text-lg font-semibold mb-4">Project Information</h3>
             <ul className="space-y-1 text-sm">
-              <li className="border-b-gray-500 border-b-1 py-2"><strong>Client:</strong> {project.client}</li>
-              <li className="border-b-gray-500 border-b-1 py-2"><strong>Location:</strong> {project.location}</li>
-              <li className="border-b-gray-500 border-b-1 py-2"><strong>Area:</strong> {project.area}</li>
-              <li className="border-b-gray-500 border-b-1 py-2"><strong>Year:</strong> {project.year}</li>
-              <li className="border-b-gray-500 border-b-1 py-2"><strong>Budget:</strong> {project.budget}</li>
-              <li className="border-b-gray-500 border-b-1 py-2"><strong>Architect:</strong> {project.architect}</li>
-              <li className="border-b-gray-500 border-b-1 py-2"><strong>Sector:</strong> {project.sector}</li>
+              <li className="border-b-gray-500 border-b-1 py-2">
+                <strong>Client:</strong> {project.client}
+              </li>
+              <li className="border-b-gray-500 border-b-1 py-2">
+                <strong>Location:</strong> {project.location}
+              </li>
+              <li className="border-b-gray-500 border-b-1 py-2">
+                <strong>Area:</strong> {project.area}
+              </li>
+              <li className="border-b-gray-500 border-b-1 py-2">
+                <strong>Year:</strong> {project.year}
+              </li>
+              <li className="border-b-gray-500 border-b-1 py-2">
+                <strong>Budget:</strong> {project.budget}
+              </li>
+              <li className="border-b-gray-500 border-b-1 py-2">
+                <strong>Architect:</strong> {project.architect}
+              </li>
+              <li className="border-b-gray-500 border-b-1 py-2">
+                <strong>Sector:</strong> {project.sector}
+              </li>
             </ul>
           </aside>
 
