@@ -75,7 +75,7 @@ export default function SetApart() {
 
               <Link
                 to="/our-services"
-                className="inline-flex items-center leading text-sm text-gray-700 hover:text-gray-900 font-bold"
+                className="inline-flex items-center leading text-sm text-[#A02B2D] hover:text-[#c52e30] font-bold"
                 >
                 Learn more
                 <svg
