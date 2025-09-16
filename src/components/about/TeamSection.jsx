@@ -114,10 +114,8 @@ const TeamSection = () => {
         <h2 className="text-lg md:text-3xl font-bold text-black uppercase mb-6">
           Our Team
         </h2>
-        <p className="text-base leading-relaxed text-gray-600">
-          Our team is our greatest asset. Comprising seasoned professionals and
-          dynamic innovators, our experts bring a wealth of knowledge and a
-          passion for excellence to every project. We believe in fostering a
+        <p className="text-sm leading-relaxed text-gray-600">
+          Our team is our greatest asset. We believe in fostering a
           collaborative environment where creativity and expertise thrive,
           ensuring that our team is always equipped to deliver top-tier
           solutions. Meet the people who make it all happen and drive our
