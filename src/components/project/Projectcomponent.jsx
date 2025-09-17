@@ -1,88 +1,12 @@
+
+
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router";
 import Slider from "react-slick";
+import { projects } from "../../datas/projects";
 import projbg from "../../assets/projbg.jpg";
-import prj from "../../assets/prj.jpeg";
-import prj1 from "../../assets/prj1.jpeg";
-import project1 from "../../assets/project-11.jpg";
-import project2 from "../../assets/project-10.jpg";
-import project3 from "../../assets/project-9.jpg";
 
-// Dummy data
-const projects = [
-  {
-    id: 1,
-    title: "Land Minning",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project1,
-  },
-  {
-    id: 2,
-    title: "Work Management",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project2,
-  },
-  {
-    id: 3,
-    title: "Material Engineering",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project3,
-  },
-  {
-    id: 4,
-    title: "Power and Energy",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project1,
-  },
-  {
-    id: 5,
-    title: "Land Minning",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project3,
-  },
-  {
-    id: 6,
-    title: "Work Management",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project2,
-  },
-  {
-    id: 7,
-    title: "Material Engineering",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project3,
-  },
-  {
-    id: 8,
-    title: "Power and Energy",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project1,
-  },
-  {
-    id: 9,
-    title: "Work Management",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisci elit sed do eiusmod tempor",
-    img: project2,
-  },
-];
-
-// Dummy Latest Project slides
-const latestProjects = [
-  {
-    id: 1,
-    title: "Headquarters of the Nigeria Security and Civil Defence Corps, Sauka, Abuja",
-    desc: "The building project for the Headquarters of the Nigeria Security and Civil Defence Corps in Sauka, Abuja is known as the Command Control and Communication Centre. Veekites Global Services was contracted by Tantita Security Services Nigeria for this project. Tantita Security Services Nigeria Limited specializes in providing comprehensive security solutions specifically tailored to the unique needs of the oil and gas industry. With an unwavering commitment to excellence, they protect vital infrastructure across Nigeria—both onshore and offshore—ensuring that operations remain secure 24/7.",
-    img: prj,
-  },
-  {
-    id: 2,
-    title: "Green Energy Plant",
-    desc: "A sustainable energy project delivering clean power and driving eco-friendly development.",
-    img: prj1,
-  },
-];
-
+// Slider settings
 const settings = {
   dots: true,
   infinite: true,
@@ -100,9 +24,14 @@ const settings = {
 const Projectcomponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
-  const totalPages = Math.ceil(projects.length / itemsPerPage);
 
-  const paginatedProjects = projects.slice(
+  // Split projects
+  const featuredProjects = projects.filter((p) => !p.isLatest);
+  const latestProjects = projects.filter((p) => p.isLatest);
+
+  const totalPages = Math.ceil(featuredProjects.length / itemsPerPage);
+
+  const paginatedProjects = featuredProjects.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -110,26 +39,23 @@ const Projectcomponent = () => {
   // Slider state
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Autoplay for slider
+  // Autoplay effect for slider
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % latestProjects.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [latestProjects.length]);
 
   // ✅ Utility to slugify title
   const slugify = (text) =>
-    text
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]+/g, "");
+    text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
 
   return (
     <div>
       {/* Hero Section */}
       <div className="h-[300px] -top-21 relative bg-[url(/src/assets/service_hero.jpg)] bg-no-repeat bg-cover bg-center">
-        <div className="bg-[#0000009e] h-full flex justify-center  flex-col">
+        <div className="bg-[#0000009e] h-full flex justify-center flex-col">
           <div className="max-w-6xl w-full mx-auto">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
               Projects
@@ -142,10 +68,10 @@ const Projectcomponent = () => {
         </div>
       </div>
 
-      {/* New Section */}
+      {/* Intro Section */}
       <div className="w-11/12 mx-auto pb-12 px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-lg uppercase font-bold  leading-tight">
+          <h2 className="text-lg uppercase font-bold leading-tight">
             Delivering Impactful <br /> Solutions Across <br /> Industries
           </h2>
           <p className="mt-6 text-gray-700 leading-relaxed">
@@ -182,13 +108,15 @@ const Projectcomponent = () => {
           {paginatedProjects.map((proj) => (
             <div key={proj.id} className="bg-white overflow-hidden transition">
               <img
-                src={proj.img}
+                src={proj.mainImage}
                 alt={proj.title}
                 className="!rounded-none h-48 w-full object-cover"
               />
               <div className="p-5">
                 <h3 className="font-semibold uppercase">{proj.title}</h3>
-                <p className="text-gray-500 text-sm mt-2">{proj.desc}</p>
+                <p className="text-gray-500 text-sm mt-2">
+                  {proj.description?.slice(0, 100)}...
+                </p>
                 <Link
                   to={`/project/${slugify(proj.title)}/${proj.id}`}
                   className="text-[#A02B2D] mt-4 text-sm font-medium hover:underline inline-block"
@@ -231,6 +159,8 @@ const Projectcomponent = () => {
           </button>
         </div>
       </div>
+
+      {/* Latest Projects */}
       <div className="bg-gray-50 py-16">
         <h1 className="text-lg font-bold uppercase leading-snug mb-4 text-center">
           Latest Project
@@ -242,23 +172,23 @@ const Projectcomponent = () => {
                 <div className="grid md:grid-cols-2 gap-10 items-center">
                   {/* Image */}
                   <img
-                    src={proj.img}
+                    src={proj.mainImage}
                     alt={proj.title}
                     className="w-full h-80 object-cover shadow-md rounded-lg"
                   />
 
                   {/* Content */}
                   <div className="flex flex-col justify-center">
-                    <h3 className=" leading-snug font-bold text-lg uppercase mb-4">
+                    <h3 className="leading-snug font-bold text-lg uppercase mb-4">
                       {proj.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed mb-6">
-                      {proj.desc.slice(0, 150)}...
+                      {proj.description?.slice(0, 150)}...
                     </p>
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
                       className="bg-[#A02B2D] w-41 text-white px-6 py-2 shadow transition inline-block"
-                    >                                                                                                                                                                                                                                                                                                                                                           
+                    >
                       VIEW PROJECT
                     </Link>
                   </div>

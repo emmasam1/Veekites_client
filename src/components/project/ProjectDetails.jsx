@@ -3,65 +3,22 @@ import { Link, useParams } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import { IoChevronBackSharp } from "react-icons/io5";
+import { projects } from "../../datas/projects";
 
-// Dummy fallback images
 import fallbackImg from "../../assets/project-details.jpg";
-import gallery1 from "../../assets/project-11.jpg";
-import gallery2 from "../../assets/project-10.jpg";
-import gallery3 from "../../assets/project-9.jpg";
-import gallery4 from "../../assets/project-11.jpg";
-import gallery5 from "../../assets/project-9.jpg";
-
-const dummyProjects = [
-  {
-    id: "1",
-    title: "Mountain Tunnel",
-    client: "RRS Company",
-    location: "San Francisco",
-    area: "550,000 sf",
-    year: 2019,
-    budget: "$245,000,000",
-    architect: "Scott & Austin",
-    sector: "Tunnel, Transport",
-    description: [
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem veritatis quo et ullam, ducimus itaque earum dolorem?",
-      "Modi cum fugit officia dolores eligendi, rem. Quibusdam quas impedit perspiciatis iure maiores.",
-      "Aliquid nemo consequuntur cupiditate delectus sapiente doloribus dolorem, non laudantium mollitia magnam repellat atque quia!",
-    ],
-    mainImage: fallbackImg,
-    gallery: [gallery1, gallery2, gallery3, gallery4, gallery5],
-  },
-  {
-    id: "2",
-    title: "City Bridge",
-    client: "ABC Infrastructure",
-    location: "New York",
-    area: "300,000 sf",
-    year: 2021,
-    budget: "$100,000,000",
-    architect: "Doe & Partners",
-    sector: "Bridge, Transport",
-    description: [
-      "Bridge construction project with modern design.",
-      "Focused on durability and sustainability.",
-    ],
-    mainImage: gallery2,
-    gallery: [gallery1, gallery2, gallery3, gallery4, gallery5],
-  },
-];
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const [selectedImg, setSelectedImg] = useState(null);
   const [project, setProject] = useState(null);
 
-  // Find project by id
+  // Find project by ID (support numeric IDs)
   useEffect(() => {
-    const found = dummyProjects.find((p) => p.id === id);
-    setProject(found || dummyProjects[0]); // fallback
+    const found = projects.find((p) => String(p.id) === id);
+    setProject(found || null);
   }, [id]);
 
-  // ESC key handler to close modal
+  // ESC key handler for modal close
   const handleKeyDown = useCallback((e) => {
     if (e.key === "Escape") setSelectedImg(null);
   }, []);
@@ -75,7 +32,14 @@ const ProjectDetail = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedImg, handleKeyDown]);
 
-  if (!project) return <p className="text-center py-20">Loading...</p>;
+  if (!project) {
+    return <p className="text-center py-20">Project not found.</p>;
+  }
+
+  // Ensure description is always an array
+  const descriptions = Array.isArray(project.description)
+    ? project.description
+    : [project.description];
 
   return (
     <div className="w-full">
@@ -91,14 +55,19 @@ const ProjectDetail = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className=" w-20 gap-2  mb-5">
-          <Link to="/our-projects" className="flex items-center cursor-pointer w-20 gap-2">
+        {/* Back button */}
+        <div className="w-20 gap-2 mb-5">
+          <Link
+            to="/our-projects"
+            className="flex items-center cursor-pointer w-20 gap-2"
+          >
             <IoChevronBackSharp /> Back
           </Link>
         </div>
+
         {/* Main Image */}
         <img
-          src={project.mainImage}
+          src={project.mainImage || fallbackImg}
           alt={project.title}
           className="w-full h-64 sm:h-72 md:h-[400px] object-cover rounded-lg shadow-lg"
         />
@@ -109,25 +78,25 @@ const ProjectDetail = () => {
           <aside className="bg-gray-900 text-white p-6 shadow-lg space-y-4">
             <h3 className="text-lg font-semibold mb-4">Project Information</h3>
             <ul className="space-y-1 text-sm">
-              <li className="border-b-gray-500 border-b-1 py-2">
+              <li className="border-b border-gray-500 py-2">
                 <strong>Client:</strong> {project.client}
               </li>
-              <li className="border-b-gray-500 border-b-1 py-2">
+              <li className="border-b border-gray-500 py-2">
                 <strong>Location:</strong> {project.location}
               </li>
-              <li className="border-b-gray-500 border-b-1 py-2">
+              <li className="border-b border-gray-500 py-2">
                 <strong>Area:</strong> {project.area}
               </li>
-              <li className="border-b-gray-500 border-b-1 py-2">
+              <li className="border-b border-gray-500 py-2">
                 <strong>Year:</strong> {project.year}
               </li>
-              <li className="border-b-gray-500 border-b-1 py-2">
+              <li className="border-b border-gray-500 py-2">
                 <strong>Budget:</strong> {project.budget}
               </li>
-              <li className="border-b-gray-500 border-b-1 py-2">
+              <li className="border-b border-gray-500 py-2">
                 <strong>Architect:</strong> {project.architect}
               </li>
-              <li className="border-b-gray-500 border-b-1 py-2">
+              <li className="border-b border-gray-500 py-2">
                 <strong>Sector:</strong> {project.sector}
               </li>
             </ul>
@@ -138,7 +107,7 @@ const ProjectDetail = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D]">
               {project.title}
             </h2>
-            {project.description.map((text, i) => (
+            {descriptions.map((text, i) => (
               <p
                 key={i}
                 className="text-gray-600 leading-relaxed text-sm sm:text-base"
@@ -150,24 +119,26 @@ const ProjectDetail = () => {
         </div>
 
         {/* Gallery */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-10">
-          {project.gallery.map((img, i) => (
-            <div
-              key={i}
-              className="relative group cursor-pointer"
-              onClick={() => setSelectedImg(img)}
-            >
-              <img
-                src={img}
-                alt={`${project.title} Gallery ${i + 1}`}
-                className="w-full h-32 sm:h-40 md:h-44 object-cover rounded-lg shadow transition-transform group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/40 rounded-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <Plus className="text-white w-8 h-8" />
+        {project.gallery?.length > 0 && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-10">
+            {project.gallery.map((img, i) => (
+              <div
+                key={i}
+                className="relative group cursor-pointer"
+                onClick={() => setSelectedImg(img)}
+              >
+                <img
+                  src={img}
+                  alt={`${project.title} Gallery ${i + 1}`}
+                  className="w-full h-32 sm:h-40 md:h-44 object-cover rounded-lg shadow transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/40 rounded-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <Plus className="text-white w-8 h-8" />
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Image Preview Modal */}

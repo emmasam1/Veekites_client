@@ -1,22 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { GoBriefcase } from "react-icons/go";
-import { FaHandshake, FaRocket } from "react-icons/fa";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Button, Card } from "antd";
+import { Card } from "antd";
 import { Link } from "react-router";
-
-import image1 from "../../assets/project-9.jpg";
-import image2 from "../../assets/project-10.jpg";
-import image3 from "../../assets/project-11.jpg";
-import image4 from "../../assets/project-12.jpg";
 import Testimony from "../../components/testimony/Testimony";
 import ProjectCarousel from "../../components/home/ProjectCarousel";
 import BrochureSection from "../../components/home/BrochureSection";
 import { PiGreaterThanLight } from "react-icons/pi";
+import { projects, slides } from "../../datas/projects";
 
 const { Meta } = Card;
 
@@ -78,16 +71,6 @@ const Home = () => {
     if (inView3) controls3.start("visible");
   }, [controls3, inView3]);
 
-  const fadeInTop = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const fadeInBottom = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
     // ✅ Utility to slugify title
   const slugify = (text) =>
     text
@@ -95,51 +78,6 @@ const Home = () => {
       .replace(/\s+/g, "-")
       .replace(/[^\w-]+/g, "");
 
-  const slides = [
-    {
-      title: "Veekites Global Services Limited",
-      text: "is widely recognized as one of the most professional companies offering a wide range of services",
-    },
-    {
-      title: "Veekites Global Services Limited",
-      text: "Civil, Mechanical,electric, Building engineering, general Supply as well as Technical company of the milleniueum",
-    },
-    {
-      title: "Veekites Global Services Limited",
-      text: "To highlight and slove crucial technical issues in Engineering Constructions and supply industry to the satisfactory of our valued Clients",
-    },
-  ];
-
-  const services = [
-    {
-      id: 1,
-      title: "Infrastructure Development",
-      description:
-        "We specialize in the design and construction of infrastructure that defines the modern landscape. From towering skyscrapers to expansive bridges, our civil engineering expertise ensures projects that are safe, sustainable, and visually striking. We manage every phase, from concept to completion, delivering on time and within budget.",
-      image: image1, // replace with real image
-    },
-    {
-      id: 2,
-      title: "Urban Planning",
-      description:
-        "At Veekites, our projects are a testament to our commitment to quality, innovation, and client satisfaction. From complex civil engineering challenges to groundbreaking work in the oil and gas industry, our portfolio spans a wide range of successful ventures. Each project we undertake is a reflection of our expertise, collaborative spirit, and unwavering dedication to excellence",
-      image: image2,
-    },
-    {
-      id: 3,
-      title: "Environmental Engineering",
-      description:
-        "At Veekites, our projects are a testament to our commitment to quality, innovation, and client satisfaction. From complex civil engineering challenges to groundbreaking work in the oil and gas industry, our portfolio spans a wide range of successful ventures. Each project we undertake is a reflection of our expertise, collaborative spirit, and unwavering dedication to excellence.",
-      image: image3,
-    },
-    {
-      id: 4,
-      title: "ICT Solutions",
-      description:
-        "Offering cutting-edge ICT services, software development, and systems integration.",
-      image: image4,
-    },
-  ];
 
   return (
     <>
@@ -197,66 +135,63 @@ const Home = () => {
       <div className="w-11/12 mx-auto">
         <div className="hidden  lg:flex justify-between items-center">
           <h1 className="relative font-extrabold text-lg uppercase">Our Services</h1>
-
-          {/* <Link to="/our-services" className="text-black">
-            View all
-          </Link> */}
         </div>
         <BrochureSection />
       </div>
 
-     
+  <div className="mx-auto w-11/12">
+  <div className="flex justify-between items-center my-3">
+    <h1 className="relative font-extrabold font text-lg uppercase">
+      Our Projects
+    </h1>
 
-      <div className="mx-auto w-11/12">
-        <div className="flex justify-between items-center my-3">
-          <h1 className="relative font-extrabold font text-lg uppercase">Our Projects</h1>
+    <Link to="/our-projects" className="!text-[#A02B2D] flex items-center gap-0.5">
+      View all <PiGreaterThanLight />
+      <PiGreaterThanLight className="relative -left-2" />
+    </Link>
+  </div>
 
-          <Link to="/our-projects" className="!text-[#A02B2D] flex items-center gap-0.5">
-            View all <PiGreaterThanLight/><PiGreaterThanLight className="relative -left-2"/>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              cover={
-                <img
-                  alt={service.title}
-                  src={service.image}
-                  className="!rounded-none h-48 w-full object-cover" // 👈 fixed height + cover
-                />
-              }
-              className="!border-none !rounded-none"
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {projects.slice(0, 4).map((proj, index) => (   // 👈 show only 4
+      <Card
+        key={index}
+        cover={
+          <img
+            alt={proj.title}
+            src={proj.mainImage}
+            className="!rounded-none h-48 w-full object-cover"
+          />
+        }
+        className="!border-none !rounded-none"
+      >
+        <div className="flex flex-col h-full justify-between px-3">
+          <Meta
+            title={
+              <span className="text-lg font-semibold uppercase">
+                {proj.title}
+              </span>
+            }
+            description={proj.description?.slice(0, 70)}
+          />
+          <div className="flex justify-left mt-5">
+            <Link
+              to={`/project/${slugify(proj.title)}/${proj.id}`}
+              className="hover:underline !text-[#A02B2D] "
             >
-              <div className="flex flex-col h-full justify-between px-3">
-                <Meta
-                  title={
-                    <span className="text-lg font-semibold uppercase">
-                      {service.title}
-                    </span>
-                  }
-                  description={service.description?.slice(0, 70)}
-                />
-                <div className="flex justify-left mt-5">
-                  <Link to={`/project/${slugify(service.title)}/${service.id}`} className="hover:underline !text-[#A02B2D] ">
-                    Learn more
-                  </Link>
-                </div>
-              </div>
-            </Card>
-          ))}
+              Learn more
+            </Link>
+          </div>
         </div>
-      </div>
+      </Card>
+    ))}
+  </div>
+</div>
+
 
 
        <div className="my-10">
         <Testimony />
       </div>
-
-      {/* <div className="mt-6">
-        <Map />
-      </div> */}
     </>
   );
 };
