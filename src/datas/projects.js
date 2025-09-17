@@ -182,7 +182,7 @@ export const projects = [
     architect: "Veekites Global Services",
     sector: "Security, Infrastructure",
     description:
-      "The Command Control and Communication Centre project delivering security infrastructure across Nigeria...",
+      "The building project for the Headquarters of the Nigeria Security and Civil Defence Corps in Sauka, Abuja is known as the Command Control and Communication Centre. Veekites Global Services was contracted by Tantita Security Services Nigeria for this project. Tantita Security Services Nigeria Limited specializes in providing comprehensive security solutions specifically tailored to the unique needs of the oil and gas industry. With an unwavering commitment to excellence, they protect vital infrastructure across Nigeria—both onshore and offshore—ensuring that operations remain secure 24/7.",
     mainImage: prj,
     gallery: [gallery1, gallery2, gallery3, gallery4, gallery5],
     isLatest: true,
