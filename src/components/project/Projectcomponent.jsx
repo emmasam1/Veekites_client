@@ -71,8 +71,8 @@ const projects = [
 const latestProjects = [
   {
     id: 1,
-    title: "Mega Bridge Construction",
-    desc: "A landmark bridge project showcasing our engineering expertise and innovative construction methods.",
+    title: "Headquarters of the Nigeria Security and Civil Defence Corps, Sauka, Abuja",
+    desc: "The building project for the Headquarters of the Nigeria Security and Civil Defence Corps in Sauka, Abuja is known as the Command Control and Communication Centre. Veekites Global Services was contracted by Tantita Security Services Nigeria for this project. Tantita Security Services Nigeria Limited specializes in providing comprehensive security solutions specifically tailored to the unique needs of the oil and gas industry. With an unwavering commitment to excellence, they protect vital infrastructure across Nigeria—both onshore and offshore—ensuring that operations remain secure 24/7.",
     img: prj,
   },
   {
@@ -253,7 +253,7 @@ const Projectcomponent = () => {
                       {proj.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed mb-6">
-                      {proj.desc}
+                      {proj.desc.slice(0, 150)}...
                     </p>
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
