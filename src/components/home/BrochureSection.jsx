@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import brochureImg from "../../assets/brochure.png";
+import brochureImg from "../../assets/brochure3.png";
 
 export default function BrochureSection() {
   return (
