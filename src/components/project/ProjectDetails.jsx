@@ -115,6 +115,14 @@ const ProjectDetail = () => {
                 {text}
               </p>
             ))}
+
+            {project.sub_dec && (
+              <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                {project.sub_dec.map((e) => (
+                  <li key={e.id}>{e.text}</li>
+                ))}
+              </ul>
+            )}
           </section>
         </div>
 

@@ -45,16 +45,30 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Material Engineering",
+    title: "Creation of a mini stadium for the Torogbene community",
     client: "Zenith Materials Ltd",
-    location: "Houston, USA",
-    area: "410,000 sf",
+    location: "Delta State",
+    area: "Burutu Local Government",
     year: 2018,
     budget: "$220,000,000",
     architect: "Brown & Partners",
     sector: "Industrial, R&D",
     description:
-      "A world-class facility focused on advanced material research and engineering, enabling new technologies that drive innovation in aerospace and automotive industries.",
+      "This stadium was built for the Torogbene community in Burutu Local Government, Delta State. The mini stadium serves as a multi-use facility for local sports, community events, and youth activities, promoting physical fitness and community engagement.",
+    sub_dec: [
+      {
+        id: 1,
+        text: "Facilities Included:The stadium features a playing field, seating for spectators, changing rooms, and rest areas to support various sporting events.",
+      },
+      {
+        id: 2,
+        text: "Community Impact: This project aims to enhance the quality of life for residents by providing a safe and accessible venue for recreation and social gatherings.",
+      },
+      {
+        id: 3,
+        text: "Future Plans: There are intentions to organize regular sports tournaments and community activities to foster teamwork and unity within the Torogbene community.",
+      },
+    ],
     mainImage: project3,
     gallery: [gallery3, gallery1, gallery2, gallery5, gallery4],
     isLatest: false,
@@ -158,7 +172,8 @@ export const projects = [
   // From Latest Projects
   {
     id: 10,
-    title: "Headquarters of the Nigeria Security and Civil Defence Corps, Sauka, Abuja",
+    title:
+      "Headquarters of the Nigeria Security and Civil Defence Corps, Sauka, Abuja",
     client: "Tantita Security Services Nigeria",
     location: "Sauka, Abuja",
     area: "850,000 sf",
@@ -190,22 +205,21 @@ export const projects = [
   },
 ];
 
-
-  export const slides = [
-    {
-      title: "Veekites Global Services Limited",
-      text: "Building, Powering, and Connecting Industries.",
-    },
-    {
-      title: "Veekites Global Services Limited",
-      text: "Your Partner in Construction, Energy, and Marine Services.",
-    },
-    {
-      title: "Veekites Global Services Limited",
-      text: "Delivering Excellence in Projects, Procurement, and Maritime.",
-    },
-    {
-      title: "Veekites Global Services Limited",
-      text: "Engineering Growth, Navigating Futures.",
-    },
-  ];
+export const slides = [
+  {
+    title: "Veekites Global Services Limited",
+    text: "Building, Powering, and Connecting Industries.",
+  },
+  {
+    title: "Veekites Global Services Limited",
+    text: "Your Partner in Construction, Energy, and Marine Services.",
+  },
+  {
+    title: "Veekites Global Services Limited",
+    text: "Delivering Excellence in Projects, Procurement, and Maritime.",
+  },
+  {
+    title: "Veekites Global Services Limited",
+    text: "Engineering Growth, Navigating Futures.",
+  },
+];
