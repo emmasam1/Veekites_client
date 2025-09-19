@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Card } from "antd";
+import { Card, Button } from "antd";
 import { Link } from "react-router";
 import Testimony from "../../components/testimony/Testimony";
 import ProjectCarousel from "../../components/home/ProjectCarousel";
@@ -102,7 +102,7 @@ const Home = () => {
         <div className="absolute inset-0 flex items-center">
           <div
             className="
-         !bg-[#a02b2dd9] text-white p-4 sm:p-6 md:p-8
+         !bg-[#a02b2dd9] text-white p-4 sm:p-6 md:p-8 rounded-lg
         max-w-[280px] sm:max-w-md md:w-[500px]
         ml-4 sm:mx-auto md:ml-[137px]
         text-left relative z-10
@@ -127,6 +127,10 @@ const Home = () => {
                 </motion.div>
               ))}
             </Slider>
+
+            <Button className="!bg-white !border-none !text-[#A02B2D] !rounded-none !px-4 !py-2 !mt-3 hover:!text-[#A02B2D]">
+              <Link to="/about-us">Learn More</Link>
+            </Button>
           </div>
         </div>
       </div>
