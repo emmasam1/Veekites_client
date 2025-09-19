@@ -18,34 +18,34 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
   const slides = [
     {
       id: 1,
-      title: "Energizing NGL Hub in 5 Months with High-Voltage EPC Solution",
-      category: "Power + Utilities",
+      title: "Civil Engineering",
+      // category: "Power + Utilities",
       description:
-        "Two-phase project planning with flexible engineering, agile problem-solving, and dedication to success",
+        "Delivers durable infrastructure and construction projects with a focus on quality, safety, and timely completion, supporting both private and public sector needs.",
       image: projectImg1,
     },
     {
       id: 2,
-      title: "Transforming Energy Infrastructure with EPC Solutions",
-      category: "Energy + Infrastructure",
+      title: "Oil & Gas Services",
+      // category: "Energy + Infrastructure",
       description:
-        "Comprehensive engineering, procurement, and construction services that ensure timely project delivery.",
+        "Partners with industry operators to supply manpower, logistics, and technical solutions across upstream and downstream operations, driving sustainable performance.",
       image: projectImg2,
     },
     {
       id: 3,
-      title: "Driving Growth with Next-Gen Utility Innovations",
-      category: "Utilities + Innovation",
+      title: "Marine Operations & Support",
+      // category: "Utilities + Innovation",
       description:
-        "Cutting-edge utility management systems designed to scale with tomorrow’s energy demands.",
+        "Provides reliable offshore and onshore support, including logistics, crew management, and port services, ensuring efficiency and compliance with international standards.",
       image: projectImg3,
     },
     {
       id: 4,
-      title: "Driving Growth with Next-Gen Utility Innovations",
-      category: "Utilities + Innovation",
+      title: "Procurement & Supply Solutions",
+      // category: "Utilities + Innovation",
       description:
-        "Cutting-edge utility management systems designed to scale with tomorrow’s energy demands.",
+        "Manages the sourcing and delivery of critical equipment and materials, offering cost-effective and transparent procurement for diverse industrial projects.",
       image: projectImg4,
     },
   ];
@@ -109,9 +109,9 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
                   {slide.title}
                 </h3>
 
-                <p className="text-sm text-[#1f4854] font-medium mb-4">
+                {/* <p className="text-sm text-[#1f4854] font-medium mb-4">
                   {slide.category}
-                </p>
+                </p> */}
 
                 <p className="text-base text-[#274a53] max-w-md mb-8">
                   {slide.description}
