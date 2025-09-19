@@ -2,7 +2,7 @@ import historyImg from "../../assets/historyImg.jpg";
 
 const events = [
   {
-    year: "1960–1965",
+    year: "2012 -2016",
     small: "History of the Museum",
     title: "THE ARCHIVE",
     desc:
@@ -10,7 +10,7 @@ const events = [
     img: historyImg,
   },
   {
-    year: "1970–1978",
+    year: "2018 - 2020",
     small: "Always in",
     title: "NEW HOME",
     desc:
@@ -18,7 +18,7 @@ const events = [
     img: historyImg,
   },
   {
-    year: "1982–1995",
+    year: "2020 - 2024",
     small: "Milestones & more",
     title: "EVENTS",
     desc:
@@ -38,7 +38,7 @@ export default function OurHistory() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-white/40" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="text-white text-xl md:text-2xl tracking-widest font-bold uppercase">
+          <h2 className="text-[#A02B2D] text-xl md:text-2xl tracking-widest font-bold uppercase">
             OUR HISTORY
           </h2>
         </div>
