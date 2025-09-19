@@ -10,6 +10,11 @@ import ProjectCarousel from "../../components/home/ProjectCarousel";
 import BrochureSection from "../../components/home/BrochureSection";
 import { PiGreaterThanLight } from "react-icons/pi";
 import { projects, slides } from "../../datas/projects";
+import {
+  SettingOutlined,
+  PhoneOutlined,
+  CloudOutlined,
+} from "@ant-design/icons";
 
 const { Meta } = Card;
 
@@ -71,13 +76,33 @@ const Home = () => {
     if (inView3) controls3.start("visible");
   }, [controls3, inView3]);
 
-    // ✅ Utility to slugify title
+  // ✅ Utility to slugify title
   const slugify = (text) =>
     text
       .toLowerCase()
       .replace(/\s+/g, "-")
       .replace(/[^\w-]+/g, "");
 
+  const services = [
+    {
+      title: "Corporate Solution",
+      description:
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+      icon: <SettingOutlined className="!text-white text-2xl" />,
+    },
+    {
+      title: "Call Center Solutions",
+      description:
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+      icon: <PhoneOutlined className="!text-white text-2xl" />,
+    },
+    {
+      title: "Cloud Development",
+      description:
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+      icon: <CloudOutlined className="!text-white text-2xl" />,
+    },
+  ];
 
   return (
     <>
@@ -136,64 +161,105 @@ const Home = () => {
       </div>
       <ProjectCarousel />
 
+      <div className="w-11/12 mx-auto my-16">
+       
+        <h2 className="text-lg font-bold mb-12 uppercase">Our Services</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className="shadow-md rounded-lg text-center"
+              bordered={false}
+            >
+              <div className="flex justify-center mb-4">
+                <div className="bg-[#A02B2D] w-16 h-16 flex items-center justify-center rounded-full">
+                  {service.icon}
+                </div>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-500 text-sm">{service.description}</p>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Button
+            type="primary"
+            size="large"
+            className="!bg-[#A02B2D] !rounded-none"
+          >
+            See All Services →
+          </Button>
+        </div>
+      </div>
+
       <div className="w-11/12 mx-auto">
         <div className="hidden  lg:flex justify-between items-center">
-          <h1 className="relative font-extrabold text-lg uppercase">Our Services</h1>
+          <h1 className="relative font-extrabold text-lg uppercase">
+            Our Services
+          </h1>
         </div>
         <BrochureSection />
       </div>
 
-  <div className="mx-auto w-11/12">
-  <div className="flex justify-between items-center my-3">
-    <h1 className="relative font-extrabold font text-lg uppercase">
-      Our Projects
-    </h1>
+      <div className="mx-auto w-11/12">
+        <div className="flex justify-between items-center my-3">
+          <h1 className="relative font-extrabold font text-lg uppercase">
+            Our Projects
+          </h1>
 
-    <Link to="/our-projects" className="!text-[#A02B2D] flex items-center gap-0.5">
-      View all <PiGreaterThanLight />
-      <PiGreaterThanLight className="relative -left-2" />
-    </Link>
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    {projects.slice(0, 4).map((proj, index) => (   // 👈 show only 4
-      <Card
-        key={index}
-        cover={
-          <img
-            alt={proj.title}
-            src={proj.mainImage}
-            className="!rounded-none h-48 w-full object-cover"
-          />
-        }
-        className="!border-none !rounded-none"
-      >
-        <div className="flex flex-col h-full justify-between px-3">
-          <Meta
-            title={
-              <span className="text-lg font-semibold uppercase">
-                {proj.title}
-              </span>
-            }
-            description={proj.description?.slice(0, 70)}
-          />
-          <div className="flex justify-left mt-5">
-            <Link
-              to={`/project/${slugify(proj.title)}/${proj.id}`}
-              className="hover:underline !text-[#A02B2D] "
-            >
-              Learn more
-            </Link>
-          </div>
+          <Link
+            to="/our-projects"
+            className="!text-[#A02B2D] flex items-center gap-0.5"
+          >
+            View all <PiGreaterThanLight />
+            <PiGreaterThanLight className="relative -left-2" />
+          </Link>
         </div>
-      </Card>
-    ))}
-  </div>
-</div>
 
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {projects.slice(0, 4).map(
+            (
+              proj,
+              index // 👈 show only 4
+            ) => (
+              <Card
+                key={index}
+                cover={
+                  <img
+                    alt={proj.title}
+                    src={proj.mainImage}
+                    className="!rounded-none h-48 w-full object-cover"
+                  />
+                }
+                className="!border-none !rounded-none"
+              >
+                <div className="flex flex-col h-full justify-between px-3">
+                  <Meta
+                    title={
+                      <span className="text-lg font-semibold uppercase">
+                        {proj.title}
+                      </span>
+                    }
+                    description={proj.description?.slice(0, 70)}
+                  />
+                  <div className="flex justify-left mt-5">
+                    <Link
+                      to={`/project/${slugify(proj.title)}/${proj.id}`}
+                      className="hover:underline !text-[#A02B2D] "
+                    >
+                      Learn more
+                    </Link>
+                  </div>
+                </div>
+              </Card>
+            )
+          )}
+        </div>
+      </div>
 
-
-       <div className="my-10">
+      <div className="my-10">
         <Testimony />
       </div>
     </>
