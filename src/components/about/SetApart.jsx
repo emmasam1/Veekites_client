@@ -11,8 +11,7 @@ const features = [
     icon: Settings,
     textColor: "text-indigo-500",
     bgColor: "bg-indigo-500",
-    learnMore: `Multi-Sector Expertise:
-We provide integrated solutions across construction, project management, oil & gas, procurement, and marine services. As your one-stop partner, we streamline processes and deliver exceptional results tailored to your needs.`,
+    learnMore: `We provide integrated solutions across construction, project management, oil & gas, procurement, and marine services. As your one-stop partner, we streamline processes and deliver exceptional results tailored to your needs.`,
   },
   {
     id: "02",
@@ -22,8 +21,7 @@ We provide integrated solutions across construction, project management, oil & g
     icon: Globe,
     textColor: "text-pink-500",
     bgColor: "bg-pink-500",
-    learnMore: `Local Insight, Global Standards:
-With a deep understanding of Nigeria’s unique environments and ports, we combine local knowledge with international best practices. Our commitment to safety, efficiency, and sustainability ensures that your projects meet global standards.`,
+    learnMore: `With a deep understanding of Nigeria’s unique environments and ports, we combine local knowledge with international best practices. Our commitment to safety, efficiency, and sustainability ensures that your projects meet global standards.`,
   },
   {
     id: "03",
@@ -33,8 +31,7 @@ With a deep understanding of Nigeria’s unique environments and ports, we combi
     icon: Handshake,
     textColor: "text-yellow-500",
     bgColor: "bg-yellow-500",
-    learnMore: `Proven Track Record of Collaboration:
-Our strong partnerships with industry stakeholders, offshore operators, regulators, and logistics providers enable us to deliver seamless project execution. Trust us to bring together the right expertise for reliable and successful outcomes.`,
+    learnMore: `Our strong partnerships with industry stakeholders, offshore operators, regulators, and logistics providers enable us to deliver seamless project execution. Trust us to bring together the right expertise for reliable and successful outcomes.`,
   },
 ];
 

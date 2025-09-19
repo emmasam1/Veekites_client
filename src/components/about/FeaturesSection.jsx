@@ -7,17 +7,17 @@ const features = [
   {
     icon: <Star className="w-10 h-10 text-[#A02B2D]" />,
     title: "Top Rated",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Officia odio eum corporis consequatur."
+    desc: "Recognized for excellence through consistent delivery of reliable, professional, and world-class services across various industries."
   },
   {
     icon: <Award className="w-10 h-10 text-[#A02B2D]" />,
     title: "Best Quality",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Officia odio eum corporis consequatur."
+    desc: "Committed to international standards,  we ensure that every project meets the highest benchmarks for safety, durability, and performance."
   },
   {
     icon: <DollarSign className="w-10 h-10 text-[#A02B2D]" />,
     title: "Low Cost",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Officia odio eum corporis consequatur."
+    desc: "We provide cost-effective solutions without compromising on quality,    offering clients maximum value for their investment."
   }
 ];
 

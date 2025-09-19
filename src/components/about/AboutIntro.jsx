@@ -36,15 +36,15 @@ const AboutIntro = () => {
             Engineering a future built on excellence
           </h1>
           <p className="mt-6 text-gray-200 text-base  max-w-3xl">
-            Veekites provides reliable, integrated EPC services with flexibility
-            and expertise. Building on our past and focusing on the future, we
-            generate sustainable, turnkey solutions for global industrial
-            operators—and a better tomorrow for us all.
+          Veekites offers integrated Engineering, Procurement, and Construction
+           (EPC) services with exceptional flexibility and expertise. With
+            a proven track record, we create sustainable turnkey solutions for
+             global industrial operators.
           </p>
           <p className="mt-4 text-gray-200 text-base max-w-3xl">
-            By applying technological innovation and agile problem-solving, we
-            continue to overcome complex challenges with multidisciplinary
-            capabilities to deliver repeatable project success.
+           Through innovation and agile problem-solving, we tackle complex
+            challenges and achieve project success while ensuring efficiency, 
+            quality, and trust in every solution.
           </p>
         </div>
       </div>
