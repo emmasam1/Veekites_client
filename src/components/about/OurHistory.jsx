@@ -1,20 +1,21 @@
 import historyImg from "../../assets/historyImg.jpg";
 import historyImg1 from "../../assets/history_1.jpeg";
+import historyImg2 from "../../assets/6.webp";
 
 const events = [
   {
     year: "2012 -2016",
     small: "History of the Museum",
     title: "VEEKITES AS AN INDIGENOUS COMPANY",
-    desc: "As a proudly indigenous company, VEEKITES GLOBAL SERVICE LIMITED  is recognized as one of the fastest-growing companies in the industry, VEEKITES GLOBAL SERVICE LIMITED specializes in a wide range of services, including architectural design, construction of buildings, roads, bridges, and dams.",
+    desc: "As a proudly indigenous company, Veekites Global Services Limited   is recognized as one of the fastest-growing companies in the industry, VEEKITES GLOBAL SERVICE LIMITED specializes in a wide range of services, including architectural design, construction of buildings, roads, bridges, and dams.",
     img: historyImg1,
   },
   {
     year: "2018 - 2020",
     small: "Always in",
-    title: "VEEKITES AS SERVICE PROVIDERS",
+    title: "VEEKITES AS SERVICES PROVIDERS",
     desc: "We provide a range of services, including electrical installations, water borehole drilling and distribution, estate development, landscaping, horticultural design, project management, general contracting, and supply services. Our commitment to excellence motivates us to deliver outstanding results for every project we undertake.",
-    img: historyImg,
+    img: historyImg2,
   },
   {
     year: "2020 - 2024",
@@ -50,11 +51,11 @@ export default function OurHistory() {
         {/* Intro / Title centered above timeline */}
         <div className="text-center mb-12">
           <p className="text-sm text-gray-400 uppercase">About our history</p>
-          <h3 className="text-lg md:text-2xl tracking-widest my-3 leading-tight font-bold">
+          {/* <h3 className="text-lg md:text-2xl tracking-widest my-3 leading-tight font-bold">
             TIMELINE
-          </h3>
+          </h3> */}
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
-            VEEKITES GLOBAL SERVICE LIMITED was established on June 11, 2013,
+            VEEKITES GLOBAL SERVICES LIMITED was established on June 11, 2013,
             with a primary focus on delivering high-quality engineering services
             and general contracting solutions.
           </p>
