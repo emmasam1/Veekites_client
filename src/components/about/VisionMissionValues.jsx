@@ -20,7 +20,7 @@ export default function VisionMissionValues() {
       Icon: Gem,
       title: "VALUES",
       desc:
-        "We aim to combine technical expertise, local knowledge, and global standards to deliver solutions that are efficient, reliable, and sustainable in the long term. Our approach helps save clients time and costs, reduces operational risks, fosters trusted relationships, and achieves measurable results.",
+        "We bring together technical expertise, local insights, and global best practices. Our solutions are designed to be efficient, reliable, and sustainable.We help clients cut down on time and costs. Our methods reduce operational risks and strengthen trust.",
     },
   ];
 
