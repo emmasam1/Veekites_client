@@ -11,15 +11,15 @@ const events = [
   {
     year: "2018 - 2020",
     small: "Always in",
-    title: "NEW HOME",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+    title: "VEEKITES AS SERVICE PROVIDERS",
+    desc: "We provide a range of services, including electrical installations, water borehole drilling and distribution, estate development, landscaping, horticultural design, project management, general contracting, and supply services. Our commitment to excellence motivates us to deliver outstanding results for every project we undertake.",
     img: historyImg,
   },
   {
     year: "2020 - 2024",
     small: "Milestones & more",
-    title: "EVENTS",
-    desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    title: "VEEKITES RECOGNIZED FOR PRECISION AND EFFICIENCY",
+    desc: "Drawing on our extensive experience and technical expertise, as well as our deep understanding of local working conditions, VEEKITES GLOBAL SERVICE LIMITED is dedicated to ensuring the successful execution of our clients' projects, even under tight deadlines. We adopt a cost-effective approach to project management, whether we are operating independently or in collaboration with our carefully selected overseas partners. Our project personnel are chosen based on their hands-on experience and suitability for the specific tasks at hand.",
     img: historyImg,
   },
 ];
