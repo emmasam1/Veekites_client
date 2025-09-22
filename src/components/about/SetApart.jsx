@@ -47,7 +47,7 @@ export default function SetApart() {
         WHAT SETS <span className="text-[#A02B2D]">VEEKITES</span> APART
       </h2>
       <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-        At <span className="font-semibold text-gray-900">VEEKITES</span>, we take pride in 
+        At <span className="font-semibold text-gray-900">Veekites</span>, we take pride in 
         offering more than just <span className="italic text-gray-800">services</span>; 
         we deliver an <span className="text-[#A02B2D] font-medium">experience</span>. 
         Here’s what sets us apart:
