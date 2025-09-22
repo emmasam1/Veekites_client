@@ -91,7 +91,7 @@ export default function OurHistory() {
                 <div className="w-full md:w-5/12 px-3 md:px-6 flex items-center">
                   <div className="max-w-[36rem]">
                     <p className="text-sm text-gray-400 mb-2">{ev.small}</p>
-                    <h4 className="text-lg md:text-2xl tracking-wide mb-4 leading-tight font-bold">
+                    <h4 className="text-lg tracking-wide mb-4 leading-tight font-bold">
                       {ev.title}
                     </h4>
                     <p className="text-sm text-gray-600 leading-relaxed">
