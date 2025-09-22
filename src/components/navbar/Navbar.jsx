@@ -207,7 +207,7 @@ const Navbar = () => {
                         </Link>
                       </motion.li>
                     ))}
-                    <Button className="!bg-[#A02B2D] !border-none !rounded-none !text-white">
+                    <Button className="!bg-[#A02B2D] !border-none !rounded-full !text-white">
              <Link to='/contact-us'>
               Book a Consultation
              </Link>
@@ -262,7 +262,7 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
-            <Button className="!bg-[#A02B2D] !border-none !rounded-none !text-white">
+            <Button className="!bg-[#A02B2D] !border-none !rounded-full !text-white">
              <Link to='/contact-us'>
               Book a Consultation
              </Link>
