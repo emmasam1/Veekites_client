@@ -4,25 +4,22 @@ const events = [
   {
     year: "2012 -2016",
     small: "History of the Museum",
-    title: "THE ARCHIVE",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+    title: "VEEKITES AS AN INDIGENOUS COMPANY",
+    desc: "As a proudly indigenous company, VEEKITES GLOBAL SERVICE LIMITED  is recognized as one of the fastest-growing companies in the industry, VEEKITES GLOBAL SERVICE LIMITED specializes in a wide range of services, including architectural design, construction of buildings, roads, bridges, and dams.",
     img: historyImg,
   },
   {
     year: "2018 - 2020",
     small: "Always in",
     title: "NEW HOME",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
     img: historyImg,
   },
   {
     year: "2020 - 2024",
     small: "Milestones & more",
     title: "EVENTS",
-    desc:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     img: historyImg,
   },
 ];
@@ -56,8 +53,9 @@ export default function OurHistory() {
             TIMELINE
           </h3>
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore.
+            VEEKITES GLOBAL SERVICE LIMITED was established on June 11, 2013,
+            with a primary focus on delivering high-quality engineering services
+            and general contracting solutions.
           </p>
         </div>
 
@@ -96,7 +94,9 @@ export default function OurHistory() {
                     <h4 className="text-lg md:text-2xl tracking-wide mb-4 leading-tight font-bold">
                       {ev.title}
                     </h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">{ev.desc}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {ev.desc}
+                    </p>
                   </div>
                 </div>
               </div>
