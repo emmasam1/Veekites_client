@@ -1,4 +1,5 @@
 import historyImg from "../../assets/historyImg.jpg";
+import historyImg1 from "../../assets/history_1.jpeg";
 
 const events = [
   {
@@ -6,7 +7,7 @@ const events = [
     small: "History of the Museum",
     title: "VEEKITES AS AN INDIGENOUS COMPANY",
     desc: "As a proudly indigenous company, VEEKITES GLOBAL SERVICE LIMITED  is recognized as one of the fastest-growing companies in the industry, VEEKITES GLOBAL SERVICE LIMITED specializes in a wide range of services, including architectural design, construction of buildings, roads, bridges, and dams.",
-    img: historyImg,
+    img: historyImg1,
   },
   {
     year: "2018 - 2020",
@@ -90,7 +91,7 @@ export default function OurHistory() {
                 {/* Right (text block) */}
                 <div className="w-full md:w-5/12 px-3 md:px-6 flex items-center">
                   <div className="max-w-[36rem]">
-                    <p className="text-sm text-gray-400 mb-2">{ev.small}</p>
+                    {/* <p className="text-sm text-gray-400 mb-2">{ev.small}</p> */}
                     <h4 className="text-lg tracking-wide mb-4 leading-tight font-bold">
                       {ev.title}
                     </h4>
