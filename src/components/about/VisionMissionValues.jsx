@@ -20,7 +20,7 @@ export default function VisionMissionValues() {
       Icon: Gem,
       title: "VALUES",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.",
+        "We aim to combine technical expertise, local knowledge, and global standards to deliver solutions that are efficient, reliable, and sustainable in the long term. Our approach helps save clients time and costs, reduces operational risks, fosters trusted relationships, and achieves measurable results.",
     },
   ];
 
