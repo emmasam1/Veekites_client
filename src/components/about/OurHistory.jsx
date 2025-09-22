@@ -7,7 +7,7 @@ const events = [
     year: "2012 -2016",
     small: "History of the Museum",
     title: "VEEKITES AS AN INDIGENOUS COMPANY",
-    desc: "As a proudly indigenous company, Veekites Global Services Limited   is recognized as one of the fastest-growing companies in the industry, VEEKITES GLOBAL SERVICE LIMITED specializes in a wide range of services, including architectural design, construction of buildings, roads, bridges, and dams.",
+    desc: "As a proudly indigenous company, Veekites Global Services Limited  is recognized as one of the fastest-growing companies in the industry, Veekites Global Services Limited specializes in a wide range of services, including architectural design, construction of buildings, roads, bridges, and dams.",
     img: historyImg1,
   },
   {
@@ -21,7 +21,7 @@ const events = [
     year: "2020 - 2024",
     small: "Milestones & more",
     title: "VEEKITES RECOGNIZED FOR PRECISION AND EFFICIENCY",
-    desc: "Drawing on our extensive experience and technical expertise, as well as our deep understanding of local working conditions, VEEKITES GLOBAL SERVICE LIMITED is dedicated to ensuring the successful execution of our clients' projects, even under tight deadlines. We adopt a cost-effective approach to project management, whether we are operating independently or in collaboration with our carefully selected overseas partners. Our project personnel are chosen based on their hands-on experience and suitability for the specific tasks at hand.",
+    desc: "Drawing on our extensive experience and technical expertise, as well as our deep understanding of local working conditions, Veekites Global Services Limited is dedicated to ensuring the successful execution of our clients' projects, even under tight deadlines. We adopt a cost-effective approach to project management, whether we are operating independently or in collaboration with our carefully selected overseas partners. Our project personnel are chosen based on their hands-on experience and suitability for the specific tasks at hand.",
     img: historyImg,
   },
 ];
