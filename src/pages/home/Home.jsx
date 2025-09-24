@@ -195,11 +195,6 @@ const Home = () => {
       </div>
 
       <div className="w-11/12 mx-auto">
-        <div className="hidden  lg:flex justify-between items-center">
-          <h1 className="relative font-extrabold text-lg uppercase">
-            Comapny Brochure
-          </h1>
-        </div>
         <BrochureSection />
       </div>
 
