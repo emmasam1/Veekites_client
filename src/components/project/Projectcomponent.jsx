@@ -95,7 +95,7 @@ const Projectcomponent = () => {
       {/* Featured Projects */}
       <div className="lg:text-center mb-12 max-w-7xl mx-auto px-6">
         <h2 className="text-lg md:text-lg font-bold uppercase leading-snug">
-          Featured Projects
+          Projects
         </h2>
         <p className="text-gray-600 mt-3 max-w-3xl mx-auto sm:text-left">
           Explore a selection of our most impactful projects, where innovation
