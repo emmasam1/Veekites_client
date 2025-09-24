@@ -15,6 +15,12 @@ import p3 from "../assets/p3.jpeg";
 import p4 from "../assets/p4.jpeg";
 import p5 from "../assets/p5.jpeg";
 import p6 from "../assets/p6.jpeg";
+import p7 from "../assets/p7.jpeg";
+import p8 from "../assets/p8.jpeg";
+import p9 from "../assets/p9.jpeg";
+import p10 from "../assets/p10.jpeg";
+import p11 from "../assets/p11.jpeg";
+import p12 from "../assets/p12.jpeg";
 
 export const projects = [
   {
@@ -195,7 +201,7 @@ export const projects = [
   },
   {
     id: 11,
-    title: "Green Energy Plant",
+    title: "Mini stadium",
     client: "EcoFuture Energy",
     location: "Nairobi, Kenya",
     area: "620,000 sf",
@@ -204,9 +210,9 @@ export const projects = [
     architect: "Sustain Design Group",
     sector: "Energy, Renewables",
     description:
-      "A sustainable energy project delivering clean power and driving eco-friendly development with solar...",
-    mainImage: prj1,
-    gallery: [gallery2, gallery3, gallery5, gallery1, gallery4],
+      "Development of a mini stadium for community sports and events, promoting local engagement and physical activity with modern amenities and sustainable design.",
+    mainImage: p9,
+    gallery: [p8, p10, gallery5, p11, p12],
     isLatest: true,
   },
 ];
