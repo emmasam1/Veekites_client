@@ -27,6 +27,10 @@ import p15 from "../assets/p15.jpeg";
 import p16 from "../assets/p16.jpeg";
 import p17 from "../assets/p17.jpeg";
 import p18 from "../assets/p18.jpeg";
+import p19 from "../assets/p19.jpeg";
+import p20 from "../assets/p20.jpeg";
+import p21 from "../assets/p21.jpeg";
+import p22 from "../assets/p22.png";
 
 export const projects = [
   {
@@ -59,6 +63,22 @@ export const projects = [
       "Veekites Global Services, in partnership with the National Space Research and Development Agency, successfully delivered a fully equipped ICT Centre for St. Charles Grammar School, Osogbo, Osun State. /n/ The project included the construction and furnishing of a modern ICT facility, installation of computers, networking systems, and provision of reliable power and internet access. /n/ This initiative has created a conducive digital learning environment, empowering students and teachers with the tools to embrace technology and improve educational outcomes.",
     mainImage: p18,
     gallery: [p17],
+    isLatest: false,
+  },
+  {
+    id: 3,
+    title: "Installation of 3-in-1 Solar Street Lights – Yenagoa/Kolokuma Federal Constituency",
+    client: "National Institute of Construction Technology and Management, Uromi, Edo State ",
+    location: "Bayelsa State",
+    area: "550,000 sf",
+    year: 2019,
+    budget: "$245,000,000",
+    architect: "Scott & Austin",
+    sector: "Tunnel, Transport",
+    description:
+      "Veekites Global Services successfully completed the provision and installation of 3-in-1 solar street lights across the Yenagoa/Kolokuma Federal Constituency in Bayelsa State. This project involved the deployment of durable and energy-efficient solar lighting systems that aim to enhance community safety, improve visibility at night, and promote sustainable energy use. /n/ By utilizing renewable energy, this initiative reduces reliance on the national grid, supports eco-friendly development, and offers long-term benefits to the residents of the constituency.",
+    mainImage: p19,
+    gallery: [p20, p21, p22],
     isLatest: false,
   },
   // {
