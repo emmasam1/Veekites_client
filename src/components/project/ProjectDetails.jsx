@@ -96,26 +96,20 @@ const ProjectDetail = () => {
               </li>
             </ul>
           </aside>
-     <section className="md:col-span-2 space-y-6">
-  <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D]">
-    {project.title}
-  </h2>
-      {project.description
-        ?.match(/([^.!?]+[.!?]+)/g)
-        ?.reduce((acc, sentence, i) => {
-          const groupIndex = Math.floor(i / 3);
-          if (!acc[groupIndex]) acc[groupIndex] = "";
-          acc[groupIndex] += sentence + " ";
-          return acc;
-        }, [])
-        .map((para, i) => (
-          <p
-            key={i}
-            className="text-gray-600 leading-relaxed text-sm sm:text-base"
-          >
-            {para.trim()}
-          </p>
-        ))}
+          <section className="md:col-span-2 space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D]">
+              {project.title}
+            </h2>
+            {project.description
+              ?.split("/n/") // 👈 split by /n/
+              .map((para, i) => (
+                <p
+                  key={i}
+                  className="text-gray-600 leading-relaxed text-sm sm:text-base"
+                >
+                  {para.trim()}
+                </p>
+              ))}
 
             {project.sub_dec && (
               <ul className="list-disc pl-5 space-y-2 text-gray-600">
@@ -124,8 +118,7 @@ const ProjectDetail = () => {
                 ))}
               </ul>
             )}
-    </section>
- 
+          </section>
         </div>
 
         {/* Gallery */}

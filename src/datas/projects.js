@@ -25,6 +25,8 @@ import p13 from "../assets/p13.jpeg";
 import p14 from "../assets/p14.jpeg";
 import p15 from "../assets/p15.jpeg";
 import p16 from "../assets/p16.jpeg";
+import p17 from "../assets/p17.jpeg";
+import p18 from "../assets/p18.jpeg";
 
 export const projects = [
   {
@@ -38,9 +40,25 @@ export const projects = [
     architect: "Scott & Austin",
     sector: "Tunnel, Transport",
     description:
-      "High-capacity infrastructure project involving the construction of reinforced concrete plates to support efficient operations in EPF and gas processing plants, ensuring durability and safety.",
+      "At Veekites Global Services, we successfully delivered the construction of reinforced concrete plates as part of the Early Processing Facility (EPF) and Gas Plant at the Ogbonabor Marginal Oil Field, Delta State, for Kalm Marine Petroleum Services. /n/ Our scope of work included site preparation, structural design, and installation of reinforced concrete plates to support heavy-duty oil and gas processing equipment. We ensured full compliance with industry standards, prioritizing safety, durability, and efficiency throughout the project. /n/ This project demonstrates our ability to provide robust engineering solutions that meet the demanding requirements of the oil and gas sector, while delivering on time and to the highest quality standards.",
     mainImage: project1,
     gallery: [p13, p14, p15, p16],
+    isLatest: false,
+  },
+  {
+    id: 2,
+    title: "Provision of ICT Centre – St. Charles Grammar School",
+    client: "RRS Company",
+    location: "Osogbo, Osun State",
+    area: "550,000 sf",
+    year: 2019,
+    budget: "$245,000,000",
+    architect: "Scott & Austin",
+    sector: "Tunnel, Transport",
+    description:
+      "Veekites Global Services, in partnership with the National Space Research and Development Agency, successfully delivered a fully equipped ICT Centre for St. Charles Grammar School, Osogbo, Osun State. /n/ The project included the construction and furnishing of a modern ICT facility, installation of computers, networking systems, and provision of reliable power and internet access. /n/ This initiative has created a conducive digital learning environment, empowering students and teachers with the tools to embrace technology and improve educational outcomes.",
+    mainImage: p18,
+    gallery: [p17],
     isLatest: false,
   },
   // {
