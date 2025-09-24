@@ -189,7 +189,7 @@ const Home = () => {
             size="large"
             className="!bg-[#A02B2D] !rounded-none"
           >
-            See All Services →
+           <Link to="/our-services"> See All Services →</Link>
           </Button>
         </div>
       </div>
@@ -197,7 +197,7 @@ const Home = () => {
       <div className="w-11/12 mx-auto">
         <div className="hidden  lg:flex justify-between items-center">
           <h1 className="relative font-extrabold text-lg uppercase">
-            Our Services
+            Comapny Brochure
           </h1>
         </div>
         <BrochureSection />
