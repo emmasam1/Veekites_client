@@ -26,7 +26,7 @@ const Projectcomponent = () => {
   const itemsPerPage = 6;
 
   // Split projects
-  const featuredProjects = projects.filter((p) => !p.isLatest);
+  const featuredProjects = projects
   const latestProjects = projects.filter((p) => p.isLatest);
 
   const totalPages = Math.ceil(featuredProjects.length / itemsPerPage);
