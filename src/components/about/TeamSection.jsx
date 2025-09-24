@@ -5,32 +5,38 @@ import { FiChevronsRight, FiChevronsLeft  } from "react-icons/fi";
 
 const team = [
   {
-    name: "Ngozi Nwosu",
-    role: "Environmental Consultant",
+    name: "Tare-ere P. Seimode",
+    role: "General Manager",
     email: "info@veekites.com",
     img: "assets/team1.jpg",
   },
   {
-    name: "Aisha Bello",
-    role: "Civil Engineering Manager",
+    name: "Tochukwu Chukwurah",
+    role: "⁠Legal Officer/HR",
     email: "info@veekites.com",
     img: "assets/team2.jpg",
   },
   {
-    name: "Chinedu Okafor",
-    role: "Project Manager",
+    name: "Praise Bassey",
+    role: "Business Developer",
     email: "info@veekites.com",
     img: "assets/team3.jpg",
   },
   {
-    name: "Tunde Adeyemi",
-    role: "Operations Director",
+    name: "Charles Uduakah",
+    role: "Head Of Accountant",
     email: "info@veekites.com",
     img: "assets/team4.jpg",
   },
   {
-    name: "Tunde Adeyemi",
-    role: "Operations Director",
+    name: "Pedro Ebipade",
+    role: "Field Manager",
+    email: "info@veekites.com",
+    img: "assets/team4.jpg",
+  },
+  {
+    name: " Benaebi Isereke",
+    role: "Procurement Supervisor",
     email: "info@veekites.com",
     img: "assets/team4.jpg",
   },

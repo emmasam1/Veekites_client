@@ -12,7 +12,7 @@ import { IoChevronBackSharp } from "react-icons/io5";
 import image1 from "../../assets/services_renovation.jpg";
 import image5 from "../../assets/service_oil.jpg";
 import image6 from "../../assets/service_marine.jpg";
-import image8 from "../../assets/project.jpg";
+import image8 from "../../assets/prj_management.jpg";
 import image7 from "../../assets/service_ict.jpg";
 import image9 from "../../assets/service_strategic.jpg";
 import image10 from "../../assets/solution.jpg";
