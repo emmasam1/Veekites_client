@@ -9,6 +9,12 @@ import gallery2 from "../assets/project-10.jpg";
 import gallery3 from "../assets/project-9.jpg";
 import gallery4 from "../assets/project-11.jpg";
 import gallery5 from "../assets/project-9.jpg";
+import p1 from "../assets/p1.jpeg";
+import p2 from "../assets/p2.jpeg";
+import p3 from "../assets/p3.jpeg";
+import p4 from "../assets/p4.jpeg";
+import p5 from "../assets/p5.jpeg";
+import p6 from "../assets/p6.jpeg";
 
 export const projects = [
   {
@@ -183,8 +189,8 @@ export const projects = [
     sector: "Security, Infrastructure",
     description:
       "The building project for the Headquarters of the Nigeria Security and Civil Defence Corps in Sauka, Abuja is known as the Command Control and Communication Centre. Veekites Global Services was contracted by Tantita Security Services Nigeria for this project. Tantita Security Services Nigeria Limited specializes in providing comprehensive security solutions specifically tailored to the unique needs of the oil and gas industry. With an unwavering commitment to excellence, they protect vital infrastructure across Nigeria—both onshore and offshore—ensuring that operations remain secure 24/7.",
-    mainImage: prj,
-    gallery: [gallery1, gallery2, gallery3, gallery4, gallery5],
+    mainImage: p4,
+    gallery: [p2, p1, p3, p5, p6],
     isLatest: true,
   },
   {
