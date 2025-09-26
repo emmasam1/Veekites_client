@@ -15,7 +15,7 @@ const Footer = () => {
             <div></div>
           </div>
           <div className="border-t border-gray-600">
-            <div className="m-auto bg-[url('assets/image/footer-bg.jpg')] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               <div className="p-5">
                 <h2 className="text-gray-400 font-thin mb-4">ABOUT</h2>
                 <p className="text-gray-300 text-sm font-thin">
