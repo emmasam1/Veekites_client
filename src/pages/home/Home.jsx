@@ -91,19 +91,19 @@ const Home = () => {
     {
       title: "civil engineering",
       description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        "We provide exceptional construction solutions meticulously crafted to meet the unique needs of our clients.",
       icon: <MdEngineering className="!text-white text-2xl" />,
     },
     {
       title: "marine operations",
       description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        "We deliver comprehensive marine solutions that set the standard in the industry.",
       icon: <GiMiniSubmarine className="!text-white text-2xl" />,
     },
     {
       title: "oil and gas",
       description:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+        " Veekites delivers exceptional services that encompass every aspect of the oil and gas value chain, ensuring unparalleled quality and expertise.",
       icon: <FaOilWell className="!text-white text-2xl" />,
     },
   ];
