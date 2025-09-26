@@ -240,7 +240,7 @@ const Home = () => {
                     {proj.title}
                   </span>
 
-                  <p>{proj.description?.slice(0, 40)}</p>
+                  <p>{proj.description?.slice(0, 40)}....</p>
                   <div className="flex justify-left mt-5">
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
