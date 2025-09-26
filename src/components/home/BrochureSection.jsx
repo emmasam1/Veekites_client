@@ -14,7 +14,7 @@ export default function BrochureSection() {
         {/* Left text */}
         <div className="max-w-lg text-center md:text-left">
           <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-8">
-            Download our Company Brochures
+            Download our Company Brochure
           </h2>
           {/* Button (mobile: placed below image, so hide here) */}
           <div className="hidden md:block">

@@ -10,11 +10,7 @@ import ProjectCarousel from "../../components/home/ProjectCarousel";
 import BrochureSection from "../../components/home/BrochureSection";
 import { PiGreaterThanLight } from "react-icons/pi";
 import { projects, slides } from "../../datas/projects";
-import {
-  SettingOutlined,
-  PhoneOutlined,
-  CloudOutlined,
-} from "@ant-design/icons";
+
 
 import { FaOilWell } from "react-icons/fa6";
 import { GiMiniSubmarine } from "react-icons/gi";
@@ -236,9 +232,11 @@ const Home = () => {
                 className="!border-none !rounded-none"
               >
                 <div className="flex flex-col h-full justify-between px-3">
-                  <span className="text-lg font-semibold uppercase">
+                 <div className="h-23">
+                   <span className="text-lg font-semibold uppercase">
                     {proj.title}
                   </span>
+                 </div>
 
                   <p>{proj.description?.slice(0, 40)}....</p>
                   <div className="flex justify-left mt-5">

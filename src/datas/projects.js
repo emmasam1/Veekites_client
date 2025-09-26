@@ -26,14 +26,14 @@ import p23 from "../assets/p23.png";
 export const projects = [
   {
     id: 1,
-    title: "Construction of Reinforced Concrete Plates for EPF & Gas Plants.",
-    client: "RRS Company",
-    location: "San Francisco",
+    title: "CONSTRUCTION OF REINFORCED CONCRETE PLATES.",
+    client: "Kalm marine petroleum services",
+    location: "Ogbonabor, Delta state",
     area: "550,000 sf",
-    year: 2019,
-    budget: "$245,000,000",
+    year: 2024,
+    // budget: "$245,000,000",
     architect: "Scott & Austin",
-    sector: "Tunnel, Transport",
+    sector: "Oil & gas",
     description:
       "At Veekites Global Services, we successfully delivered the construction of reinforced concrete plates as part of the Early Processing Facility (EPF) and Gas Plant at the Ogbonabor Marginal Oil Field, Delta State, for Kalm Marine Petroleum Services. /n/ Our scope of work included site preparation, structural design, and installation of reinforced concrete plates to support heavy-duty oil and gas processing equipment. We ensured full compliance with industry standards, prioritizing safety, durability, and efficiency throughout the project. /n/ This project demonstrates our ability to provide robust engineering solutions that meet the demanding requirements of the oil and gas sector, while delivering on time and to the highest quality standards.",
     mainImage: project1,
@@ -42,12 +42,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Provision of ICT Centre – St. Charles Grammar School",
+    title: "PROVISION OF ICT CENTRE",
     client: "RRS Company",
     location: "Osogbo, Osun State",
     area: "550,000 sf",
     year: 2019,
-    budget: "$245,000,000",
+    // budget: "$245,000,000",
     architect: "Scott & Austin",
     sector: "Tunnel, Transport",
     description:
@@ -58,12 +58,12 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Installation of 3-in-1 Solar Street Lights – Yenagoa/Kolokuma Federal Constituency",
+    title: "INSTALLATION OF 3-IN-1 SOLAR LIGHT",
     client: "National Institute of Construction Technology and Management, Uromi, Edo State ",
     location: "Bayelsa State",
     area: "550,000 sf",
     year: 2019,
-    budget: "$245,000,000",
+    // budget: "$245,000,000",
     architect: "Scott & Austin",
     sector: "Tunnel, Transport",
     description:
@@ -80,7 +80,7 @@ export const projects = [
     location: "Sauka, Abuja",
     area: "850,000 sf",
     year: 2024,
-    budget: "$320,000,000",
+    // budget: "$320,000,000",
     architect: "Veekites Global Services",
     sector: "Security, Infrastructure",
     description:
@@ -96,7 +96,7 @@ export const projects = [
     location: "Torogbene community, Burutu Local Government, Delta State.",
     area: "620,000 sf",
     year: 2023,
-    budget: "$270,000,000",
+    // budget: "$270,000,000",
     architect: "Veekites Global Services",
     sector: "Construction",
     description:
