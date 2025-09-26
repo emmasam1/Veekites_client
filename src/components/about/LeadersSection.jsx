@@ -6,26 +6,26 @@ import founders from "../../assets/founders.png";
 
 const testimonials = [
   {
-    name: "Madison Black",
-    role: "Founder",
+    name: "Victor Isereke (PhD)",
+    role: "CEO/Managing Director",
     img: founders,
     text: "Lorem ipsum dolor sit amet, consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
   },
   {
-    name: "Alfred May",
-    role: "CEO",
+    name: "Ebilade Pondei",
+    role: "Director",
     img: founders,
     text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
-    name: "Lesly Ugo",
-    role: "Engineer",
+    name: "Tare-ere P. Seimode",
+    role: "General Manager",
     img: founders,
     text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];
 
-const TestimonialSlider = () => {
+const LeadersSection = () => {
   return (
     <div className="relative bg-[url('assets/testimonial.jpg')] bg-cover bg-center py-20 w-11/12 mx-auto">
       <div className="absolute inset-0 bg-black/60"></div>
@@ -57,4 +57,4 @@ const TestimonialSlider = () => {
   );
 };
 
-export default TestimonialSlider;
+export default LeadersSection;

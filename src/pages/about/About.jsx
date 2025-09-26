@@ -1,7 +1,7 @@
 import HeroSection from "../../components/about/HeroSection";
 import StatsSection from "../../components/about/StatsSection";
 import TeamSection from "../../components/about/TeamSection";
-import TestimonialSlider from "../../components/about/TestimonialSlider";
+import LeadersSection from "../../components/about/LeadersSection";
 import BrandsSection from "../../components/about/BrandsSection";
 import FeaturesSection from "../../components/about/FeaturesSection";
 import WhyVeekites from "../../components/about/WhyVeekites";
@@ -24,7 +24,7 @@ const About = () => {
       <OurHistory />
       <StatsSection />
       <TeamSection />
-      <TestimonialSlider />
+      <LeadersSection />
       <BrandsSection />
     </div>
   );

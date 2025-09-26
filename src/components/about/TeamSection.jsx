@@ -5,6 +5,18 @@ import { FiChevronsRight, FiChevronsLeft  } from "react-icons/fi";
 
 const team = [
   {
+    name: "Victor Isereke (PhD)",
+    role: "CEO/Managing Director",
+    email: "info@veekites.com",
+    img: "assets/team1.jpg",
+  },
+    {
+    name: "Ebilade Pondei",
+    role: "Director",
+    email: "info@veekites.com",
+    img: "assets/team1.jpg",
+  },
+  {
     name: "Tare-ere P. Seimode",
     role: "General Manager",
     email: "info@veekites.com",

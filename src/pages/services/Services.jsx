@@ -14,8 +14,8 @@ import image5 from "../../assets/service_oil.jpg";
 import image6 from "../../assets/marin_service.jpg";
 import image8 from "../../assets/prj_management.jpg";
 import image7 from "../../assets/ict_training.png";
-import image9 from "../../assets/strategy_procurement.jpg";
-import image10 from "../../assets/solution.jpg";
+import image9 from "../../assets/strat_proc.jpg";
+import image10 from "../../assets/customized.jpg";
 import heroImage from "../../assets/service_bg.jpeg";
 import { useLocation } from "react-router";
 
