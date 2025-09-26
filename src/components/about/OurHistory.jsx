@@ -1,6 +1,7 @@
 import historyImg from "../../assets/historyImg.jpg";
 import historyImg1 from "../../assets/history_1.jpeg";
 import historyImg2 from "../../assets/6.webp";
+import historyImg3 from "../../assets/ourhistory_third.jpg";
 
 const events = [
   {
@@ -22,7 +23,7 @@ const events = [
     small: "Milestones & more",
     title: "VEEKITES RECOGNIZED FOR PRECISION AND EFFICIENCY",
     desc: "Drawing on our extensive experience and technical expertise, as well as our deep understanding of local working conditions, Veekites Global Services Limited is dedicated to ensuring the successful execution of our clients' projects, even under tight deadlines. We adopt a cost-effective approach to project management, whether we are operating independently or in collaboration with our carefully selected overseas partners. Our project personnel are chosen based on their hands-on experience and suitability for the specific tasks at hand.",
-    img: historyImg,
+    img: historyImg3,
   },
 ];
 

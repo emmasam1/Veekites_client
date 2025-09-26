@@ -22,7 +22,7 @@ export default function BrochureSection() {
               to="/our-services"
               className="w-full bg-[#A02B2D] hover:bg-[#ef2b2e] text-white font-semibold px-6 py-3 transition"
             >
-                download & View 
+                Download & View 
             </Link>
           </div>
         </div>

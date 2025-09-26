@@ -9,13 +9,13 @@ import {
 } from "@ant-design/icons";
 import { IoChevronBackSharp } from "react-icons/io5";
 
-import image1 from "../../assets/services_renovation.jpg";
+import image1 from "../../assets/construction_service.jpg";
 import image5 from "../../assets/service_oil.jpg";
-import image6 from "../../assets/service_marine.jpg";
+import image6 from "../../assets/marin_service.jpg";
 import image8 from "../../assets/prj_management.jpg";
-import image7 from "../../assets/service_ict.jpg";
-import image9 from "../../assets/service_strategic.jpg";
-import image10 from "../../assets/solution.jpg";
+import image7 from "../../assets/ict_training.png";
+import image9 from "../../assets/strat_proc.jpg";
+import image10 from "../../assets/customized.jpg";
 import heroImage from "../../assets/service_bg.jpeg";
 import { useLocation } from "react-router";
 
