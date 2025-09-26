@@ -31,6 +31,7 @@ import p19 from "../assets/p19.jpeg";
 import p20 from "../assets/p20.jpeg";
 import p21 from "../assets/p21.jpeg";
 import p22 from "../assets/p22.png";
+import p23 from "../assets/p23.png";
 
 export const projects = [
   {
@@ -62,7 +63,7 @@ export const projects = [
     description:
       "Veekites Global Services, in partnership with the National Space Research and Development Agency, successfully delivered a fully equipped ICT Centre for St. Charles Grammar School, Osogbo, Osun State. /n/ The project included the construction and furnishing of a modern ICT facility, installation of computers, networking systems, and provision of reliable power and internet access. /n/ This initiative has created a conducive digital learning environment, empowering students and teachers with the tools to embrace technology and improve educational outcomes.",
     mainImage: p18,
-    gallery: [p17],
+    gallery: [p17, p23],
     isLatest: false,
   },
   {
