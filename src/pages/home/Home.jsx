@@ -16,6 +16,10 @@ import {
   CloudOutlined,
 } from "@ant-design/icons";
 
+import { FaOilWell } from "react-icons/fa6";
+import { GiMiniSubmarine } from "react-icons/gi";
+import { MdEngineering } from "react-icons/md";
+
 const { Meta } = Card;
 
 const settings = {
@@ -85,22 +89,22 @@ const Home = () => {
 
   const services = [
     {
-      title: "Corporate Solution",
+      title: "civil engineering",
       description:
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-      icon: <SettingOutlined className="!text-white text-2xl" />,
+      icon: <MdEngineering className="!text-white text-2xl" />,
     },
     {
-      title: "Call Center Solutions",
+      title: "marine operations",
       description:
         "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-      icon: <PhoneOutlined className="!text-white text-2xl" />,
+      icon: <GiMiniSubmarine className="!text-white text-2xl" />,
     },
     {
-      title: "Cloud Development",
+      title: "oil and gas",
       description:
         "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-      icon: <CloudOutlined className="!text-white text-2xl" />,
+      icon: <FaOilWell className="!text-white text-2xl" />,
     },
   ];
 
@@ -177,7 +181,7 @@ const Home = () => {
                   {service.icon}
                 </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+              <h3 className="text-lg font-semibold mb-2 capitalize">{service.title}</h3>
               <p className="text-gray-500 text-sm">{service.description}</p>
             </Card>
           ))}
