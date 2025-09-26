@@ -166,7 +166,6 @@ const Home = () => {
       <ProjectCarousel />
 
       <div className="w-11/12 mx-auto my-16">
-       
         <h2 className="text-lg font-bold mb-12 uppercase">Our Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -181,7 +180,9 @@ const Home = () => {
                   {service.icon}
                 </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2 capitalize">{service.title}</h3>
+              <h3 className="text-lg font-semibold mb-2 capitalize">
+                {service.title}
+              </h3>
               <p className="text-gray-500 text-sm">{service.description}</p>
             </Card>
           ))}
@@ -193,7 +194,7 @@ const Home = () => {
             size="large"
             className="!bg-[#A02B2D] !rounded-none"
           >
-           <Link to="/our-services"> See All Services →</Link>
+            <Link to="/our-services"> See All Services →</Link>
           </Button>
         </div>
       </div>
@@ -235,14 +236,11 @@ const Home = () => {
                 className="!border-none !rounded-none"
               >
                 <div className="flex flex-col h-full justify-between px-3">
-                  <Meta
-                    title={
-                      <span className="text-lg font-semibold uppercase">
-                        {proj.title}
-                      </span>
-                    }
-                    description={proj.description?.slice(0, 70)}
-                  />
+                  <span className="text-lg font-semibold uppercase">
+                    {proj.title}
+                  </span>
+
+                  <p>{proj.description?.slice(0, 40)}</p>
                   <div className="flex justify-left mt-5">
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
