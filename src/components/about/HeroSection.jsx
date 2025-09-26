@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="h-[400px] bg-[url('assets/about2.jpg')] bg-no-repeat bg-cover bg-center relative">
+    <div className="h-[400px] bg-[url('assets/about2.webp')] bg-no-repeat bg-cover bg-center relative">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 h-[400px] flex justify-center flex-col px-4">
         <div className="max-w-6xl w-full mx-auto">
