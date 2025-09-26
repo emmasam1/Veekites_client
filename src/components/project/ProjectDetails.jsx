@@ -88,9 +88,9 @@ const ProjectDetail = () => {
               {/* <li className="border-b border-gray-500 py-2">
                 <strong>Budget:</strong> {project.budget}
               </li> */}
-              <li className="border-b border-gray-500 py-2">
+              {/* <li className="border-b border-gray-500 py-2">
                 <strong>Architect:</strong> {project.architect}
-              </li>
+              </li> */}
               <li className="border-b border-gray-500 py-2">
                 <strong>Sector:</strong> {project.sector}
               </li>

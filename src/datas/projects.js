@@ -32,7 +32,7 @@ export const projects = [
     area: "550,000 sf",
     year: 2024,
     // budget: "$245,000,000",
-    architect: "Scott & Austin",
+    // architect: "Scott & Austin",
     sector: "Oil & gas",
     description:
       "At Veekites Global Services, we successfully delivered the construction of reinforced concrete plates as part of the Early Processing Facility (EPF) and Gas Plant at the Ogbonabor Marginal Oil Field, Delta State, for Kalm Marine Petroleum Services. /n/ Our scope of work included site preparation, structural design, and installation of reinforced concrete plates to support heavy-duty oil and gas processing equipment. We ensured full compliance with industry standards, prioritizing safety, durability, and efficiency throughout the project. /n/ This project demonstrates our ability to provide robust engineering solutions that meet the demanding requirements of the oil and gas sector, while delivering on time and to the highest quality standards.",
@@ -48,7 +48,7 @@ export const projects = [
     area: "550,000 sf",
     year: 2019,
     // budget: "$245,000,000",
-    architect: "Scott & Austin",
+    // architect: "Scott & Austin",
     sector: "Tunnel, Transport",
     description:
       "Veekites Global Services, in partnership with the National Space Research and Development Agency, successfully delivered a fully equipped ICT Centre for St. Charles Grammar School, Osogbo, Osun State. /n/ The project included the construction and furnishing of a modern ICT facility, installation of computers, networking systems, and provision of reliable power and internet access. /n/ This initiative has created a conducive digital learning environment, empowering students and teachers with the tools to embrace technology and improve educational outcomes.",
@@ -64,7 +64,7 @@ export const projects = [
     area: "550,000 sf",
     year: 2019,
     // budget: "$245,000,000",
-    architect: "Scott & Austin",
+    // architect: "Scott & Austin",
     sector: "Tunnel, Transport",
     description:
       "Veekites Global Services successfully completed the provision and installation of 3-in-1 solar street lights across the Yenagoa/Kolokuma Federal Constituency in Bayelsa State. This project involved the deployment of durable and energy-efficient solar lighting systems that aim to enhance community safety, improve visibility at night, and promote sustainable energy use. /n/ By utilizing renewable energy, this initiative reduces reliance on the national grid, supports eco-friendly development, and offers long-term benefits to the residents of the constituency.",
@@ -81,7 +81,7 @@ export const projects = [
     area: "850,000 sf",
     year: 2024,
     // budget: "$320,000,000",
-    architect: "Veekites Global Services",
+    // architect: "Veekites Global Services",
     sector: "Security, Infrastructure",
     description:
       "The building project for the Headquarters of the Nigeria Security and Civil Defence Corps in Sauka, Abuja is known as the Command Control and Communication Centre. Veekites Global Services was contracted by Tantita Security Services Nigeria for this project. Tantita Security Services Nigeria Limited specializes in providing comprehensive security solutions specifically tailored to the unique needs of the oil and gas industry. With an unwavering commitment to excellence, they protect vital infrastructure across Nigeria—both onshore and offshore—ensuring that operations remain secure 24/7.",
@@ -97,7 +97,7 @@ export const projects = [
     area: "620,000 sf",
     year: 2023,
     // budget: "$270,000,000",
-    architect: "Veekites Global Services",
+    // architect: "Veekites Global Services",
     sector: "Construction",
     description:
       "This stadium was built for the Torogbene community in Burutu Local Government, Delta State. The mini stadium serves as a multi-use facility for local sports, community events, and youth activities, promoting physical fitness and community engagement./n/ Facilities Included:The stadium features a playing field, seating for spectators, changing rooms, and rest areas to support various sporting events./n/ Community Impact: This project aims to enhance the quality of life for residents by providing a safe and accessible venue for recreation and social gatherings./n/ Future Plans: There are intentions to organize regular sports tournaments and community activities to foster teamwork and unity within the Torogbene community.",
