@@ -163,7 +163,7 @@ const Footer = () => {
       <div className="py-4 border-t border-gray-700">
         <div className="w-11/12 m-auto flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-center md:text-left text-gray-500">
-            &copy; {currentYear} Veekites. All rights reserved. By - D-Unit
+            &copy; {currentYear} Veekites. All rights reserved. 
           </p>
           <div className="flex gap-4 text-sm">
             <Link to="/terms" className="text-gray-400 hover:text-red-500">

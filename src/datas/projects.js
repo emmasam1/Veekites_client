@@ -6,6 +6,7 @@ import p3 from "../assets/p3.jpeg";
 import p4 from "../assets/p4.jpeg";
 import p5 from "../assets/p5.jpeg";
 import p6 from "../assets/p6.jpeg";
+import p7 from "../assets/p7.jpeg";
 import p8 from "../assets/p8.jpeg";
 import p9 from "../assets/p9.jpeg";
 import p10 from "../assets/p10.jpeg";
@@ -22,6 +23,7 @@ import p20 from "../assets/p20.jpeg";
 import p21 from "../assets/p21.jpeg";
 import p22 from "../assets/p22.png";
 import p23 from "../assets/p23.png";
+import solar from "../assets/solar.jpeg";
 
 export const projects = [
   {
@@ -68,7 +70,7 @@ export const projects = [
     sector: "Construction, ",
     description:
       "Veekites Global Services successfully completed the provision and installation of 3-in-1 solar street lights across the Yenagoa/Kolokuma Federal Constituency in Bayelsa State. This project involved the deployment of durable and energy-efficient solar lighting systems that aim to enhance community safety, improve visibility at night, and promote sustainable energy use. /n/ By utilizing renewable energy, this initiative reduces reliance on the national grid, supports eco-friendly development, and offers long-term benefits to the residents of the constituency.",
-    mainImage: p19,
+    mainImage: solar,
     gallery: [p20, p21, p22],
     isLatest: false,
   },
@@ -86,7 +88,7 @@ export const projects = [
     description:
       "The building project for the Headquarters of the Nigeria Security and Civil Defence Corps in Sauka, Abuja is known as the Command Control and Communication Centre. Veekites Global Services was contracted by Tantita Security Services Nigeria for this project. /n/ Tantita Security Services Nigeria Limited specializes in providing comprehensive security solutions specifically tailored to the unique needs of the oil and gas industry. With an unwavering commitment to excellence, they protect vital infrastructure across Nigeria—both onshore and offshore—ensuring that operations remain secure 24/7.",
     mainImage: p4,
-    gallery: [p2, p1, p3, p5, p6],
+    gallery: [p6, p1, p3, p5, p7],
     isLatest: true,
   },
   {
