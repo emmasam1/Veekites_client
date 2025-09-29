@@ -231,15 +231,15 @@ const Home = () => {
                 }
                 className="!border-none !rounded-none"
               >
-                <div className="flex flex-col h-full justify-between px-3">
-                 <div className="h-23">
-                   <span className="text-lg font-semibold uppercase">
+                <div className="flex text-center flex-col h-full justify-between px-3">
+                 <div className="h-15">
+                   <span className="text-sm font-semibold uppercase">
                     {proj.title}
                   </span>
                  </div>
 
-                  <p>{proj.description?.slice(0, 40)}....</p>
-                  <div className="flex justify-left mt-5">
+                  <p>{proj.description?.slice(0, 80)}....</p>
+                  <div className="flex justify-center mt-5">
                     <Link
                       to={`/project/${slugify(proj.title)}/${proj.id}`}
                       className="hover:underline !text-[#A02B2D] "
