@@ -240,7 +240,7 @@ const TeamSection = () => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 1, // ✅ mobile-first default
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -251,7 +251,14 @@ const TeamSection = () => {
       {
         breakpoint: 768, // tablet
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+       {
+        breakpoint: 480, // tablet
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
