@@ -42,11 +42,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "PROVISION OF ICT CENTRE",
+    title: "ESTABLISHMENT OF ICT CENTRE",
     client: "RRS Company",
     location: "Osogbo, Osun State",
     area: "550,000 sf",
-    year: 2019,
+    year: 2024,
     // budget: "$245,000,000",
     // architect: "Scott & Austin",
     sector: "Tunnel, Transport",
@@ -62,10 +62,10 @@ export const projects = [
     client: "National Institute of Construction Technology and Management, Uromi, Edo State ",
     location: "Bayelsa State",
     area: "550,000 sf",
-    year: 2019,
+    year: 2024,
     // budget: "$245,000,000",
     // architect: "Scott & Austin",
-    sector: "Tunnel, Transport",
+    sector: "Construction, ",
     description:
       "Veekites Global Services successfully completed the provision and installation of 3-in-1 solar street lights across the Yenagoa/Kolokuma Federal Constituency in Bayelsa State. This project involved the deployment of durable and energy-efficient solar lighting systems that aim to enhance community safety, improve visibility at night, and promote sustainable energy use. /n/ By utilizing renewable energy, this initiative reduces reliance on the national grid, supports eco-friendly development, and offers long-term benefits to the residents of the constituency.",
     mainImage: p19,
@@ -75,7 +75,7 @@ export const projects = [
   {
     id: 10,
     title:
-      "Headquarters of the Nigeria Security and Civil Defence Corps, Sauka, Abuja",
+      "Construction of NSCDC, HEADQUARTERS",
     client: "Tantita Security Services Nigeria",
     location: "Sauka, Abuja",
     area: "850,000 sf",
