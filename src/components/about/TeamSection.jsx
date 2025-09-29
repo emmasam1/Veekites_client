@@ -1,7 +1,3 @@
-
-
-
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -78,51 +74,65 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const TeamSection = () => {
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 600,
-  slidesToShow: 4,   // ✅ default for desktop
-  slidesToScroll: 2,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  arrows: true,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1024, // ✅ everything below 1024px = phones & tablets
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-  // responsive: [
-  //   {
-  //     breakpoint: 1280, // below 1280px
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  //   {
-  //     breakpoint: 1024, // below 1024px
-  //     settings: {
-  //       slidesToShow: 2,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  //   {
-  //     breakpoint: 768, // below 768px
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  // ],
-};
 
+  const mobileSettings = {
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1, // ✅ default for mobile
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 4, // ✅ default for desktop
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024, // ✅ everything below 1024px = phones & tablets
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1280, // below 1280px
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 1024, // below 1024px
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 768, // below 768px
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
+  };
 
   return (
     <div className="py-20 w-11/12 mx-auto relative">
@@ -132,15 +142,16 @@ const settings = {
           Our Team
         </h2>
         <p className="text-sm leading-relaxed text-gray-600">
-          Our team is our greatest asset. We believe in fostering a collaborative
-          environment where creativity and expertise thrive, ensuring that our
-          team is always equipped to deliver top-tier solutions. Meet the people
-          who make it all happen and drive our success.
+          Our team is our greatest asset. We believe in fostering a
+          collaborative environment where creativity and expertise thrive,
+          ensuring that our team is always equipped to deliver top-tier
+          solutions. Meet the people who make it all happen and drive our
+          success.
         </p>
       </div>
 
       {/* Team Slider */}
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden hidden lg:block">
         <Slider {...settings}>
           {team.map((member, i) => (
             <div key={i} className="px-3">
@@ -150,8 +161,43 @@ const settings = {
                   alt={member.name}
                   className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D]"
                 />
-                <h3 className="font-semibold text-md text-gray-800">{member.name}</h3>
-                <p className="text-sm text-[#A02B2D] font-medium">{member.role}</p>
+                <h3 className="font-semibold text-md text-gray-800">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-[#A02B2D] font-medium">
+                  {member.role}
+                </p>
+                <p className="text-sm text-gray-400">{member.email}</p>
+                {/* Social Icons */}
+                <div className="flex justify-center space-x-3 mt-4 text-gray-500">
+                  <i className="fab fa-facebook-f hover:text-blue-600"></i>
+                  <i className="fab fa-twitter hover:text-sky-500"></i>
+                  <i className="fab fa-linkedin-in hover:text-blue-700"></i>
+                  <i className="fab fa-instagram hover:text-pink-500"></i>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* Team Slider for Mobile */}
+      <div className="w-full overflow-hidden block lg:hidden">
+        <Slider {...mobileSettings}>
+          {team.map((member, i) => (
+            <div key={i} className="px-3">
+              <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition h-full">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D]"
+                />
+                <h3 className="font-semibold text-md text-gray-800">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-[#A02B2D] font-medium">
+                  {member.role}
+                </p>
                 <p className="text-sm text-gray-400">{member.email}</p>
                 {/* Social Icons */}
                 <div className="flex justify-center space-x-3 mt-4 text-gray-500">
