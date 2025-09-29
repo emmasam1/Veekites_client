@@ -91,27 +91,36 @@ const settings = {
   prevArrow: <PrevArrow />,
   responsive: [
     {
-      breakpoint: 1280, // below 1280px
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1024, // below 1024px
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768, // below 768px
+      breakpoint: 1024, // ✅ everything below 1024px = phones & tablets
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
   ],
+  // responsive: [
+  //   {
+  //     breakpoint: 1280, // below 1280px
+  //     settings: {
+  //       slidesToShow: 3,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  //   {
+  //     breakpoint: 1024, // below 1024px
+  //     settings: {
+  //       slidesToShow: 2,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  //   {
+  //     breakpoint: 768, // below 768px
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  // ],
 };
 
 
