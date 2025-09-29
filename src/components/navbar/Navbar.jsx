@@ -4,8 +4,8 @@ import { Spin as Hamburger } from "hamburger-react";
 import { IoHome } from "react-icons/io5";
 import { IoMdCall, IoMdTime } from "react-icons/io";
 import { TiSocialFacebook } from "react-icons/ti";
-import { IoLogoTwitter, IoLogoLinkedin, IoLogoYoutube } from "react-icons/io";
-import { FaInstagram, FaTiktok, FaSnapchatGhost } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion"; // ✅ Framer Motion
 import "./Navbar.css";
 
@@ -175,6 +175,7 @@ const Navbar = () => {
                   exit={{ opacity: 0 }}
                   onClick={closeMenu}
                 />
+
                 {/* Mobile Menu */}
                 <motion.div
                   className="fixed top-0 left-0 w-3/4 max-w-xs h-full bg-white z-30 shadow-lg md:hidden"
@@ -190,7 +191,6 @@ const Navbar = () => {
                       { name: "About Us", path: "/about-us" },
                       { name: "Our Services", path: "/our-services" },
                       { name: "Projects", path: "/our-projects" },
-                      // { name: "Blog", path: "/blog" },
                       { name: "Contact Us", path: "/contact-us" },
                     ].map((item, i) => (
                       <motion.li key={i} variants={itemVariants}>
@@ -201,17 +201,22 @@ const Navbar = () => {
                               ? "nav-item-active"
                               : ""
                           }`}
-                          onClick={closeMenu}
+                          onClick={closeMenu} // ✅ close sidebar on click
                         >
                           {item.name}
                         </Link>
                       </motion.li>
                     ))}
-                    <Button className="!bg-[#DBE9F2] !border-none !rounded-full !text-black font-bold">
-             <Link to='/contact-us' className="font-semibold">
-              Book a Consultation
-             </Link>
-            </Button>
+
+                    {/* Book Button */}
+                    <Button
+                      className="!bg-[#DBE9F2] !border-none !rounded-full !text-black font-bold"
+                      onClick={closeMenu} // ✅ close sidebar on click
+                    >
+                      <Link to="/contact-us" className="font-semibold">
+                        Book a Consultation
+                      </Link>
+                    </Button>
                   </ul>
                 </motion.div>
               </>
@@ -263,9 +268,9 @@ const Navbar = () => {
               </motion.div>
             ))}
             <Button className="!bg-[#DBE9F2] !border-none !rounded-full !text-black font-bold">
-             <Link to='/contact-us' className="font-semibold">
-              Book a Consultation
-             </Link>
+              <Link to="/contact-us" className="font-semibold">
+                Book a Consultation
+              </Link>
             </Button>
           </motion.div>
 
