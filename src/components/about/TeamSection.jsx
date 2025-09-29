@@ -229,8 +229,8 @@ const TeamSection = () => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    // slidesToShow: 4,
+    //slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
@@ -238,21 +238,21 @@ const TeamSection = () => {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1024, // tablets
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 768, // small tablets/large phones
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // small phones
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
