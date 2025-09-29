@@ -1,0 +1,15 @@
+/* Fix slick responsiveness on real mobile devices */
+.slick-slider {
+  width: 100% !important;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: stretch;
+  height: auto !important;
+}
+
+.slick-slide > div {
+  width: 100%;
+}
