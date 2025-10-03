@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
-import legalOfficer from "../../assets/hr.jpg";
+import legalOfficer from "../../assets/legalOfficer.jpg";
 import gm from "../../assets/gm.jpg";
 import fe from "../../assets/fe.jpg";
 import lfo from "../../assets/lfo.jpg";
