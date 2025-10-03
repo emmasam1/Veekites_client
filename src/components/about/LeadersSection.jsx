@@ -3,6 +3,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import founders from "../../assets/founders.png";
+import md from "../../assets/md.jpg"
+import director from "../../assets/director.jpg"
 
 const testimonials = [
   {
@@ -14,13 +16,13 @@ const testimonials = [
   {
     name: "Ebilade Pondei",
     role: "Director",
-    img: founders,
+    img: director,
     text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     name: "Tare-ere P. Seimode",
     role: "General Manager",
-    img: founders,
+    img: md,
     text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];

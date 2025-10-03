@@ -2,53 +2,67 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
+import hr from "../../assets/hr.jpg";
+import gm from "../../assets/gm.jpg";
+import fe from "../../assets/fe.jpg";
+import lfo from "../../assets/lfo.jpg";
+import md from "../../assets/md.jpg";
+import hof from "../../assets/hof.jpg";
+import director from "../../assets/director.jpg";
+import bd from "../../assets/bd.jpg";
 
 const team = [
   {
     name: "Victor Isereke (PhD)",
     role: "CEO/Managing Director",
     email: "info@veekites.com",
-    img: "assets/team1.jpg",
+    img: md,
   },
   {
     name: "Ebilade Pondei",
     role: "Director",
     email: "info@veekites.com",
-    img: "assets/team1.jpg",
+    img: director,
   },
   {
     name: "Tare-ere P. Seimode",
     role: "General Manager",
     email: "info@veekites.com",
-    img: "assets/team1.jpg",
+    img: gm,
   },
   {
     name: "Tochukwu Chukwurah",
     role: "⁠Legal Officer/HR",
     email: "info@veekites.com",
-    img: "assets/team2.jpg",
+    img: hr,
   },
   {
     name: "Praise Bassey",
     role: "Business Developer",
     email: "info@veekites.com",
-    img: "assets/team3.jpg",
+    img: bd,
   },
   {
     name: "Charles Uduakah",
-    role: "Head Of Accountant",
+    role: "Head Of Finance",
     email: "info@veekites.com",
-    img: "assets/team4.jpg",
+    img: hof,
   },
   {
     name: "Pedro Ebipade",
     role: "Field Manager",
     email: "info@veekites.com",
-    img: "assets/team4.jpg",
+    img: fe,
   },
   {
     name: "Benaebi Isereke",
     role: "Procurement Supervisor",
+    email: "info@veekites.com",
+    img: "assets/team4.jpg",
+  },
+  {
+    name: "Moses Ofunama",
+    role: "Logistics/Facility officer",
     email: "info@veekites.com",
     img: "assets/team4.jpg",
   },
@@ -74,7 +88,6 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const TeamSection = () => {
-
   const mobileSettings = {
     dots: false,
     infinite: true,
@@ -87,7 +100,6 @@ const TeamSection = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
-
 
   const settings = {
     dots: false,
