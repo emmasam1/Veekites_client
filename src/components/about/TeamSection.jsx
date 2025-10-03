@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
-import hr from "../../assets/hr.jpg";
+import legalOfficer from "../../assets/hr.jpg";
 import gm from "../../assets/gm.jpg";
 import fe from "../../assets/fe.jpg";
 import lfo from "../../assets/lfo.jpg";
@@ -34,7 +34,7 @@ const team = [
     name: "Tochukwu Chukwurah",
     role: "⁠Legal Officer/HR",
     email: "info@veekites.com",
-    img: hr,
+    img: legalOfficer,
   },
   {
     name: "Praise Bassey",
