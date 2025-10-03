@@ -64,7 +64,7 @@ const team = [
     name: "Moses Ofunama",
     role: "Logistics/Facility officer",
     email: "info@veekites.com",
-    img: "assets/team4.jpg",
+    img: lfo,
   },
 ];
 

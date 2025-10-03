@@ -5,12 +5,13 @@ import "swiper/css/pagination";
 import founders from "../../assets/founders.png";
 import md from "../../assets/md.jpg"
 import director from "../../assets/director.jpg"
+import gm from "../../assets/gm.jpg";
 
 const testimonials = [
   {
     name: "Victor Isereke (PhD)",
     role: "CEO/Managing Director",
-    img: founders,
+    img: md,
     text: "Lorem ipsum dolor sit amet, consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
   },
   {
@@ -22,7 +23,7 @@ const testimonials = [
   {
     name: "Tare-ere P. Seimode",
     role: "General Manager",
-    img: md,
+    img: gm,
     text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];
