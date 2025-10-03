@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
-import legalOfficer from "../../assets/legalOfficer.jpg";
+import legalOfficer2 from "../../assets/legalOfficer.jpg";
 import gm from "../../assets/gm.jpg";
 import fe from "../../assets/fe.jpg";
 import lfo from "../../assets/lfo.jpg";
@@ -34,7 +34,7 @@ const team = [
     name: "Tochukwu Chukwurah",
     role: "⁠Legal Officer/HR",
     email: "info@veekites.com",
-    img: legalOfficer,
+    img: legalOfficer2,
   },
   {
     name: "Praise Bassey",
@@ -121,29 +121,6 @@ const TeamSection = () => {
         },
       },
     ],
-    // responsive: [
-    //   {
-    //     breakpoint: 1280, // below 1280px
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 1024, // below 1024px
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 768, // below 768px
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
   };
 
   return (
