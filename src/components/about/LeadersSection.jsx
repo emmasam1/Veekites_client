@@ -2,8 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import founders from "../../assets/founders.png";
-import md from "../../assets/md.jpg"
+import Managingdirector from "../../assets/md.jpg"
 import director from "../../assets/director.jpg"
 import gm from "../../assets/gm.jpg";
 
@@ -11,20 +10,20 @@ const testimonials = [
   {
     name: "Victor Isereke (PhD)",
     role: "CEO/Managing Director",
-    img: md,
-    text: "Lorem ipsum dolor sit amet, consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    img: Managingdirector,
+    text: "Everyone has their own life to live, each person’s life is their own journey",
   },
   {
     name: "Ebilade Pondei",
     role: "Director",
     img: director,
-    text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    text: "If I am worth anything later, I am worth something now. For wheat is wheat even if people think it is grass in the beginning",
   },
   {
     name: "Tare-ere P. Seimode",
     role: "General Manager",
     img: gm,
-    text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    text: "Have the determination of a mirror because no matter how many pieces it shatters into, it never loses its ability to reflect",
   },
 ];
 
