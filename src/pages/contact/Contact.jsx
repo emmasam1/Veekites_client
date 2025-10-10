@@ -13,6 +13,7 @@ const { TextArea } = Input;
 const Contact = () => {
   const [form] = Form.useForm();
   const [sending, setSending] = useState(false);
+  const [messageApi, contextHolder] = message.useMessage();
 
   const onFinish = (values) => {
     setSending(true);
@@ -33,7 +34,10 @@ const Contact = () => {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
-          message.success("Message sent successfully!");
+          messageApi.open({
+            type: "success",
+            content: "Message sent successfully!",
+          });
           form.resetFields(); // ✅ Clear form after success
         },
         (err) => {
@@ -48,6 +52,7 @@ const Contact = () => {
     <>
       <div className="relative -top-21 h-[300px] bg-[url(/src/assets/blog_hero.jpg)] bg-no-repeat bg-cover bg-center">
         {/* Overlay */}
+        {contextHolder}
         <div className="absolute inset-0 bg-black/70 h-[300px] flex justify-center flex-col px-4">
           <div className="max-w-6xl w-full mx-auto">
             <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white">
