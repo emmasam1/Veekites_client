@@ -1,17 +1,47 @@
-import React from "react";
-import { Form, Input, Button } from "antd";
+import React, { useState } from "react";
+import { Form, Input, Button, message } from "antd";
 import {
   EnvironmentOutlined,
   PhoneOutlined,
   MailOutlined,
 } from "@ant-design/icons";
 import Map from "../../components/map/Map";
+import emailjs from "emailjs-com";
 
 const { TextArea } = Input;
 
 const Contact = () => {
+  const [form] = Form.useForm();
+  const [sending, setSending] = useState(false);
+
   const onFinish = (values) => {
-    console.log("Form Values:", values);
+    setSending(true);
+
+    const templateParams = {
+      name: values.name,
+      email: values.email,
+      message: values.message,
+    };
+
+    emailjs
+      .send(
+        "service_gozwykh", // from EmailJS dashboard
+        "template_g69q20z",
+        templateParams,
+        "EsTzN-dWRv49434Ne"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          message.success("Message sent successfully!");
+          form.resetFields(); // ✅ Clear form after success
+        },
+        (err) => {
+          console.error("FAILED...", err);
+          message.error("Failed to send message. Try again later.");
+        }
+      )
+      .finally(() => setSending(false)); // ✅ Stop loading
   };
 
   return (
@@ -72,11 +102,11 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="">
+        <div>
           <h2 className="text-2xl font-bold mb-6 uppercase">
             Send Us a Message
           </h2>
-          <Form layout="vertical" onFinish={onFinish}>
+          <Form layout="vertical" form={form} onFinish={onFinish}>
             <Form.Item
               label="Full Name"
               name="name"
@@ -108,16 +138,17 @@ const Contact = () => {
             <Button
               type="primary"
               htmlType="submit"
-              className="!bg-[#A02B2D] !rounded-none  py-2"
+              className="!bg-[#A02B2D] !rounded-none py-2"
+              loading={sending} // ✅ Shows spinner
             >
-              Send Message
+              {sending ? "Sending..." : "Send Message"}
             </Button>
           </Form>
         </div>
       </div>
 
       {/* Map Section */}
-      <div className="">
+      <div>
         <Map />
       </div>
     </>
