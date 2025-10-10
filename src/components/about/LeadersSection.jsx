@@ -29,7 +29,7 @@ const testimonials = [
 
 const LeadersSection = () => {
   return (
-    <div className="relative bg-[url('assets/testimonial.jpg')] bg-cover bg-center py-20 w-11/12 mx-auto">
+    <div className="relative bg-[url('assets/testimonial.jpg')] bg-cover bg-center py-20 w-11/12 mx-auto mt-10">
       <div className="absolute inset-0 bg-black/60"></div>
       <div className=" relative z-10">
         <Swiper

@@ -51,7 +51,7 @@ export default function OurHistory() {
 
         {/* Intro / Title centered above timeline */}
         <div className="text-center mb-12">
-          <p className="text-sm text-gray-400 uppercase">About our history</p>
+          {/* <p className="text-sm text-gray-400 uppercase">About our history</p> */}
           {/* <h3 className="text-lg md:text-2xl tracking-widest my-3 leading-tight font-bold">
             TIMELINE
           </h3> */}

@@ -23,7 +23,7 @@ const About = () => {
       <SetApart />
       <OurHistory />
       <StatsSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <LeadersSection />
       <BrandsSection />
     </div>
