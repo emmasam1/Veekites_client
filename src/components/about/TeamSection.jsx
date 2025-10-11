@@ -2,14 +2,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
-import legalOfficer2 from "../../assets/legalOfficer.jpg";
-import gm from "../../assets/gm.jpg";
-import fe from "../../assets/fe.jpg";
-import lfo from "../../assets/lfo.jpg";
-import md from "../../assets/md.jpg";
-import hof from "../../assets/hof.jpg";
-import director from "../../assets/director.jpg";
-import bd from "../../assets/bd.jpg";
+import legalOfficer2 from "../../assets/hr.png";
+import gm from "../../assets/gm.png";
+import fe from "../../assets/fieldmanager.png";
+import lfo from "../../assets/utility.png";
+import md from "../../assets/md.png";
+import hof from "../../assets/head_of_account.png";
+import director from "../../assets/director.png";
+import bd from "../../assets/businessdev.png";
 
 const team = [
   {
@@ -145,11 +145,18 @@ const TeamSection = () => {
           {team.map((member, i) => (
             <div key={i} className="px-3">
               <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition h-full">
+                {/* <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D] block"
+                /> */}
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#A02B2D]">
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D]"
+                  className="w-full h-full object-cover block"
                 />
+              </div>
                 <h3 className="font-semibold text-md text-gray-800">
                   {member.name}
                 </h3>

@@ -2,9 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import Managingdirector from "../../assets/md.jpg"
-import director from "../../assets/director.jpg"
-import gm from "../../assets/gm.jpg";
+import Managingdirector from "../../assets/md.png"
+import director from "../../assets/director.png"
+import gm from "../../assets/gm.png";
 
 const testimonials = [
   {
@@ -34,7 +34,7 @@ const LeadersSection = () => {
       <div className=" relative z-10">
         <Swiper
           modules={[Autoplay, Pagination]}
-          autoplay={{ delay: 4000 }}
+          autoplay={{ delay: 9000 }}
           pagination={{ clickable: true }}
           loop
           className="pb-25"
