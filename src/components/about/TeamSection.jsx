@@ -150,12 +150,11 @@ const TeamSection = () => {
                   alt={member.name}
                   className="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D] block"
                 /> */}
-                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#A02B2D]">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-full object-cover block"
-                />
+                <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#A02B2D]">
+                 <div
+                  className="w-40 h-40 rounded-full  bg-bottom bg-cover bg-no-repeat"
+                  style={{ backgroundImage: `url(${member.img})` }}
+                ></div>
               </div>
                 <h3 className="font-semibold text-md text-gray-800">
                   {member.name}
@@ -183,11 +182,12 @@ const TeamSection = () => {
           {team.map((member, i) => (
             <div key={i} className="px-3">
               <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition h-full">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D]"
-                />
+                 <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#A02B2D]">
+                 <div
+                  className="w-40 h-40 rounded-full  bg-bottom bg-cover bg-no-repeat"
+                  style={{ backgroundImage: `url(${member.img})` }}
+                ></div>
+              </div>
                 <h3 className="font-semibold text-md text-gray-800">
                   {member.name}
                 </h3>

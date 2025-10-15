@@ -45,7 +45,7 @@ const LeadersSection = () => {
                 <img
                   src={t.img}
                   alt={t.name}
-                  className="w-20 h-20 rounded-full object-cover border-4 border-white"
+                  className="w-40 h-40 rounded-full object-bottom object-cover border-4 border-white"
                 />
                 <h3 className="font-bold text-white">{t.name}</h3>
                 <p className="text-sm text-gray-200">{t.role}</p>
