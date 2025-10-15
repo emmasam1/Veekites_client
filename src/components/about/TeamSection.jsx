@@ -150,9 +150,9 @@ const TeamSection = () => {
                   alt={member.name}
                   className="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-[#A02B2D] block"
                 /> */}
-                <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#A02B2D]">
+                <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-7 border-[#A02B2D]">
                  <div
-                  className="w-40 h-40 rounded-full  bg-bottom bg-cover bg-no-repeat"
+                  className="w-40 h-40 rounded-full bg-bottom bg-cover bg-no-repeat"
                   style={{ backgroundImage: `url(${member.img})` }}
                 ></div>
               </div>
