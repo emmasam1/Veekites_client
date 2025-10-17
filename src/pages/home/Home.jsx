@@ -143,10 +143,10 @@ const Home = () => {
                   transition={{ duration: 0.8 }}
                   className="text-left "
                 >
-                  <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2">
+                  {/* <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-2">
                     {slide.title}
-                  </h2>
-                  <p className="text-gray-300 text-xs sm:text-sm md:text-base">
+                  </h2> */}
+                  <p className="text-gray-300 text-2xl sm:text-sm md:text-2xl">
                     {slide.text}
                   </p>
                 </motion.div>

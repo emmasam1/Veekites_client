@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import projectImg1 from "../../assets/project-13.jpg";
-import projectImg2 from "../../assets/project-14.jpg";
-import projectImg3 from "../../assets/project-15.jpg";
-import projectImg4 from "../../assets/project-16.jpg";
+import projectImg2 from "../../assets/Blue Minimalist Project Presentation-5.png";
+import projectImg3 from "../../assets/Blue Minimalist Project Presentation-3.png";
+import projectImg4 from "../../assets/Blue Minimalist Project Presentation-2.png";
 
 const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
   const sliderRef = useRef(null);
@@ -132,7 +132,7 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    className="w-full md:h-[420px] h-[260px] object-cover block shadow-md"
+                    className="w-full md:h-[480px] h-[260px] object-cover block shadow-md"
                     draggable={false}
                   />
                 </div>

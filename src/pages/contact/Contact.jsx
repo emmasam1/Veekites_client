@@ -59,9 +59,7 @@ const Contact = () => {
               Let’s Build Something Great Together
             </h2>
             <p className="mt-4 text-lg md:text-lg text-gray-200">
-              Have a project in mind or need expert guidance? Reach out to
-              Veekites today—we’re here to provide tailored solutions in
-              construction, energy, ICT, and beyond.
+              We provide tailored and sustainable solutions in construction, oil & gas and marine operations.
             </p>
           </div>
         </div>

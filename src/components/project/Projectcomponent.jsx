@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import Slider from "react-slick";
 import { projects } from "../../datas/projects";
-import projbg from "../../assets/projbg.jpg";
+import projbg from "../../assets/Image_project.jpeg";
 
 // Slider settings
 const settings = {

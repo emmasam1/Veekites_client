@@ -11,7 +11,7 @@ const brands = [brand1, brand2, brand3, brand4, brand5, brand6];
 
 const BrandsSection = () => {
   return (
-    <div className="bg-white py-12 overflow-hidden">
+    <div className="bg-white pt-12 overflow-hidden">
       <div className="relative w-full">
         <div className="flex animate-marquee space-x-12">
           {[...brands, ...brands].map((logo, i) => (
@@ -19,7 +19,7 @@ const BrandsSection = () => {
               key={i}
               src={logo}
               alt="Brand logo"
-              className="h-12 w-auto object-contain"
+              className="h-17 w-auto object-contain"
             />
           ))}
         </div>
