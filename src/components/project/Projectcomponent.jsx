@@ -1,12 +1,9 @@
-
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import Slider from "react-slick";
-import { projects } from "../../datas/projects";
+import axios from "axios";
 import projbg from "../../assets/Image_project.jpeg";
 
-// Slider settings
 const settings = {
   dots: true,
   infinite: true,
@@ -22,34 +19,60 @@ const settings = {
 };
 
 const Projectcomponent = () => {
+  // 🧩 ALL HOOKS FIRST
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(0); // moved up ✅
   const itemsPerPage = 6;
 
+  // Fetch projects
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const res = await axios.get("https://veekites.onrender.com/api/projects");
+        setProjects(res.data.projects || []);
+      } catch (err) {
+        console.error("Error fetching projects:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProjects();
+  }, []);
+
   // Split projects
-  const featuredProjects = projects
+  const featuredProjects = projects;
   const latestProjects = projects.filter((p) => p.isLatest);
 
-  const totalPages = Math.ceil(featuredProjects.length / itemsPerPage);
+  // Autoplay effect for slider
+  useEffect(() => {
+    if (latestProjects.length > 0) {
+      const interval = setInterval(() => {
+        setActiveSlide((prev) => (prev + 1) % latestProjects.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [latestProjects.length]);
 
+  // Utility
+  const slugify = (text) =>
+    text?.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
+
+  // ⚠️ Conditional render is okay AFTER all hooks
+  if (loading) {
+    return (
+      <div className="py-32 text-center text-lg font-semibold text-gray-600">
+        Loading projects...
+      </div>
+    );
+  }
+
+  const totalPages = Math.ceil(featuredProjects.length / itemsPerPage);
   const paginatedProjects = featuredProjects.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
-  // Slider state
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  // Autoplay effect for slider
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % latestProjects.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [latestProjects.length]);
-
-  // ✅ Utility to slugify title
-  const slugify = (text) =>
-    text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
 
   return (
     <div>
@@ -79,8 +102,7 @@ const Projectcomponent = () => {
             most professional companies offering a wide range of services in the
             fields of engineering, construction, supplies, and training, with a
             team of directors and senior executives who are experts in their
-            chosen fields. Each member of this formidable team offers a range of
-            combined experience in their areas of specialty.
+            chosen fields.
           </p>
         </div>
         <div>
@@ -106,9 +128,9 @@ const Projectcomponent = () => {
       <div className="w-11/12 mx-auto pb-16 px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginatedProjects.map((proj) => (
-            <div key={proj.id} className="bg-white overflow-hidden transition">
+            <div key={proj._id} className="bg-white overflow-hidden transition">
               <img
-                src={proj.mainImage}
+                src={proj.mainImage?.url}
                 alt={proj.title}
                 className="!rounded-none h-48 w-full object-cover"
               />
@@ -118,7 +140,7 @@ const Projectcomponent = () => {
                   {proj.description?.slice(0, 100)}...
                 </p>
                 <Link
-                  to={`/project/${slugify(proj.title)}/${proj.id}`}
+                  to={`/project/${slugify(proj.title)}/${proj._id}`}
                   className="text-[#A02B2D] mt-4 text-sm font-medium hover:underline inline-block"
                 >
                   Learn more
@@ -161,45 +183,46 @@ const Projectcomponent = () => {
       </div>
 
       {/* Latest Projects */}
-      <div className="bg-gray-50 py-16">
-        <h1 className="text-lg font-bold uppercase leading-snug mb-4 text-center">
-          Latest Project
-        </h1>
-        <div className="max-w-7xl mx-auto px-6">
-          <Slider {...settings}>
-            {latestProjects.map((proj) => (
-              <div key={proj.id} className="px-4">
-                <div className="grid md:grid-cols-2 gap-10 items-center">
-                  {/* Image */}
-                  <img
-                    src={proj.mainImage}
-                    alt={proj.title}
-                    className="w-full h-80 object-cover shadow-md rounded-lg"
-                  />
-
-                  {/* Content */}
-                  <div className="flex flex-col justify-center">
-                    <h3 className="leading-snug font-bold text-lg uppercase mb-4">
-                      {proj.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                      {proj.description?.slice(0, 150)}...
-                    </p>
-                    <Link
-                      to={`/project/${slugify(proj.title)}/${proj.id}`}
-                      className="bg-[#A02B2D] w-41 text-white px-6 py-2 shadow transition inline-block"
-                    >
-                      VIEW PROJECT
-                    </Link>
+      {latestProjects.length > 0 && (
+        <div className="bg-gray-50 py-16">
+          <h1 className="text-lg font-bold uppercase leading-snug mb-4 text-center">
+            Latest Project
+          </h1>
+          <div className="max-w-7xl mx-auto px-6">
+            <Slider {...settings}>
+              {latestProjects.map((proj) => (
+                <div key={proj._id} className="px-4">
+                  <div className="grid md:grid-cols-2 gap-10 items-center">
+                    <img
+                      src={proj.mainImage?.url}
+                      alt={proj.title}
+                      className="w-full h-80 object-cover shadow-md rounded-lg"
+                    />
+                    <div className="flex flex-col justify-center">
+                      <h3 className="leading-snug font-bold text-lg uppercase mb-4">
+                        {proj.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed mb-6">
+                        {proj.description?.slice(0, 150)}...
+                      </p>
+                      <Link
+                        to={`/project/${slugify(proj.title)}/${proj._id}`}
+                        className="bg-[#A02B2D] w-41 text-white px-6 py-2 shadow transition inline-block"
+                      >
+                        VIEW PROJECT
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
 
 export default Projectcomponent;
+
+

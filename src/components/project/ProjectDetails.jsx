@@ -1,21 +1,38 @@
+
 import { useState, useEffect, useCallback } from "react";
 import { Link, useParams } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import { IoChevronBackSharp } from "react-icons/io5";
-import { projects } from "../../datas/projects";
+import axios from "axios";
+import Skeleton from "react-loading-skeleton";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-loading-skeleton/dist/skeleton.css";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import fallbackImg from "../../assets/project-details.jpg";
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const [selectedImg, setSelectedImg] = useState(null);
   const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedImg, setSelectedImg] = useState(null);
+  const [error, setError] = useState(null);
 
-  // Find project by ID (support numeric IDs)
+  // Fetch project by ID
   useEffect(() => {
-    const found = projects.find((p) => String(p.id) === id);
-    setProject(found || null);
+    const fetchProject = async () => {
+      try {
+        const res = await axios.get(`https://veekites.onrender.com/api/projects/${id}`);
+        setProject(res.data.project);
+      } catch (err) {
+        console.error("Error fetching project:", err);
+        setError("Unable to load project details. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProject();
   }, [id]);
 
   // ESC key handler for modal close
@@ -32,9 +49,34 @@ const ProjectDetail = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedImg, handleKeyDown]);
 
+  // --- LOADING STATE ---
+  if (loading) {
+    return (
+      <div className="max-w-6xl mx-auto px-6 py-20 animate-pulse">
+        <Skeleton height={400} className="mb-6 rounded-md" />
+        <Skeleton count={4} />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-10">
+          {[...Array(6)].map((_, i) => (
+            <Skeleton key={i} height={180} className="rounded-md" />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-20 text-red-600 font-medium">
+        {error}
+      </div>
+    );
+  }
+
   if (!project) {
     return <p className="text-center py-20">Project not found.</p>;
   }
+
+  const { title, description, client, location, area, year, sector, mainImage, gallery } = project;
 
   return (
     <div className="w-full">
@@ -43,7 +85,7 @@ const ProjectDetail = () => {
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white">
           <h1 className="text-3xl md:text-4xl font-bold">Project Details</h1>
           <p className="mt-2 text-sm md:text-base">
-            Home &gt; Project &gt; {project.title}
+            Home &gt; Project &gt; {title}
           </p>
         </div>
       </div>
@@ -52,93 +94,100 @@ const ProjectDetail = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Back button */}
         <div className="w-20 gap-2 mb-5">
-          <Link
-            to="/our-projects"
-            className="flex items-center cursor-pointer w-20 gap-2"
-          >
+          <Link to="/our-projects" className="flex items-center cursor-pointer w-20 gap-2">
             <IoChevronBackSharp /> Back
           </Link>
         </div>
 
-        {/* Main Image */}
-        <img
-          src={project.mainImage || fallbackImg}
-          alt={project.title}
-          className="w-full h-62 sm:h-72 md:h-[600px] object-cover"
-        />
+        {/* Main Image with LazyLoad + Skeleton */}
+        <div className="relative w-full h-62 sm:h-72 md:h-[600px] mb-8 rounded-md overflow-hidden">
+          {!mainImage?.url ? (
+            <Skeleton height="100%" className="rounded-md" />
+          ) : (
+            <LazyLoadImage
+              src={mainImage.url || fallbackImg}
+              alt={title}
+              effect="blur"
+              className="w-full h-full object-cover rounded-md"
+              wrapperClassName="w-full h-full block"
+            />
+          )}
+        </div>
 
         {/* Info & Description */}
         <div className="grid md:grid-cols-3 gap-10 mt-10">
           {/* Left Info */}
-          <aside className="bg-gray-900 text-white p-6 shadow-lg space-y-4">
+          <aside className="bg-gray-900 text-white p-6 shadow-lg space-y-4 rounded-md">
             <h3 className="text-lg font-semibold mb-4">Project Information</h3>
             <ul className="space-y-1 text-sm">
-              <li className="border-b border-gray-500 py-2">
-                <strong>Client:</strong> {project.client}
-              </li>
-              <li className="border-b border-gray-500 py-2">
-                <strong>Location:</strong> {project.location}
-              </li>
-              <li className="border-b border-gray-500 py-2">
-                <strong>Area:</strong> {project.area}
-              </li>
-              <li className="border-b border-gray-500 py-2">
-                <strong>Year:</strong> {project.year}
-              </li>
-              {/* <li className="border-b border-gray-500 py-2">
-                <strong>Budget:</strong> {project.budget}
-              </li> */}
-              {/* <li className="border-b border-gray-500 py-2">
-                <strong>Architect:</strong> {project.architect}
-              </li> */}
-              <li className="border-b border-gray-500 py-2">
-                <strong>Sector:</strong> {project.sector}
-              </li>
+              {client && (
+                <li className="border-b border-gray-500 py-2">
+                  <strong>Client:</strong> {client}
+                </li>
+              )}
+              {location && (
+                <li className="border-b border-gray-500 py-2">
+                  <strong>Location:</strong> {location}
+                </li>
+              )}
+              {area && (
+                <li className="border-b border-gray-500 py-2">
+                  <strong>Area:</strong> {area}
+                </li>
+              )}
+              {year && (
+                <li className="border-b border-gray-500 py-2">
+                  <strong>Year:</strong> {year}
+                </li>
+              )}
+              {sector && (
+                <li className="border-b border-gray-500 py-2">
+                  <strong>Sector:</strong> {sector}
+                </li>
+              )}
             </ul>
           </aside>
+
+          {/* Description */}
           <section className="md:col-span-2 space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-[#A02B2D]">
-              {project.title}
+              {title}
             </h2>
-            {project.description
-              ?.split("/n/") // 👈 split by /n/
-              .map((para, i) => (
-                <p
-                  key={i}
-                  className="text-gray-600 leading-relaxed text-sm sm:text-base"
-                >
-                  {para.trim()}
-                </p>
-              ))}
 
-            {project.sub_dec && (
-              <ul className="list-disc pl-5 space-y-2 text-gray-600">
-                {project.sub_dec.map((e) => (
-                  <li key={e.id}>{e.text}</li>
-                ))}
-              </ul>
-            )}
+            {description?.split("/n/").map((para, i) => (
+              <p
+                key={i}
+                className="text-gray-600 leading-relaxed text-sm sm:text-base"
+              >
+                {para.trim()}
+              </p>
+            ))}
           </section>
         </div>
 
         {/* Gallery */}
-        {project.gallery?.length > 0 && (
+        {gallery?.length > 0 && (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-10">
-            {project.gallery.map((img, i) => (
-              <div
+            {gallery.map((img, i) => (
+              <motion.div
                 key={i}
+                whileHover={{ scale: 1.03 }}
                 className="relative group cursor-pointer"
-                onClick={() => setSelectedImg(img)}
+                onClick={() => setSelectedImg(img.url)}
               >
-                <img
-                  src={img}
-                  alt={`${project.title} Gallery ${i + 1}`}
-                  className="w-full h-32 sm:h-40 md:h-44 object-cover rounded-lg shadow transition-transform group-hover:scale-105"
-                />
+                <div className="w-full h-32 sm:h-40 md:h-44 rounded-lg overflow-hidden">
+                  <LazyLoadImage
+                    src={img.url}
+                    alt={`${title} Gallery ${i + 1}`}
+                    effect="blur"
+                    className="w-full h-full object-cover"
+                    wrapperClassName="w-full h-full block"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-black/40 rounded-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                   <Plus className="text-white w-8 h-8" />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         )}
@@ -180,3 +229,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+

@@ -9,12 +9,13 @@ import Testimony from "../../components/testimony/Testimony";
 import ProjectCarousel from "../../components/home/ProjectCarousel";
 import BrochureSection from "../../components/home/BrochureSection";
 import { PiGreaterThanLight } from "react-icons/pi";
-import { projects, slides } from "../../datas/projects";
+import { slides } from "../../datas/projects";
 
 
 import { FaOilWell } from "react-icons/fa6";
 import { GiMiniSubmarine } from "react-icons/gi";
 import { MdEngineering } from "react-icons/md";
+import axios from "axios";
 
 const { Meta } = Card;
 
@@ -60,6 +61,9 @@ const Home = () => {
   const controls2 = useAnimation();
   const controls3 = useAnimation();
 
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const [ref1, inView1] = useIntersection({ threshold: 0.1 });
   const [ref2, inView2] = useIntersection({ threshold: 0.1 });
   const [ref3, inView3] = useIntersection({ threshold: 0.1 });
@@ -103,6 +107,21 @@ const Home = () => {
       icon: <FaOilWell className="!text-white text-2xl" />,
     },
   ];
+
+    useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const res = await axios.get("https://veekites.onrender.com/api/projects");
+        const data = res.data.projects || [];
+        setProjects(data.slice(0, 4)); // 👈 fetch only 4 projects
+      } catch (err) {
+        console.error("Error fetching projects:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProjects();
+  }, []);
 
   return (
     <>
@@ -215,7 +234,7 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {projects.slice(0, 4).map(
+          {projects.map(
             (
               proj,
               index // 👈 show only 4
@@ -225,7 +244,7 @@ const Home = () => {
                 cover={
                   <img
                     alt={proj.title}
-                    src={proj.mainImage}
+                    src={proj.mainImage?.url}
                     className="!rounded-none h-48 w-full object-cover"
                   />
                 }
@@ -241,7 +260,7 @@ const Home = () => {
                   <p>{proj.description?.slice(0, 80)}....</p>
                   <div className="flex justify-center mt-5">
                     <Link
-                      to={`/project/${slugify(proj.title)}/${proj.id}`}
+                       to={`/project/${slugify(proj.title)}/${proj._id}`}
                       className="hover:underline !text-[#A02B2D] "
                     >
                       Learn more
