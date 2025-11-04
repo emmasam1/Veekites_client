@@ -18,6 +18,8 @@ const settings = {
   dotsClass: "slick-dots custom-dots",
 };
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 const Projectcomponent = () => {
   // 🧩 ALL HOOKS FIRST
   const [projects, setProjects] = useState([]);
@@ -30,7 +32,8 @@ const Projectcomponent = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("https://veekites.onrender.com/api/projects");
+       // const res = await axios.get("https://veekites.onrender.com/api/projects");
+        const res = await axios.get(`${API_BASE}/api/projects`);
         setProjects(res.data.projects || []);
       } catch (err) {
         console.error("Error fetching projects:", err);

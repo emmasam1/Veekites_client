@@ -6,6 +6,7 @@ import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import axios from "axios";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 const NextArrow = ({ onClick }) => (
   <div
@@ -33,7 +34,8 @@ const TeamSection = () => {
   useEffect(() => {
     const fetchTeam = async () => {
       try {
-        const res = await axios.get("https://veekites.onrender.com/api/team");
+        //const res = await axios.get("https://veekites.onrender.com/api/team");
+        const res = await axios.get(`${API_BASE}/api/team`);  
         setTeam(res.data.data || []);
       } catch (error) {
         console.error("Error fetching team:", error);

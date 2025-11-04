@@ -12,6 +12,8 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 import fallbackImg from "../../assets/project-details.jpg";
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 const ProjectDetail = () => {
   const { id } = useParams();
   const [project, setProject] = useState(null);
@@ -23,7 +25,7 @@ const ProjectDetail = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await axios.get(`https://veekites.onrender.com/api/projects/${id}`);
+        const res = await axios.get(`${API_BASE}/api/projects/${id}`);
         setProject(res.data.project);
       } catch (err) {
         console.error("Error fetching project:", err);

@@ -19,6 +19,9 @@ import {
   CustomizedCapability,
 } from "./capabilitiesData";
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
+
 const Services = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -38,7 +41,8 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await axios.get("https://veekites.onrender.com/api/services");
+        //const res = await axios.get("https://veekites.onrender.com/api/services");
+        const res = await axios.get(`${API_BASE}/api/services`);
         // Handle both array or object-based API responses
         const data = Array.isArray(res.data)
           ? res.data

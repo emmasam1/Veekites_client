@@ -5,6 +5,8 @@ import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 const DetailsPage = () => {
   const { id } = useParams();
   const location = useLocation();
@@ -16,7 +18,7 @@ const DetailsPage = () => {
     const fetchService = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.VITE_API_URL}/services/${id}`
+          `${API_BASE}/api/services/${id}`
         );
         setService(res.data.data);
       } catch (err) {
