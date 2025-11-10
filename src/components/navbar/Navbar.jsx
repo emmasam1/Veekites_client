@@ -210,7 +210,7 @@ const Navbar = () => {
 
                     {/* Book Button */}
                     <Button
-                      className="!bg-[#DBE9F2] !border-none !rounded-full !text-black font-bold"
+                      className="!bg-[#8B1E3F] !border-none !rounded-full !text-black font-bold"
                       onClick={closeMenu} // ✅ close sidebar on click
                     >
                       <Link to="/contact-us" className="font-semibold">
