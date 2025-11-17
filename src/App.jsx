@@ -16,6 +16,7 @@ import SocialMediaFloatingMenu from "./components/social-media/SocialMediaFloati
 import ProjDetails from "./pages/project/ProjDetails";
 import TermsPage from "./pages/terms/TermsPage";
 import Privacy from "./pages/privacy/Privacy";
+import Featured from "./components/featured_work/Featured";
 // import BlogDetails from "./components/blog/BlogDetails";
 
 //fetch(`${process.env.REACT_APP_API_URL}/api/blogs`)
@@ -36,6 +37,7 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/project/:name/:id" element={<ProjDetails />} />
+        <Route path="/featured/:name/:id" element={<Featured />} />
         {/* <Route path="/services/:name/:id" element={<DetailsPage />} /> */}
         {/* <Route path="/blog" element={<Blog />}>
           <Route index element={<Blogs />} />
