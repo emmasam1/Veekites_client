@@ -78,7 +78,7 @@ const Contact = () => {
               <EnvironmentOutlined className="text-xl" />
             </div>
             <p className="text-gray-700">
-              House 49, O.A.U. Quarters, Close D Kashim Ibrahim Wy, <br />
+              House 49, O.A.U. Quarters, Close D Kashim Ibrahim Way, <br />
               Maitama, AMAC 904101, Federal Capital Territory
             </p>
           </div>

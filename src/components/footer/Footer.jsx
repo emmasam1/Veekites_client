@@ -116,7 +116,7 @@ const Footer = () => {
               <div className="p-5">
                 <h2 className="text-gray-400 font-thin mb-4">ADDRESS</h2>
                 <p className="text-gray-300 text-sm font-thin">
-                  House 49, O.A.U. Quarters, Close D Kashim Ibrahim Wy, Maitama,
+                  House 49, O.A.U. Quarters, Close D Kashim Ibrahim Way, Maitama,
                   AMAC 904101, Federal Capital Territory
                 </p>
                 <p className="text-gray-300 text-sm mt-3 font-thin">
