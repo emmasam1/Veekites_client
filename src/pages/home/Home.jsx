@@ -17,6 +17,8 @@ import { GiMiniSubmarine } from "react-icons/gi";
 import { MdEngineering } from "react-icons/md";
 import axios from "axios";
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 const { Meta } = Card;
 
 const settings = {
@@ -111,7 +113,7 @@ const Home = () => {
     useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("https://veekites.onrender.com/api/projects");
+        const res = await axios.get(`${API_BASE}/api/projects`);
         const data = res.data.projects || [];
         setProjects(data.slice(0, 4)); // 👈 fetch only 4 projects
       } catch (err) {
