@@ -99,7 +99,7 @@ const Navbar = () => {
               <IoMdTime size={30} className="mr-2 text-gray-300" />
               <div>
                 <p className="text-xs text-white font-semibold">
-                  Mon-Fri 8:00-5:00
+                  Mon-Fri 9:00-5:00
                 </p>
                 <p className="text-xs text-gray-300 font-semibold">
                   Sat-Sun CLOSED
@@ -210,7 +210,7 @@ const Navbar = () => {
 
                     {/* Book Button */}
                     <Button
-                      className="!bg-[#8B1E3F] !border-none !rounded-full !text-black font-bold"
+                      className="!bg-[#8B1E3F] !border-none !rounded-full !text-white font-bold"
                       onClick={closeMenu} // ✅ close sidebar on click
                     >
                       <Link to="/contact-us" className="font-semibold">
@@ -267,7 +267,7 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
-            <Button className="!bg-[#DBE9F2] !border-none !rounded-full !text-black font-bold">
+            <Button className="!bg-[#8B1E3F] !border-none !rounded-full !text-white font-bold">
               <Link to="/contact-us" className="font-semibold">
                 Book a Consultation
               </Link>

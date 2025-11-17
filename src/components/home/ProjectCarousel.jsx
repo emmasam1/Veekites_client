@@ -118,7 +118,8 @@ const ProjectCarousel = ({ autoplaySpeed = 5000 }) => {
                 </p>
 
                 <Link
-                  to={`/project/${slugify(slide.title)}/${slide.id}`}
+                  to={`/featured/${slugify(slide.title)}/${slide.id}`}
+                  state={{ slide }}
                   className="inline-block bg-[#A02B2D] text-white font-semibold px-6 py-3"
                 >
                   Learn more
