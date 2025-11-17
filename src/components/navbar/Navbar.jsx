@@ -108,30 +108,38 @@ const Navbar = () => {
             </div>
             {/* Socials */}
             <div className="flex items-center border-r-2 pr-5 pl-2 border-gray-500 gap-3">
-              <TiSocialFacebook
-                size={20}
-                className="text-gray-300 cursor-pointer hover:text-red-600"
-              />
+              <Link to="http://fb.com/veekitesglobal">
+                <TiSocialFacebook
+                  size={20}
+                  className="text-gray-300 cursor-pointer hover:text-red-600"
+                />
+              </Link>
               {/* <IoLogoTwitter
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
               /> */}
-              <FaInstagram
-                size={20}
-                className="text-gray-300 cursor-pointer hover:text-red-600"
-              />
-              <IoLogoLinkedin
-                size={20}
-                className="text-gray-300 cursor-pointer hover:text-red-600"
-              />
+              <Link to="https://www.instagram.com/veekitesglobal">
+                <FaInstagram
+                  size={20}
+                  className="text-gray-300 cursor-pointer hover:text-red-600"
+                />
+              </Link>
+              <Link to="https://www.linkedin.com/company/veekitesglobal">
+                <IoLogoLinkedin
+                  size={20}
+                  className="text-gray-300 cursor-pointer hover:text-red-600"
+                />
+              </Link>
               {/* <IoLogoYoutube
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
               /> */}
-              <FaTiktok
-                size={20}
-                className="text-gray-300 cursor-pointer hover:text-red-600"
-              />
+              <Link to="https://vm.tiktok.com/ZMSwFQtUQ/">
+                <FaTiktok
+                  size={20}
+                  className="text-gray-300 cursor-pointer hover:text-red-600"
+                />
+              </Link>
               {/* <FaSnapchatGhost
                 size={20}
                 className="text-gray-300 cursor-pointer hover:text-red-600"
