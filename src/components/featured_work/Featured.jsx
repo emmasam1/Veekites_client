@@ -1,13 +1,20 @@
 import React from "react";
-import { useLocation } from "react-router";
-
+import { useLocation, useNavigate } from "react-router";
+import { IoChevronBackSharp } from "react-icons/io5";
 const Featured = () => {
   const { state } = useLocation();
   const slide = state?.slide;
 
-  console.log(slide);
+  const navigate = useNavigate();
   return (
     <div className="w-11/12 mx-auto mb-12">
+
+       <button
+          onClick={() => navigate("/")}
+          className="mt-4 px-6 py-2 flex items-center gap-2  mb-6 cursor-pointer"
+        >
+          <IoChevronBackSharp /> Back
+        </button>
         
       <div className="grid grid-cols-1 md:grid-cols-2 relative overflow-visible ">
         <div className="relative bg-[#dbe9f2] md:h-[560px] p-10 md:p-16 z-10">
